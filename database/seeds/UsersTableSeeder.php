@@ -23,14 +23,14 @@ class UsersTableSeeder extends Seeder
 
         $adminRole = Role::where('name', 'admin')->first();
         $masterRole = Role::where('name', 'master')->first();
-        $authorRole = Role::where('name', 'editor')->first();
-        $authorRole = Role::where('name', 'superuser')->first();
+        $editorRole = Role::where('name', 'editor')->first();
+        $superuserRole = Role::where('name', 'superuser')->first();
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
             'name' => 'Admin User',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('password'),
+            'password' => /*bcrypt('password')*/'123456',
             'email_verified_at' => Carbon::now(),
         ]);
 
@@ -41,14 +41,14 @@ class UsersTableSeeder extends Seeder
             'email_verified_at' => Carbon::now(),
         ]);
 
-        $author = User::create([
+        $editor = User::create([
             'name' => 'Editor User',
-            'email' => 'author@author.com',
+            'email' => 'editor@author.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
-        $user = User::create([
+        $superuser = User::create([
             'name' => 'Superuser',
             'email' => 'superuser@user.com',
             'password' => bcrypt('password'),
