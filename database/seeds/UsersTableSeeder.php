@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
         $admin = User::create([
             'name' => 'Admin User',
             'email' => 'admin@admin.com',
-            'password' => /*bcrypt('password')*/'123456',
+            'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
@@ -43,14 +43,14 @@ class UsersTableSeeder extends Seeder
 
         $editor = User::create([
             'name' => 'Editor User',
-            'email' => 'editor@author.com',
+            'email' => 'editor@editor.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
         $superuser = User::create([
-            'name' => 'Superuser',
-            'email' => 'superuser@user.com',
+            'name' => 'Super User',
+            'email' => 'super@super.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
