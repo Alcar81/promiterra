@@ -42,14 +42,4 @@ Route::get('/team', 'TeamController@index')->name('team')->middleware('team');
 Route::get('/masterteam', 'MasterTeamController@index')->name('masterteam')->middleware('masterteam');
 */
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
