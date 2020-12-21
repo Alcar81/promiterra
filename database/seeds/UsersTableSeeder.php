@@ -17,10 +17,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        Schema::disableForeignKeyConstraints();
         User::truncate();
         DB::table('role_user')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $admin = User::create([
             'name' => 'admin',
