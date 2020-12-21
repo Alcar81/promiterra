@@ -285,27 +285,21 @@
                                             @if (Route::has('login'))
 
                                                     @auth
-                                                    <li class="dropdown">
-                                                        <a class="dropdown" href="{{ route('profile.users.index') }}">
-                                                            {{ Auth::user()->name }}
-                                                        </a>
-                                                        <li class="dropdown-submenu"><a href="{{ route('home') }}">Personnages</a></li>
-                                                        <li class="dropdown-submenu"><a href="{{ route('home') }}">Guildes1</a></li>
-
-
-                                                        @can('manage-users')
                                                         <li class="dropdown">
-                                                            <a class="dropdown" href="{{ route('admin.users.index') }}">
-                                                                User Management
+                                                            <a class="dropdown" href="{{ route('profile.users.index') }}">
+                                                                {{ Auth::user()->name }}
                                                             </a>
                                                         </li>
-                                                        @endcan
 
-
+                                                        <li class="dropdown-submenu"><a href="{{ route('home') }}">Personnages</a></li>
+                                                        <li class="dropdown-submenu"><a href="{{ route('home') }}">Guildes1</a></li>
+                                                    @can('manage-users')
+                                                        <li class="dropdown"><a class="dropdown" href="{{ route('admin.users.index') }}">User Management</a></li>
+                                                    @endcan
 
                                                         <li class="dropdown">
                                                             <a class="dropdown-item" href="{{ route('logout') }}"
-                                                            onclick="event.preventDefault();
+                                                                onclick="event.preventDefault();
                                                                           document.getElementById('logout-form').submit();">
                                                              {{ __('Logout') }}
                                                             </a>
