@@ -23,14 +23,16 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
-    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
+    Route::resource('users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
 Route::namespace('Profile')->prefix('profile')->name('profile.')->group(function(){
-    Route::resource('/users', 'UsersProfileController', ['except' => ['show', 'create', 'store']]);
+    Route::resource('users', 'UsersProfileController', ['except' => ['show', 'create', 'store']]);
 });
 
-
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});
 
 
 
