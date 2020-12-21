@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Carbon\Carbon;
 use App\User;
@@ -21,46 +22,46 @@ class UsersTableSeeder extends Seeder
         DB::table('role_user')->truncate();
         Schema::enableForeignKeyConstraints();
 
-        $adminRole = Role::where('name', 'admin')->first();
-        $masterRole = Role::where('name', 'master')->first();
-        $editorRole = Role::where('name', 'editor')->first();
-        $superuserRole = Role::where('name', 'superuser')->first();
-        $userRole = Role::where('name', 'user')->first();
-
         $admin = User::create([
-            'name' => 'Admin User',
+            'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
         $master = User::create([
-            'name' => 'Master User',
+            'name' => 'master',
             'email' => 'master@master.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
         $editor = User::create([
-            'name' => 'Editor User',
+            'name' => 'editor',
             'email' => 'editor@editor.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
         $superuser = User::create([
-            'name' => 'Super User',
+            'name' => 'superuser',
             'email' => 'super@super.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
 
         $user = User::create([
-            'name' => 'Generic User',
+            'name' => 'user',
             'email' => 'user@user.com',
             'password' => bcrypt('password'),
             'email_verified_at' => Carbon::now(),
         ]);
+
+        $adminRole = Role::where('name', 'admin')->first();
+        $masterRole = Role::where('name', 'master')->first();
+        $editorRole = Role::where('name', 'editor')->first();
+        $superuserRole = Role::where('name', 'superuser')->first();
+        $userRole = Role::where('name', 'user')->first();
 
         $admin->roles()->attach($adminRole);
         $master->roles()->attach($masterRole);
