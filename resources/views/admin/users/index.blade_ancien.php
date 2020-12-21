@@ -24,7 +24,7 @@ Users management
                                   </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($users as $user)
+                                    @foreach($users as $user)
                                     <tr>
                                         <th scope="row">{{ $user->id }}</th>
                                         <td>{{  $user->name }}</td>
@@ -40,8 +40,8 @@ Users management
                                                     {{ method_field('DELETE') }}
                                                     <button type="submit" class="btn btn-warning">Delete</button></a>
                                                 </form>
-                                            @endcan
-                                        </td>
+                                                @endcan
+                                            </td>
                                     </tr>
                                 @endforeach
 
