@@ -9,29 +9,30 @@ Users management
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Liste des utilisateurs</div>
-                    <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">'#'</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($users as $user)
-                            <tr>
-                            <th scope="row">{{ $user->id }}</th>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>
-                                <a href="{{ route('admin.users.edit' ,$user->id) }}"><button class="btn btn-primary">Éditer</button></a>
-                                <a href="{{ route('admin.users.destroy', $user->id) }}"><button class="btn btn-warning">Suprimer</button></a>
-                            </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
+                    <div class="card-header">Modifier <strong>{{ $user->name }}</strong></div>
+                        <div class="card-body">
+                            <form action="{{ route('admin.users.update', $user) }}" method="POST">
+                                @csrf
+                                {{ method_field('PATCH') }}
+
+                                <div class="form-group row">
+                                    <label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
+
+                                    <div class="col-md-6">
+                                        @foreach($roles as $role)
+                                            <div class="form-check">
+
+                                                <input type="checkbox" name="roles[]" value="{{ $role->id }}"
+                                                @if($user->roles->pluck('id')->contains($role->id)) checked @endif>
+                                                <label>{{ $role->name }}</label>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Modifier les rôles</button>
+                            </form>
+                        </div>
 
                 </div>
             </div>
