@@ -22,7 +22,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function() {
     Route::resource('users', 'UsersController');
 });
 

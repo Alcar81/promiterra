@@ -290,11 +290,13 @@
                                                                 {{ Auth::user()->name }}
                                                             </a>
                                                         </li>
-
+                                                    @can('manage-users')
+                                                        <li class="dropdown"><a class="dropdown" href="{{ route('admin.users.index') }}">Liste des utilisateurs</a></li>
+                                                    @endcan
                                                         <li class="dropdown-submenu"><a href="{{ route('home') }}">Personnages</a></li>
                                                         <li class="dropdown-submenu"><a href="{{ route('home') }}">Guildes1</a></li>
 
-                                                        <li class="dropdown"><a class="dropdown" href="{{ route('admin.users.index') }}">User Management</a></li>
+
 
 
                                                         <li class="dropdown">
