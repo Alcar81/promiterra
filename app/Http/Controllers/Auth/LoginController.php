@@ -44,13 +44,13 @@ class LoginController extends Controller
         if (Auth::user()->roles->pluck('name')->contains('admin')) {
             return '/admin/users';
         } elseif (Auth::user()->roles->pluck('name')->contains('master')) {
-            return '/admin/master';
+            return '/profile/master';
         } elseif (Auth::user()->roles->pluck('name')->contains('editor')) {
-            return '/admin/editor';
+            return '/profile/editor';
         } elseif (Auth::user()->roles->pluck('name')->contains('superuser')) {
-            return '/admin/superuser';
+            return '/profile/superuser';
         } elseif (Auth::user()->roles->pluck('name')->contains('user')) {
-            return '/admin/user';
+            return '/profile/user';
         } else {
             return '/home';
         }

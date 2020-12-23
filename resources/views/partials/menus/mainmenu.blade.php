@@ -286,7 +286,7 @@
 
                                                     @auth
                                                         <li class="dropdown">
-                                                            <a class="dropdown" href="{{ route('profile.users.index') }}">
+                                                            <a class="dropdown" href="{{ route('profile.user.index') }}">
                                                                 {{ Auth::user()->name }}
                                                             </a>
                                                         </li>
