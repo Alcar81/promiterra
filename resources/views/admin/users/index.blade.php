@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Users management
+Liste des utilisateurs
 @endsection
 
 @section('content')

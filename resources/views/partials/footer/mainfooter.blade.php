@@ -8,8 +8,8 @@
                         <h4>À propos de nous</h4>
                         <ul class="list-icon">
                             <li><i class="fa fa-map-marker"></i>Québec, QC, Canada</li>
-                            <li><i class="fa fa-phone"></i> (418) 802-0277 </li>
                             <li><i class="fa fa"></i> Gauthier Robitaille Inventeur </li>
+                            <li><i class="fa fa-phone"></i> (418) 802-0277 </li>
                             <li><i class="fa fa-envelope"></i> <a href="mailto:gaut@videotron.ca">gaut@videotron.ca</a>
                             </li>
                             <li><i class="fa fa"></i> Alexandre Carignan Webmestre</li>

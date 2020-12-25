@@ -52,7 +52,7 @@ class LoginController extends Controller
         } elseif (Auth::user()->roles->pluck('name')->contains('user')) {
             return '/profile/user';
         } else {
-            return '/home';
+            return 'home';
         }
     }
 

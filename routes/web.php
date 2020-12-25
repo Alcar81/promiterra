@@ -27,7 +27,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 });
 
 Route::namespace('Profile')->prefix('profile')->name('profile.')->group(function() {
-    Route::resource('user', 'UsersProfileController', ['except' => ['show', 'create', 'store']]);
+    Route::resource('user', 'UsersProfileController');
 });
 
 Route::get('logout', 'Auth\LoginController@logout', function () {

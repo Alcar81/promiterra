@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Profile;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\Gate;
 
 class UsersProfileController extends Controller
 {
@@ -23,7 +24,7 @@ class UsersProfileController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('profile.users.index')->with('users', $users);
+        return view('profile.user.index')->with('user', $users);
     }
 
 
@@ -36,7 +37,10 @@ class UsersProfileController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $this->authorize ('manage', $user);
+        return view('profile.user.edit', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -46,9 +50,15 @@ class UsersProfileController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
-    {
-        //
+    public function update(Request $request, $id) {
+
+
+
+        $user = User::findOrFail($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->save();
+        return redirect()->route('profile.user.index')->with('status', 'Le profil a bien été mis à jour');
     }
 
     /**
@@ -59,6 +69,9 @@ class UsersProfileController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->roles()->detach();
+        $user->delete();
+
+        return redirect()->route('register');
     }
 }

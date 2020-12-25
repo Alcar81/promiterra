@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use App\Models\ { Image, User };
+use App\Policies\ { ImagePolicy, UserPolicy };
+
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -14,6 +17,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+        Image::class => ImagePolicy::class,
+        User::class => UserPolicy::class,
     ];
 
     /**
@@ -37,6 +42,8 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('delete-users', function ($user) {
             return $user->hasAnyRole(['master', 'admin']);
         });
+
+
 
        // Exemple pour une page.
        //Gate::define('delete-users', function ($user) {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Users management
+Liste des utilisateurs
 @endsection
 
 @section('content')
@@ -66,6 +66,7 @@ Users management
                                 <button type="submit" class="btn btn-primary">Modifier les informations</button>
                             </form>
                         </div>
+
 
                 </div>
             </div>
