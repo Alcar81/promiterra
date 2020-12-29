@@ -29,9 +29,19 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::namespace('Profile')->prefix('profile')->name('profile.')->group(function() {
     Route::resource('user', 'UsersProfileController');
 });
+Route::namespace('Profile')->prefix('editor')->name('editor.')->group(function() {
+    Route::resource('user', 'EditorProfileController');
+});
+
+Route::namespace('Editable')->prefix('editable')->name('ville.')->group(function() {
+    Route::resource('city', 'EditableCityController');
+});
+
+
+
 
 Route::get('logout', 'Auth\LoginController@logout', function () {
-    return abort(404);
+    return view('login');
 });
 
 

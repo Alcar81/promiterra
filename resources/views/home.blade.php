@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-    Home
+    Accueil
 @endsection
 
 @section('contenu')

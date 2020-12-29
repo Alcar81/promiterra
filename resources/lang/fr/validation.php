@@ -1,4 +1,5 @@
 <?php
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -10,6 +11,7 @@ return [
     | as the size rules. Feel free to tweak each of these messages.
     |
     */
+
     'accepted'             => 'Le champ :attribute doit être accepté.',
     'active_url'           => "Le champ :attribute n'est pas une URL valide.",
     'after'                => 'Le champ :attribute doit être une date postérieure au :date.',
@@ -87,6 +89,7 @@ return [
         'string'  => 'Le texte :attribute doit contenir au moins :min caractères.',
         'array'   => 'Le tableau :attribute doit contenir au moins :min éléments.',
     ],
+    'multiple_of'          => 'La valeur de :attribute doit être un multiple de :value',
     'not_in'               => "Le champ :attribute sélectionné n'est pas valide.",
     'not_regex'            => "Le format du champ :attribute n'est pas valide.",
     'numeric'              => 'Le champ :attribute doit contenir un nombre.',
@@ -114,6 +117,7 @@ return [
     'uploaded'             => "Le fichier du champ :attribute n'a pu être téléversé.",
     'url'                  => "Le format de l'URL de :attribute n'est pas valide.",
     'uuid'                 => 'Le champ :attribute doit être un UUID valide',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -124,11 +128,13 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
+
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -139,6 +145,7 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
+
     'attributes' => [
         'name'                  => 'nom',
         'username'              => "nom d'utilisateur",
