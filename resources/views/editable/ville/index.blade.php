@@ -1,23 +1,32 @@
 @extends('layouts.app')
 @section('title')
-Édition Villes
+Index
 @endsection
+
+@if(session()->has('info'))
+    <div class="notification is-success">
+        {{ session('info') }}
+    </div>
+@endif
+
 
 @section('content')
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center p-4">
+        <div class="col-md-6">
             <div class="card">
 
-                <div class="card-header">Index editable</div>
+                    <div class="card-body p-4">
+                       Index
 
-                    <div class="card-body">
                     </div>
 
                 </div>
+
             </div>
         </div>
 
     </div>
 
 @endsection
+

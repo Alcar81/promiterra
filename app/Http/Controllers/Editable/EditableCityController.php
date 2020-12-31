@@ -29,10 +29,10 @@ class EditableCityController extends Controller
      */
     public function create()
     {
-        $cities = City::all();
-        return view('editable.ville.create')->with('cities', $cities);
-
+        return view('editable.ville.create');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -42,7 +42,9 @@ class EditableCityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            City::create($request->all());
+
+            return redirect()->route('editor.user.index');
     }
 
     /**

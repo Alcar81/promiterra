@@ -7,7 +7,7 @@
 @section('contenu')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 p-4">
             <div class="card">
                 <div class="card-header">{{ __('Connexion') }}</div>
 
@@ -46,9 +46,10 @@
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
+
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
+                                    <label class="form-check-label pl-4 " for="remember">
                                         {{ __('Se souvenir') }}
                                     </label>
                                 </div>

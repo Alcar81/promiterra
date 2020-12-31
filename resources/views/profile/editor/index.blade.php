@@ -10,14 +10,14 @@
     </div>
     @endif
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center p-4">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Équipements</div>
 
-                    <div class="card-body">
+                    <div class="card-body p-4">
 
-                        <div>
+                        <div class="row justify-content-center">
                             <button class="btn btn-primary" href="">Armes</button>
                             <button class="btn btn-primary" href="">Armures</button>
                             <button class="btn btn-primary" href="">Boucliers</button>

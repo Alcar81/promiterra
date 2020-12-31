@@ -47,6 +47,7 @@ class LoginController extends Controller
             return '/profile/master';
         } elseif (Auth::user()->roles->pluck('name')->contains('editor')) {
             return '/profile/editor';
+
         } elseif (Auth::user()->roles->pluck('name')->contains('superuser')) {
             return '/profile/superuser';
         } elseif (Auth::user()->roles->pluck('name')->contains('user')) {

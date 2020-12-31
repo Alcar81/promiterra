@@ -16,9 +16,9 @@ class CreateCitiesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->year('year')->nullable();
+            $table->bigInteger('year')->nullable();
             $table->string('house')->nullable();;
-            $table->year('yearfoundation')->nullable();;
+            $table->bigInteger('yearfoundation')->nullable();;
             $table->string('size')->nullable();;
             $table->string('weather')->nullable();;
             $table->string('accent1')->nullable();

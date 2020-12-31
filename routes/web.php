@@ -38,8 +38,6 @@ Route::namespace('Editable')->prefix('editable')->name('ville.')->group(function
 });
 
 
-
-
 Route::get('logout', 'Auth\LoginController@logout', function () {
     return view('login');
 });

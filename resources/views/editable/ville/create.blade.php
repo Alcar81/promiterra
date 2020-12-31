@@ -3,21 +3,27 @@
 Édition Villes
 @endsection
 
+@if(session()->has('info'))
+    <div class="notification is-success">
+        {{ session('info') }}
+    </div>
+@endif
+
 
 @section('content')
 
-    <div class="row justify-content-center pt-4">
+    <div class="row justify-content-center p-4">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header">Création d’une ville</div>
-                    <div class="card-body p-4">
 
+                    <div class="card-body p-4">
                         <form class="form-floating">
+
                             <div class="container border rounded p-4">
 
                                 <div>
-                                    <label for="floatingSelect">Importer une ville</label>
-                                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="importCity">{{ __('Importer une ville') }}</label>
+                                                <select class="form-select" id="importCity" aria-label="Floating label select example">
                                                     <option selected></option>
                                                     @foreach(App\Models\City:: get() as $ville)
                                                         <option value="{{ $ville->id }}">{{ $ville->name }}</option>
@@ -26,8 +32,8 @@
                                 </div>
 
                                 <div class="pt-2">
-                                    <label for="floatingSelect">Année désirée</label>
-                                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="yearwanted">{{ __('Année désirée') }}</label>
+                                                <select class="form-select" id="year" aria-label="Floating label select example">
                                                     <option selected></option>
                                                     @foreach(App\Models\City:: get() as $ville)
                                                         <option value="{{ $ville->id }}">{{ $ville->year }}</option>
@@ -41,23 +47,26 @@
 
                             </div>
 
+                        </form>
 
+                        <form class="form-floating" action="{{ route('ville.city.store') }}" method="POST">
+                        @csrf
 
                             <div class="container border rounded p-4">
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">En l’an :</label>
-                                    <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="year">{{__('En l’an :') }}</label>
+                                    <input type="text" class="form-control" id="year" placeholder="" value="" name="year" autofocus>
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Nom</label>
-                                    <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="name">{{ __('Nom') }}</label>
+                                    <input type="text" class="form-control" id="name" placeholder="" value="" name="name">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Maison</label>
-                                    <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="house">{{ __('Maison') }}</label>
+                                    <input type="text" class="form-control" id="house" placeholder="" value="" name="house">
                                 </div>
 
                             </div>
@@ -65,13 +74,13 @@
                             <div class="container border rounded p-4">
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Année de fondation</label>
-                                    <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="yearfoundation">{{ __('Année de fondation') }}</label>
+                                    <input type="text" class="form-control" id="yearfoundation" placeholder="" value="" name="yearfoundation">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Taille</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="size">{{ __('Taille') }}</label>
+                                        <select class="form-select" id="size" aria-label="Floating label select example" name="size">
                                         <option selected>Ville</option>
                                         <option value="Capitale">Capitale</option>
                                         <option value="Cité">Cité</option>
@@ -82,67 +91,76 @@
                                 </div>
 
                                 <div class="form-floating pt-2">
-                                    <label for="floatingInputValue">Climat</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="weather">{{ __('Climat') }}</label>
+                                        <input type="text" class="form-control" id="weather" placeholder="" value="" name="weather">
                                 </div>
 
                                 <div class="form-floating">
 
-                                    <label for="floatingSelect">Accents régionales</label>
+                                    <label for="accent1">{{ __('Accents régionales') }}</label>
                                     <div>
-                                            <input type="email" class="form-control" id="floatingInputValue" placeholder="Accent 1, s'il n'existe pas" value="">
-                                                <select class="form-select pt-2" id="floatingSelect" aria-label="Floating label select example">
+                                            <div>
+                                                <select class="form-select pt-2" id="accent1" aria-label="Floating label select example" name="accent1">
                                                     <option selected></option>
                                                         @foreach(App\Models\City:: get() as $ville)
                                                             <option value="{{ $ville->accent1 }}">{{ $ville->accent1}}</option>
                                                         @endforeach
                                                 </select>
+                                            </div>
+                                            <div class="pt-2">
+                                                <input type="text" class="form-control pt-2" id="accent1" placeholder="Accent 1, s'il n'existe pas" value="" name="accent1">
+                                            </div>
                                     </div>
                                     <div class="pt-2">
-                                            <input type="email" class="form-control" id="floatingInputValue" placeholder="Accent 2, s'il n'existe pas" value="">
-                                                <select class="form-select pt-2" id="floatingSelect" aria-label="Floating label select example">
+                                            <div>
+                                                <select class="form-select pt-2" id="accent2" aria-label="Floating label select example" name="accent2">
                                                     <option selected></option>
                                                         @foreach(App\Models\City:: get() as $ville)
                                                             <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
                                                         @endforeach
                                                 </select>
+                                            </div>
+                                            <div class="pt-2">
+                                                <input type="text" class="form-control pt-2" id="accent2" placeholder="Accent 2, s'il n'existe pas" value="" name="accent2">
+                                            </div>
                                     </div>
                                 </div>
 
 
                                 <div class="form-floating pt-2">
-                                    <label for="floatingInputValue">Spécialité locale</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="localSpeciality">{{ __('Spécialité locale') }}</label>
+                                        <input type="text" class="form-control" id="localSpeciality" placeholder="" value="" name="localSpeciality">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Maire ou mairesse</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="mayor">{{ __('Maire ou mairesse') }}</label>
+                                        <input type="text" class="form-control" id="mayor" placeholder="" value="" name="mayor">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Population urbaine</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="urbanPopulaiton">{{ __('Population urbaine') }}</label>
+                                        <input type="text" class="form-control" id="urbanPopulaiton" placeholder="" value="" name="urbanPopulaiton">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Population régionale</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="ruralPopulaiton">{{ __('Population régionale') }}</label>
+                                        <input type="text" class="form-control" id="ruralPopulaiton" placeholder="" value="" name="ruralPopulaiton">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Commerce maximal</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="tradeMax">{{ __('Commerce maximal') }}</label>
+                                        <input type="text" class="form-control" id="tradeMax" placeholder="" value="" name="tradeMax">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Boisson locale</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="localDrink">{{ __('Boisson locale') }}</label>
+                                        <input type="text" class="form-control" id="localDrink" placeholder="" value="" name="localDrink">
                                 </div>
-
+                            </div>
+                            <div class="container border rounded p-4">
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Éducation</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="education">{{ __('Éducation') }}</label>
+                                        <select class="form-select" id="education" aria-label="Floating label select example" name="education">
                                             <option selected></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -158,8 +176,8 @@
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Fortification</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="fortification">{{ __('Fortification') }}</label>
+                                        <select class="form-select" id="fortification" aria-label="Floating label select example" name="fortification">
                                             <option selected></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -175,8 +193,8 @@
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Loi et l’ordre</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="lawAndOrder">{{ __('Loi et l’ordre') }}</label>
+                                        <select class="form-select" id="lawAndOrder" aria-label="Floating label select example" name="lawAndOrder">
                                             <option selected></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -192,8 +210,8 @@
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Technologie</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="technology">{{ __('Technologie') }}</label>
+                                        <select class="form-select" id="technology" aria-label="Floating label select example" name="technology">
                                             <option selected></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -209,8 +227,8 @@
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Richesse</label>
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="wealth">{{ __('Richesse') }}</label>
+                                        <select class="form-select" id="wealth" aria-label="Floating label select example" name="wealth">
                                             <option selected></option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -229,108 +247,116 @@
                             </div>
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
-                                    <label for="floatingInputGrid">Économie</label>
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="">
+                                    <label for="economy">{{ __('Économie') }}</label>
+                                        <input type="text" class="form-control" id="economy1" placeholder="" value="" name="economy1">
+                                        <input type="text" class="form-control" id="economy2" placeholder="" value="" name="economy2">
+                                        <input type="text" class="form-control" id="economy3" placeholder="" value="" name="economy3">
+                                        <input type="text" class="form-control" id="economy4" placeholder="" value="" name="economy4">
+                                        <input type="text" class="form-control" id="economy5" placeholder="" value="" name="economy5">
+                                        <input type="text" class="form-control" id="economy6" placeholder="" value="" name="economy6">
+                                        <input type="text" class="form-control" id="economy7" placeholder="" value="" name="economy7">
+                                        <input type="text" class="form-control" id="economy8" placeholder="" value="" name="economy8">
+                                        <input type="text" class="form-control" id="economy9" placeholder="" value="" name="economy9">
+                                        <input type="text" class="form-control" id="economy10" placeholder="" value="" name="economy10">
                                 </div>
                             </div>
 
                             <div class="container border rounded p-4">
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Offres</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="offers">{{ __('Offres') }}</label>
+                                        <input type="text" class="form-control" id="offer1" placeholder="" value="" name="offer1">
+                                        <input type="text" class="form-control" id="offer2" placeholder="" value="" name="offer2">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Demandes</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="demands">{{ __('Demandes') }}</label>
+                                        <input type="text" class="form-control" id="demand1" placeholder="" value="" name="demand1">
+                                        <input type="text" class="form-control" id="demand2" placeholder="" value="" name="demand2">
                                     </div>
                             </div>
 
                             <div class="container border rounded p-4">
 
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Villes voisines 1</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="Si nouvelle ville" value="">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                                <option selected></option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-
-                                </div>
-
-                                <div class="form-floating pt-2">
-                                    <label for="floatingInputValue">Offres ville voisine 1</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="nextCity1">{{ __('Villes voisines 1') }}</label>
+                                                <div>
+                                                    <select class="form-select" id="nextCity1" aria-label="Floating label select example" name="nextCity1">
+                                                            <option selected></option>
+                                                        @foreach(App\Models\City:: get() as $ville)
+                                                            <option value="{{ $ville->id }}">{{ $ville->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <input type="text" class="form-control" id="nextCity1" placeholder="Si nouvelle ville" value="" name="nextCity1">
+                                                </div>
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Demandes ville voisine 1</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="offerNextCity1">{{ __('Offres ville voisine 1') }}</label>
+                                            <input type="text" class="form-control" id="offer1NextCity1" placeholder="" value="" name="offer1NextCity1">
+                                            <input type="text" class="form-control" id="offer2NextCity1" placeholder="" value="" name="offer2NextCity1">
+                                </div>
+
+                                <div class="form-floating pt-2">
+                                    <label for="demandNextCity1">{{ __('Demandes ville voisine 1') }}</label>
+                                            <input type="text" class="form-control" id="demand1NextCity1" placeholder="" value="" name="demand1NextCity1">
+                                            <input type="text" class="form-control" id="demand2NextCity1" placeholder="" value="" name="demand2NextCity1">
                                 </div>
                             </div>
 
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
-                                    <label for="floatingSelect">Villes voisines 2</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="Si nouvelle ville" value="">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                    <label for="nextCity2">{{ __('Villes voisines 2') }}</label>
+                                        <div>
+                                            <select class="form-select" id="nextCity2" aria-label="Floating label select example" name="nextCity2">
                                                 <option selected></option>
                                                 @foreach(App\Models\City:: get() as $ville)
                                                 <option value="{{ $ville->id }}">{{ $ville->name }}</option>
                                                 @endforeach
                                             </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control" id="nextCity2" placeholder="Si nouvelle ville" value="" name="nextCity2">
+                                        </div>
+
                                 </div>
 
                                 <div class="form-floating pt-2">
-                                    <label for="floatingInputValue">Offres ville voisine 2</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="offerNextCity2">{{ __('Offres ville voisine 2') }}</label>
+                                        <input type="text" class="form-control" id="offer1NextCity2" placeholder="" value="" name="offer1NextCity2">
+                                        <input type="text" class="form-control" id="offer2NextCity2" placeholder="" value="" name="offer2NextCity2">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Demandes ville voisine 2</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="demandNextCity2">{{ __('Demandes ville voisine 2') }}</label>
+                                        <input type="text" class="form-control" id="demand1NextCity2" placeholder="" value="" name="demand1NextCity2">
+                                        <input type="text" class="form-control" id="demand2NextCity2" placeholder="" value="" name="demand2NextCity2">
                                 </div>
 
                             </div>
 
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
-                                    <label for="floatingTextarea2">Histoire</label>
-                                            <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <label for="story">{{ __('Histoire') }}</label>
+                                            <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="story" style="height: 100px" name="story"></textarea>
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Version</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="version">{{ __('Version') }}</label>
+                                        <input type="text" class="form-control" id="version" placeholder="" value="" name="version">
 
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="floatingInputValue">Chapitre</label>
-                                        <input type="email" class="form-control" id="floatingInputValue" placeholder="" value="">
+                                    <label for="chapter">{{ __('Chapitre') }}</label>
+                                        <input type="text" class="form-control" id="chapter" placeholder="" value="" name="chapter">
                                 </div>
                             </div>
 
                             <div class="container pt-4">
-                                <div><button type="submit" class="btn btn-primary"><i class="fa fa-btn fa-sign-in"></i>Sauvegarder</button></div>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-btn fa-sign-in"></i>Sauvegarder</button></div>
                             </div>
 
                         </form>
@@ -345,3 +371,4 @@
     </div>
 
 @endsection
+
