@@ -13,9 +13,10 @@
                             <li><i class="fa fa-envelope"></i> <a href="mailto:gaut@videotron.ca">gaut@videotron.ca</a>
                             </li>
                             <li><i class="fa fa"></i> Alexandre Carignan Webmestre</li>
+                            <li><i class="fa fa-phone"></i> (418) 440-5010 </li>
                             <li><i class="fa fa-envelope"></i> <a href="mailto:alexandre.carignan@alxmultimedia.com">alexandre.carignan@alxmultimedia.com</a>
                             </li>
-                            <li><i class="fa fa-phone"></i> (418) 440-5010 </li>
+
                             <li>
                                 <br><i class="fa fa-clock-o"></i>Lundi - Vendredi: <strong>08:00 - 22:00</strong>
                                 <br>Samedi, Dimanche: <strong>Fermé</strong>

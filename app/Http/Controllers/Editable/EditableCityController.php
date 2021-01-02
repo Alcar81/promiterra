@@ -65,10 +65,19 @@ class EditableCityController extends Controller
      *
      * @param  \App\models\city  $city
      * @return \Illuminate\Http\Response
+     * if (Gate::denies('edit-users')) {
+     *       return redirect()->route('home');
+    *  }
+     *
      */
-    public function edit(city $city)
+    public function edit($id)
     {
-        //
+
+        return view('editable.ville.edit', [
+
+            'ville' => City::findOrFail($id)
+        ]);
+
     }
 
     /**
@@ -78,10 +87,23 @@ class EditableCityController extends Controller
      * @param  \App\models\city  $city
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, city $city)
+    public function update(Request $request, $id)
     {
-        //
+
+        $ville = $request->all();
+        $ville = City::find($id);
+        $ville->update($request->all());
+
+        return redirect()->route('editor.user.index');
+
     }
+
+
+
+
+
+
+
 
     /**
      * Remove the specified resource from storage.
