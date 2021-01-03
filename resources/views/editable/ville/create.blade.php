@@ -9,6 +9,14 @@
     </div>
 @endif
 
+<head2>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head2>
 
 @section('content')
 
@@ -354,10 +362,10 @@
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="story">{{ __('Histoire') }}</label>
-                                            <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="story" style="height: 100px" name="story"></textarea>
+                                            <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="summernote" style="height: 100px" name="story"></textarea>
                                 </div>
 
-                                <div class="form-floating">
+                                <div class="form-floating pt-4">
                                     <label for="version">{{ __('Version') }}</label>
                                         <input type="text" class="form-control" id="version" placeholder="" value="" name="version">
 
@@ -384,6 +392,15 @@
         </div>
 
     </div>
+
+<!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script type="text/javascript">
+    $('#summernote').summernote({
+        height: 400
+    });
+</script>
 
 @endsection
 
