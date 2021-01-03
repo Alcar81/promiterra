@@ -60,7 +60,7 @@ class CreateCitiesTable extends Migration
             $table->string('demand2NextCity2')->nullable();
             $table->text('story')->nullable();
             $table->string('version')->nullable();
-            $table->year('chapter')->nullable();
+            $table->Integer('chapter')->nullable();
             $table->timestamps();
         });
     }

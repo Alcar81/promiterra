@@ -13,7 +13,10 @@
 
                     <div class="card-header">
                         <div class="row justify-content-center pt-4">
-                            <p><h1><strong>{{ $ville->name }}</strong></h1><a href="{{ route('ville.city.edit', $ville->id) }}">( modifier )</a></p>
+                            <p><h1><strong>{{ $ville->name }}</strong></h1></p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <p><a href="{{ route('ville.city.edit', $ville->id) }}">( modifier / supprimer )</a></p>
                         </div>
                         <div>
                             <p>En l’an {{ $ville->year }}</p>

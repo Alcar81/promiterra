@@ -111,8 +111,16 @@ class EditableCityController extends Controller
      * @param  \App\models\city  $city
      * @return \Illuminate\Http\Response
      */
-    public function destroy(city $city)
+    public function destroy(Request $request, $id)
     {
-        //
+
+        $ville = $request->all();
+        $ville = City::find($id);
+        $ville->delete();
+
+        return redirect()->route('editor.user.index');
     }
+
+
+
 }
