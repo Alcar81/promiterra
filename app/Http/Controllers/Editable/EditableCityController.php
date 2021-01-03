@@ -60,6 +60,13 @@ class EditableCityController extends Controller
         ]);
     }
 
+    public function showGuest($id)
+    {
+        return view('editable.ville.showGuest', [
+            'ville' => City::findOrFail($id)
+        ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

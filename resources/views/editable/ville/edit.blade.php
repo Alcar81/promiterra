@@ -68,6 +68,7 @@ Mise à jour | {{ $ville->name }}
                                         <option selected>{{ old('year') ?? $ville->size }}</option>
                                         <option value="Capitale">Capitale</option>
                                         <option value="Cité">Cité</option>
+                                        <option value="Hameau">Ville</option>
                                         <option value="Métropole">Métropole</option>
                                         <option value="Village">Village</option>
                                         <option value="Ville">Ville</option>

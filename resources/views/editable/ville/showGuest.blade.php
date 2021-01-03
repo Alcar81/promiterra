@@ -10,20 +10,27 @@
         <div class="col-md-8">
             <div class="card">
 
+                <div class="row justify-content-center">
+                    <table class="table">
+                        @foreach($cities->chunk(8) as $villes)
+                            <div class="justify-content-center">
+                                <tbody>
+                                    @foreach($villes as $ville)
+                                        <div class="col-3">
+                                            <a href="{{ route('ville.city.showGuest', $ville->id) }}">{{ $ville->name }}</a>
+                                        </div>
+                                    @endforeach
+                                </tbody>
+                            </div>
+                        @endforeach
+                    </table>
+                </div>
 
                     <div class="card-header">
                         <div class="row justify-content-center pt-4">
                             <p><h1><strong>{{ $ville->name }}</strong></h1></p>
                         </div>
-                        <div class="row justify-content-center">
-                            <p>
-                                <a href="{{ route('ville.city.edit', $ville->id) }}">
-                                @can ('edit-users')
-                                    ( modifier / supprimer )
-                                @endcan
-                                </a>
-                            </p>
-                        </div>
+
                         <div>
                             <p>En l’an {{ $ville->year }}</p>
                         </div>
@@ -121,23 +128,7 @@
                                 </div>
                         </div>
 
-                        <div class="container border rounded p-4">
-                            <div>
-                                <p><strong>Offres</strong></p>
-                                    <div class="border rounded p-3">
-                                        <p>{{ $ville->offer1 }}</p>
-                                        <p>{{ $ville->offer2 }}</p>
-                                    </div>
-                            </div>
 
-                            <div class="pt-2">
-                                <p><strong>Demandes</strong></p>
-                                    <div class="border rounded p-3">
-                                        <p>{{ $ville->demand1 }}</p>
-                                        <p>{{ $ville->demand2 }}</p>
-                                    </div>
-                            </div>
-                        </div>
 
                         <div class="container border rounded p-4">
                             <p><strong>Villes voisines</strong></p>
@@ -156,20 +147,6 @@
                                         </div>
                                 </div>
 
-                                <div class="border rounded p-4">
-                                    <p><strong>{{ $ville->nextCity2 }}</strong></p>
-                                        <div class="border rounded p-3">
-                                            <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity2 }}</p>
-                                            <p>{{ $ville->offer2NextCity2 }}</p>
-                                        </div>
-
-                                        <div class="border rounded p-3">
-                                            <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity2 }}</p>
-                                            <p>{{ $ville->demand2NextCity2 }}</p>
-                                        </div>
-                                </div>
                         </div>
 
                         <div class="container border rounded p-4">
