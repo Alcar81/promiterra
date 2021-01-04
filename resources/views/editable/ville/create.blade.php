@@ -432,7 +432,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="pt-5">
+                                        <div class="pt-2">
                                             <input type="text" class="form-control" id="nextCity5" placeholder="Si nouvelle ville" value="" name="nextCity5">
                                         </div>
 
