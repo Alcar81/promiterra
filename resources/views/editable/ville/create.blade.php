@@ -105,7 +105,7 @@
                                         <option selected></option>
                                         <option value="Capitale">Capitale</option>
                                         <option value="Cité">Cité</option>
-                                        <option value="Hameau">Ville</option>
+                                        <option value="Hameau">Hameau</option>
                                         <option value="Métropole">Métropole</option>
                                         <option value="Village">Village</option>
                                         <option value="Ville">Ville</option>
@@ -358,6 +358,131 @@
                                 </div>
 
                             </div>
+
+                            <div class="container border rounded p-4">
+                                <div class="form-floating">
+                                    <label for="nextCity3">{{ __('Villes voisines 3') }}</label>
+                                        <div>
+                                            <select class="form-select" id="nextCity3" aria-label="Floating label select example" name="nextCity3">
+                                                <option selected></option>
+                                                @foreach(App\Models\City:: get() as $ville)
+                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control" id="nextCity3" placeholder="Si nouvelle ville" value="" name="nextCity3">
+                                        </div>
+
+                                </div>
+
+                                <div class="form-floating pt-2">
+                                    <label for="offerNextCity3">{{ __('Offres ville voisine 3') }}</label>
+                                        <input type="text" class="form-control" id="offer1NextCity3" placeholder="" value="" name="offer1NextCity3">
+                                        <input type="text" class="form-control" id="offer2NextCity3" placeholder="" value="" name="offer2NextCity3">
+                                </div>
+
+                                <div class="form-floating">
+                                    <label for="demandNextCity3">{{ __('Demandes ville voisine 3') }}</label>
+                                        <input type="text" class="form-control" id="demand1NextCity3" placeholder="" value="" name="demand1NextCity3">
+                                        <input type="text" class="form-control" id="demand2NextCity3" placeholder="" value="" name="demand2NextCity3">
+                                </div>
+
+                            </div>
+
+                            <div class="container border rounded p-4">
+                                <div class="form-floating">
+                                    <label for="nextCity4">{{ __('Villes voisines 4') }}</label>
+                                        <div>
+                                            <select class="form-select" id="nextCity4" aria-label="Floating label select example" name="nextCity4">
+                                                <option selected></option>
+                                                @foreach(App\Models\City:: get() as $ville)
+                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control" id="nextCity4" placeholder="Si nouvelle ville" value="" name="nextCity4">
+                                        </div>
+
+                                </div>
+
+                                <div class="form-floating pt-2">
+                                    <label for="offerNextCity4">{{ __('Offres ville voisine 4') }}</label>
+                                        <input type="text" class="form-control" id="offer1NextCity4" placeholder="" value="" name="offer1NextCity4">
+                                        <input type="text" class="form-control" id="offer2NextCity4" placeholder="" value="" name="offer2NextCity4">
+                                </div>
+
+                                <div class="form-floating">
+                                    <label for="demandNextCity4">{{ __('Demandes ville voisine 4') }}</label>
+                                        <input type="text" class="form-control" id="demand1NextCity4" placeholder="" value="" name="demand1NextCity4">
+                                        <input type="text" class="form-control" id="demand2NextCity4" placeholder="" value="" name="demand2NextCity4">
+                                </div>
+
+                            </div>
+
+                            <div class="container border rounded p-4">
+                                <div class="form-floating">
+                                    <label for="nextCity5">{{ __('Villes voisines 5') }}</label>
+                                        <div>
+                                            <select class="form-select" id="nextCity5" aria-label="Floating label select example" name="nextCity5">
+                                                <option selected></option>
+                                                @foreach(App\Models\City:: get() as $ville)
+                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-5">
+                                            <input type="text" class="form-control" id="nextCity5" placeholder="Si nouvelle ville" value="" name="nextCity5">
+                                        </div>
+
+                                </div>
+
+                                <div class="form-floating pt-2">
+                                    <label for="offerNextCity5">{{ __('Offres ville voisine 5') }}</label>
+                                        <input type="text" class="form-control" id="offer1NextCity5" placeholder="" value="" name="offer1NextCity5">
+                                        <input type="text" class="form-control" id="offer2NextCity5" placeholder="" value="" name="offer2NextCity5">
+                                </div>
+
+                                <div class="form-floating">
+                                    <label for="demandNextCity5">{{ __('Demandes ville voisine 5') }}</label>
+                                        <input type="text" class="form-control" id="demand1NextCity5" placeholder="" value="" name="demand1NextCity5">
+                                        <input type="text" class="form-control" id="demand2NextCity5" placeholder="" value="" name="demand2NextCity5">
+                                </div>
+
+                            </div>
+
+                            <div class="container border rounded p-4">
+                                <div class="form-floating">
+                                    <label for="nextCity6">{{ __('Villes voisines 6') }}</label>
+                                        <div>
+                                            <select class="form-select" id="nextCity6" aria-label="Floating label select example" name="nextCity6">
+                                                <option selected></option>
+                                                @foreach(App\Models\City:: get() as $ville)
+                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control" id="nextCity6" placeholder="Si nouvelle ville" value="" name="nextCity6">
+                                        </div>
+
+                                </div>
+
+                                <div class="form-floating pt-2">
+                                    <label for="offerNextCity6">{{ __('Offres ville voisine 6') }}</label>
+                                        <input type="text" class="form-control" id="offer1NextCity6" placeholder="" value="" name="offer1NextCity6">
+                                        <input type="text" class="form-control" id="offer2NextCity6" placeholder="" value="" name="offer2NextCity6">
+                                </div>
+
+                                <div class="form-floating">
+                                    <label for="demandNextCity6">{{ __('Demandes ville voisine 6') }}</label>
+                                        <input type="text" class="form-control" id="demand1NextCity6" placeholder="" value="" name="demand1NextCity6">
+                                        <input type="text" class="form-control" id="demand2NextCity6" placeholder="" value="" name="demand2NextCity6">
+                                </div>
+
+                            </div>
+
 
                             <div class="container border rounded p-4">
                                 <div class="form-floating">

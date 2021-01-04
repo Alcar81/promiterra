@@ -60,11 +60,7 @@
                             </div>
 
                             <div>
-                                <p><strong>Accent rédional 1 : </strong>{{ $ville->accent1 }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Accent rédional 2 : </strong>{{ $ville->accent2 }}</p>
+                                <p><strong>Accents régionaux: </strong>{{ $ville->accent1 }}, {{ $ville->accent2 }}</p>
                             </div>
 
                             <div>
