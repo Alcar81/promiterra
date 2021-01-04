@@ -60,7 +60,7 @@
                             </div>
 
                             <div>
-                                <p><strong>Accents régionaux: </strong>{{ $ville->accent1 }}, {{ $ville->accent2 }}</p>
+                                <p><strong>Accents régionaux: </strong>{{ $ville->accent1 }} {{ $ville->accent2 }}</p>
                             </div>
 
                             <div>
@@ -113,8 +113,7 @@
                         <div class="container border rounded p-4">
                             <p><strong>Économie</strong></p>
                                 <div>
-                                    <p>{{ $ville->economy1 }}, {{ $ville->economy2 }}, {{ $ville->economy3 }}, {{ $ville->economy4 }}, {{ $ville->economy5 }}, {{ $ville->economy6 }}, {{ $ville->economy7 }}, {{ $ville->economy8 }}, {{ $ville->economy9 }}, {{ $ville->economy10 }}</p>
-
+                                    <p>{{ $ville->economy1 }} {{ $ville->economy2 }} {{ $ville->economy3 }} {{ $ville->economy4 }} {{ $ville->economy5 }} {{ $ville->economy6 }} {{ $ville->economy7 }} {{ $ville->economy8 }} {{ $ville->economy9 }} {{ $ville->economy10 }}</p>
                                 </div>
                         </div>
 
@@ -122,14 +121,14 @@
                             <div>
                                 <p><strong>Offres</strong></p>
                                     <div class="border rounded p-3">
-                                        <p>{{ $ville->offer1 }}, {{ $ville->offer2 }}</p>
+                                        <p>{{ $ville->offer1 }} {{ $ville->offer2 }}</p>
                                     </div>
                             </div>
 
                             <div class="pt-2">
                                 <p><strong>Demandes</strong></p>
                                     <div class="border rounded p-3">
-                                        <p>{{ $ville->demand1 }}, {{ $ville->demand2 }}</p>
+                                        <p>{{ $ville->demand1 }} {{ $ville->demand2 }}</p>
                                     </div>
                             </div>
                         </div>
@@ -140,12 +139,12 @@
                                     <p><strong>{{ $ville->nextCity1 }}</strong></p>
                                         <div class="border rounded p-3">
                                             <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity1 }}, {{ $ville->offer2NextCity1 }}</p>
+                                            <p>{{ $ville->offer1NextCity1 }} {{ $ville->offer2NextCity1 }}</p>
                                         </div>
 
                                         <div class="border rounded p-3">
                                             <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity1 }}, {{ $ville->demand2NextCity1 }}</p>
+                                            <p>{{ $ville->demand1NextCity1 }} {{ $ville->demand2NextCity1 }}</p>
                                         </div>
                                 </div>
 
@@ -153,12 +152,12 @@
                                     <p><strong>{{ $ville->nextCity2 }}</strong></p>
                                         <div class="border rounded p-3">
                                             <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity2 }}, {{ $ville->offer2NextCity2 }}</p>
+                                            <p>{{ $ville->offer1NextCity2 }} {{ $ville->offer2NextCity2 }}</p>
                                         </div>
 
                                         <div class="border rounded p-3">
                                             <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity2 }}, {{ $ville->demand2NextCity2 }}</p>
+                                            <p>{{ $ville->demand1NextCity2 }} {{ $ville->demand2NextCity2 }}</p>
                                         </div>
                                 </div>
                         </div>
