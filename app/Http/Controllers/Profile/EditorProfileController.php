@@ -25,9 +25,6 @@ class EditorProfileController extends Controller
      */
     public function index()
     {
-        if (Gate::denies('edit-users')) {
-            return redirect()->route('login');
-        }
 
         $cities = City::all();
         // tu sélectionnes toutes les entrées de la table 'cities'

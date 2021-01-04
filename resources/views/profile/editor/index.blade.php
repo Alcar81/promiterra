@@ -46,7 +46,7 @@
                                     <tbody>
                                         @foreach($villes as $ville)
                                             <div class="col-3">
-                                                <a href="{{ route('ville.city.show', $ville->id) }}">{{ $ville->name }}</a>
+                                                <a href="{{ route('ville.city.show', $ville->id) }}"><p>{{ $ville->name }}</p></a>
                                             </div>
                                         @endforeach
                                     </tbody>

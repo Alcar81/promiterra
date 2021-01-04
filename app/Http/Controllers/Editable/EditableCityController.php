@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Editable;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\Gate;
 
 class EditableCityController extends Controller
 {
@@ -14,10 +15,7 @@ class EditableCityController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     public function index()
     {

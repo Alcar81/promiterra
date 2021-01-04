@@ -107,7 +107,7 @@ Mise à jour | {{ $ville->name }}
                                     <div class="pt-2">
                                             <div>
                                                 <select class="form-select pt-2" id="accent2" aria-label="Floating label select example" name="accent2">
-                                                    <option selected>{{ old('accent1') ?? $ville->accent2 }}</option>
+                                                    <option selected>{{ old('accent2') ?? $ville->accent2 }}</option>
                                                         @foreach(App\Models\City:: get() as $ville)
                                                             <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
                                                         @endforeach
@@ -117,6 +117,23 @@ Mise à jour | {{ $ville->name }}
                                                 <input type="text" class="form-control pt-2" id="accent2" placeholder="Accent 2, s'il n'existe pas" value="" name="accent2">
                                             </div>
                                     </div>
+
+                                    <div class="pt-2">
+                                        <div>
+                                            <select class="form-select pt-2" id="accent3" aria-label="Floating label select example" name="accent3">
+                                                <option selected>{{ old('accent3') ?? $ville->accent3 }}</option>
+                                                    @foreach(App\Models\City:: get() as $ville)
+                                                        <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
+                                                    @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="Accent 3, s'il n'existe pas" value="" name="accent3">
+                                        </div>
+
+                                    </div>
+                                </div>
+
                                 </div>
 
 
@@ -127,17 +144,17 @@ Mise à jour | {{ $ville->name }}
 
                                 <div class="form-floating">
                                     <label for="mayor">{{ __('Maire ou mairesse') }}</label>
-                                        <input type="text" class="form-control" id="mayor" placeholder="" value="{{ old('mayor) ?? $ville->mayor }}" name="mayor">
+                                        <input type="text" class="form-control" id="mayor" placeholder="" value="{{ old('mayor') ?? $ville->mayor }}" name="mayor">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="urbanPopulaiton">{{ __('Population urbaine') }}</label>
-                                        <input type="text" class="form-control" id="urbanPopulaiton" placeholder="" value="{{ old('urbanPopulaiton') ?? $ville->urbanPopulaiton }}" name="urbanPopulaiton">
+                                    <label for="urbanPopulation">{{ __('Population urbaine') }}</label>
+                                        <input type="text" class="form-control" id="urbanPopulation" placeholder="" value="{{ old('urbanPopulation') ?? $ville->urbanPopulation }}" name="urbanPopulation">
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="ruralPopulaiton">{{ __('Population régionale') }}</label>
-                                        <input type="text" class="form-control" id="ruralPopulaiton" placeholder="" value="{{ old('ruralPopulaiton') ?? $ville->ruralPopulaiton }}" name="ruralPopulaiton">
+                                    <label for="ruralPopulation">{{ __('Population régionale') }}</label>
+                                        <input type="text" class="form-control" id="ruralPopulation" placeholder="" value="{{ old('ruralPopulation') ?? $ville->ruralPopulation }}" name="ruralPopulation">
                                 </div>
 
                                 <div class="form-floating">
@@ -236,8 +253,8 @@ Mise à jour | {{ $ville->name }}
                                         </select>
                                 </div>
 
-
                             </div>
+
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="economy">{{ __('Économie') }}</label>

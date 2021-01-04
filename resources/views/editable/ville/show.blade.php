@@ -72,11 +72,11 @@
                             </div>
 
                             <div>
-                                <p><strong>Population urbaine : </strong>{{ $ville->urbanPopulaiton }}</p>
+                                <p><strong>Population urbaine : </strong>{{ $ville->urbanPopulation }}</p>
                             </div>
 
                             <div>
-                                <p><strong>Population rural : </strong>{{ $ville->ruralPopulaiton }}</p>
+                                <p><strong>Population rural : </strong>{{ $ville->ruralPopulation }}</p>
                             </div>
 
                             <div>
@@ -113,16 +113,8 @@
                         <div class="container border rounded p-4">
                             <p><strong>Économie</strong></p>
                                 <div>
-                                    <p>{{ $ville->economy1 }}</p>
-                                    <p>{{ $ville->economy2 }}</p>
-                                    <p>{{ $ville->economy3 }}</p>
-                                    <p>{{ $ville->economy4 }}</p>
-                                    <p>{{ $ville->economy5 }}</p>
-                                    <p>{{ $ville->economy6 }}</p>
-                                    <p>{{ $ville->economy7 }}</p>
-                                    <p>{{ $ville->economy8 }}</p>
-                                    <p>{{ $ville->economy9 }}</p>
-                                    <p>{{ $ville->economy10 }}</p>
+                                    <p>{{ $ville->economy1 }}, {{ $ville->economy2 }}, {{ $ville->economy3 }}, {{ $ville->economy4 }}, {{ $ville->economy5 }}, {{ $ville->economy6 }}, {{ $ville->economy7 }}, {{ $ville->economy8 }}, {{ $ville->economy9 }}, {{ $ville->economy10 }}</p>
+
                                 </div>
                         </div>
 
@@ -130,16 +122,14 @@
                             <div>
                                 <p><strong>Offres</strong></p>
                                     <div class="border rounded p-3">
-                                        <p>{{ $ville->offer1 }}</p>
-                                        <p>{{ $ville->offer2 }}</p>
+                                        <p>{{ $ville->offer1 }}, {{ $ville->offer2 }}</p>
                                     </div>
                             </div>
 
                             <div class="pt-2">
                                 <p><strong>Demandes</strong></p>
                                     <div class="border rounded p-3">
-                                        <p>{{ $ville->demand1 }}</p>
-                                        <p>{{ $ville->demand2 }}</p>
+                                        <p>{{ $ville->demand1 }}, {{ $ville->demand2 }}</p>
                                     </div>
                             </div>
                         </div>
@@ -150,14 +140,12 @@
                                     <p><strong>{{ $ville->nextCity1 }}</strong></p>
                                         <div class="border rounded p-3">
                                             <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity1 }}</p>
-                                            <p>{{ $ville->offer2NextCity1 }}</p>
+                                            <p>{{ $ville->offer1NextCity1 }}, {{ $ville->offer2NextCity1 }}</p>
                                         </div>
 
                                         <div class="border rounded p-3">
                                             <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity1 }}</p>
-                                            <p>{{ $ville->demand2NextCity1 }}</p>
+                                            <p>{{ $ville->demand1NextCity1 }}, {{ $ville->demand2NextCity1 }}</p>
                                         </div>
                                 </div>
 
@@ -165,14 +153,12 @@
                                     <p><strong>{{ $ville->nextCity2 }}</strong></p>
                                         <div class="border rounded p-3">
                                             <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity2 }}</p>
-                                            <p>{{ $ville->offer2NextCity2 }}</p>
+                                            <p>{{ $ville->offer1NextCity2 }}, {{ $ville->offer2NextCity2 }}</p>
                                         </div>
 
                                         <div class="border rounded p-3">
                                             <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity2 }}</p>
-                                            <p>{{ $ville->demand2NextCity2 }}</p>
+                                            <p>{{ $ville->demand1NextCity2 }}, {{ $ville->demand2NextCity2 }}</p>
                                         </div>
                                 </div>
                         </div>

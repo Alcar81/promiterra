@@ -500,6 +500,7 @@ class ComposerStaticInitf7c414b46042879babc3accfd2341f8d
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Editable\\EditableCityController' => __DIR__ . '/../..' . '/app/Http/Controllers/Editable/EditableCityController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Profile\\EditorProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Profile/EditorProfileController.php',
         'App\\Http\\Controllers\\Profile\\UsersProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Profile/UsersProfileController.php',

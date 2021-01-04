@@ -146,6 +146,22 @@
                                                 <input type="text" class="form-control pt-2" id="accent2" placeholder="Accent 2, s'il n'existe pas" value="" name="accent2">
                                             </div>
                                     </div>
+
+                                    <div class="pt-2">
+                                        <div>
+                                            <select class="form-select pt-2" id="accent3" aria-label="Floating label select example" name="accent3">
+                                                <option selected></option>
+                                                    @foreach(App\Models\City:: get() as $ville)
+                                                        <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
+                                                    @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="pt-2">
+                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="Accent 3, s'il n'existe pas" value="" name="accent3">
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
 

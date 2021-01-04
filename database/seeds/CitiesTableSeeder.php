@@ -25,8 +25,8 @@ class CitiesTableSeeder extends Seeder
         City::create(['accent2'=> 'Arable']);
         City::create(['localSpeciality'=> 'Steak de taureau']);
         City::create(['mayor'=> 'Colonel Vorgen Berrouve, beau-frère de Ilianne']);
-        City::create(['urbanPopulaiton' => 1000]);
-        City::create(['ruralPopulaiton' => 1000]);
+        City::create(['urbanPopulation' => 1000]);
+        City::create(['ruralPopulation' => 1000]);
         City::create(['tradeMax' => 5000]);
         City::create(['localDrink'=> 'Whiskey']);
         City::create(['education' => 5]);
