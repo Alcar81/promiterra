@@ -14,6 +14,11 @@ class EditableCityController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $cities = City::all();
@@ -29,6 +34,9 @@ class EditableCityController extends Controller
      */
     public function create()
     {
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
         return view('editable.ville.create');
     }
 
@@ -42,6 +50,10 @@ class EditableCityController extends Controller
      */
     public function store(Request $request)
     {
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
+
             City::create($request->all());
 
             return redirect()->route('editor.user.index');
@@ -73,6 +85,9 @@ class EditableCityController extends Controller
      */
     public function edit($id)
     {
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
 
         return view('editable.ville.edit', [
 
@@ -90,6 +105,10 @@ class EditableCityController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
 
         $ville = $request->all();
         $ville = City::find($id);
@@ -114,6 +133,10 @@ class EditableCityController extends Controller
      */
     public function destroy(Request $request, $id)
     {
+
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
 
         $ville = $request->all();
         $ville = City::find($id);
