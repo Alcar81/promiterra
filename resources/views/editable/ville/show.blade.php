@@ -34,7 +34,7 @@
                             </p>
                         </div>
                         <div>
-                            <p>En l’an {{ $ville->year }}</p>
+                            <p><strong>En l’an {{ $ville->year }}</strong></p>
                         </div>
 
                     </div>
@@ -42,142 +42,196 @@
 
                     <div class="card-body pt-4">
 
-                        <div>
-                            <p><strong>Maison : </strong>{{ $ville->house }}</p>
-                        </div>
-
-                        <div class="container border rounded pt-4">
-                            <div>
-                                <p><strong>Année de fondation : </strong>{{ $ville->yearfoundation }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Taille : </strong>{{ $ville->size }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Climat : </strong>{{ $ville->weather }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Accents régionaux: </strong>{{ $ville->accent1 }} {{ $ville->accent2 }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Spécialité locale : </strong>{{ $ville->localSpeciality }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Maire ou mairesse : </strong>{{ $ville->mayor }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Population urbaine : </strong>{{ $ville->urbanPopulation }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Population rural : </strong>{{ $ville->ruralPopulation }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Commerce maximal : </strong>{{ $ville->tradeMax }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Boisson locale : </strong>{{ $ville->localDrink }}</p>
-                            </div>
-                        </div>
-
                         <div class="container border rounded p-4">
-                            <div>
-                                <p><strong>Éducation : </strong>{{ $ville->education }}</p>
-                            </div>
 
                             <div>
-                                <p><strong>Fortification : </strong>{{ $ville->fortification }}</p>
+                                <p><strong>Maison : </strong>{{ $ville->house }}</p>
                             </div>
 
-                            <div>
-                                <p><strong>Loi et l’ordre : </strong>{{ $ville->lawAndOrder }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Technologie : </strong>{{ $ville->technology }}</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Richesse : </strong>{{ $ville->wealth }}</p>
-                            </div>
-                        </div>
-
-                        <div class="container border rounded p-4">
-                            <p><strong>Économie</strong></p>
-                                <div>
-                                    <p>{{ $ville->economy1 }} {{ $ville->economy2 }} {{ $ville->economy3 }} {{ $ville->economy4 }} {{ $ville->economy5 }} {{ $ville->economy6 }} {{ $ville->economy7 }} {{ $ville->economy8 }} {{ $ville->economy9 }} {{ $ville->economy10 }}</p>
+                            <div class="row p-4">
+                                <div class="p-4" style="width: 50%" display="inline-block">
+                                    <p><strong>Année de fondation : </strong>{{ $ville->yearfoundation }}</p>
+                                    <p><strong>Taille : </strong>{{ $ville->size }}</p>
+                                    <p><strong>Climat : </strong>{{ $ville->weather }}</p>
+                                    <p><strong>Accents régionaux: </strong>{{ $ville->accent1 }} {{ $ville->accent2 }}</p>
+                                    <p><strong>Spécialité locale : </strong>{{ $ville->localSpeciality }}</p>
+                                    <p><strong>Maire ou mairesse : </strong>{{ $ville->mayor }}</p>
+                                    <p><strong>Population urbaine : </strong>{{ $ville->urbanPopulation }}</p>
+                                    <p><strong>Population rural : </strong>{{ $ville->ruralPopulation }}</p>
+                                    <p><strong>Commerce maximal : </strong>{{ $ville->tradeMax }}</p>
+                                    <p><strong>Boisson locale : </strong>{{ $ville->localDrink }}</p>
                                 </div>
-                        </div>
 
-                        <div class="container border rounded p-4">
-                            <div>
-                                <p><strong>Offres</strong></p>
-                                    <div class="border rounded p-3">
-                                        <p>{{ $ville->offer1 }} {{ $ville->offer2 }}</p>
+                                <div class="border p-4" style="width: 50%" height="500px">
+                                    Place pour futur image de la ville
+                                </div>
+                            </div>
+
+                            <div class="container">
+
+                                <table class="table table-bordered">
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 150px" height="35px">Éducation</td>
+                                                <td><strong>{{ $ville->education }}</strong></td>
+                                            <td>Fortification</td>
+                                                <td><strong>{{ $ville->fortification }}</strong></td>
+                                            <td>Loi et l’ordre</td>
+                                                <td><strong>{{ $ville->lawAndOrder }}</strong></td>
+                                            <td>Technologie</td>
+                                                <td><strong>{{ $ville->technology }}</strong></td>
+                                            <td>Richesse</td>
+                                                <td><strong>{{ $ville->wealth }}</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <div class="container">
+
+
+                                    <table class="table table-bordered">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" colspan="5" style="width: 200px;" height="35px">Économie</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy1 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy2 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy3 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy4 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy5 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy6 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy7 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy8 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy9 }}</td>
+                                                <td style="width: 200px" height="35px">{{ $ville->economy10 }}</td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                            </div>
+
+                            <div class="container">
+
+                                    <table class="table table-bordered">
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" colspan="5" style="width: 200px; text-align: center" height="35px">{{ $ville->name }}</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">Offres</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">Demandes</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2 }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <thead class="thead-light">
+
+                                            <tr>
+                                                <th scope="col" style="width: 200px" height="35px">Villes Voisines</th>
+                                                <th scope="col" colspan="2" style="width: 200px; text-align: center" height="35px">Offres</th>
+                                                <th scope="col" colspan="2" style="width: 200px; text-align: center" height="35px">Demandes</th>
+                                            </tr>
+                                            </thead>
+                                            <tr>
+                                                <th scope="row">{{ $ville->nextCity1 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity1 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity1 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity1 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity1 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{ $ville->nextCity2 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity2 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity2 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity2 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity2 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">{{ $ville->nextCity3 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity3 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity3 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity3 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity3 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">{{ $ville->nextCity4 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity4 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity4 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity4 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity4 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">{{ $ville->nextCity5 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity5 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity5 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity5 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity5 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" style="width: 200px" height="35px">{{ $ville->nextCity6 }}</th>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer1NextCity6 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->offer2NextCity6 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand1NextCity6 }}</td>
+                                                    <td style="width: 200px" height="35px">{{ $ville->demand2NextCity6 }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                            </div>
+
+                            <div class="container border rounded p-4">
+                                <p><strong>Histoire de la ville</strong></p>
+                                    <div>
+                                        <p>{!! $ville->story !!}</p>
                                     </div>
                             </div>
 
-                            <div class="pt-2">
-                                <p><strong>Demandes</strong></p>
-                                    <div class="border rounded p-3">
-                                        <p>{{ $ville->demand1 }} {{ $ville->demand2 }}</p>
-                                    </div>
+                            <div class="row p-4">
+
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" style="width: 10px; text-align: right" height="35px">Version :</th>
+                                                <td style="width: 10px" height="35px">{{ $ville->version }}</td>
+                                            <th scope="row" style="width: 50px" height="35px"></th>
+                                                <td style="width: 50px" height="35px"></td>
+                                            <th scope="row" style="width: 50px" height="35px"></th>
+                                                <td style="width: 50px" height="35px"></td>
+                                            <th scope="row" style="width: 50px" height="35px"></th>
+                                                <td style="width: 50px" height="35px"></td>
+                                            <th scope="row" style="width: 20px; text-align: right" height="35px">chapitre :</th>
+                                                <td style="width: 10px" height="35px">{{ $ville->chapter }}</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
+
                         </div>
 
-                        <div class="container border rounded p-4">
-                            <p><strong>Villes voisines</strong></p>
-                                <div class="border rounded p-4">
-                                    <p><strong>{{ $ville->nextCity1 }}</strong></p>
-                                        <div class="border rounded p-3">
-                                            <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity1 }} {{ $ville->offer2NextCity1 }}</p>
-                                        </div>
 
-                                        <div class="border rounded p-3">
-                                            <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity1 }} {{ $ville->demand2NextCity1 }}</p>
-                                        </div>
-                                </div>
 
-                                <div class="border rounded p-4">
-                                    <p><strong>{{ $ville->nextCity2 }}</strong></p>
-                                        <div class="border rounded p-3">
-                                            <p><strong>Offres</strong></p>
-                                            <p>{{ $ville->offer1NextCity2 }} {{ $ville->offer2NextCity2 }}</p>
-                                        </div>
-
-                                        <div class="border rounded p-3">
-                                            <p><strong>Demandes</strong></p>
-                                            <p>{{ $ville->demand1NextCity2 }} {{ $ville->demand2NextCity2 }}</p>
-                                        </div>
-                                </div>
-                        </div>
-
-                        <div class="container border rounded p-4">
-                            <p><strong>Histoire de la ville</strong></p>
-                                <div class="border rounded p-4">
-                                    <p>{!! $ville->story !!}</p>
-                                </div>
-                        </div>
-
-                        <div class="pt-2">
-                                <div>
-                                    <p>Version : {{ $ville->version }}</p>
-                                </div>
-
-                                <div>
-                                    <p>chapitre : {{ $ville->chapter }}</p>
-                                </div>
-                        </div>
 
                     </div>
             </div>

@@ -440,6 +440,7 @@ Mise à jour | {{ $ville->name }}
 
                             </div>
 
+
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity6">{{ __('Villes voisines 6') }}</label>
