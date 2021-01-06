@@ -92,45 +92,20 @@ Mise à jour | {{ $ville->name }}
 
                                     <label for="accent1">{{ __('Accents régionales') }}</label>
                                     <div>
-                                            <div>
-                                                <select class="form-select pt-2" id="accent1" aria-label="Floating label select example" name="accent1">
-                                                    <option selected>{{ old('accent1') ?? $ville->accent1 }}</option>
-                                                        @foreach(App\Models\City:: get() as $ville)
-                                                            <option value="{{ $ville->accent1 }}">{{ $ville->accent1}}</option>
-                                                        @endforeach
-                                                </select>
-                                            </div>
                                             <div class="pt-2">
-                                                <input type="text" class="form-control pt-2" id="accent1" placeholder="Accent 1, s'il n'existe pas" value="" name="accent1">
+                                                <input type="text" class="form-control pt-2" id="accent1" placeholder="" value="{{ old('Accent 1') ?? $ville->Accent1 }}" name="accent1">
                                             </div>
                                     </div>
                                     <div class="pt-2">
-                                            <div>
-                                                <select class="form-select pt-2" id="accent2" aria-label="Floating label select example" name="accent2">
-                                                    <option selected>{{ old('accent2') ?? $ville->accent2 }}</option>
-                                                        @foreach(App\Models\City:: get() as $ville)
-                                                            <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
-                                                        @endforeach
-                                                </select>
-                                            </div>
                                             <div class="pt-2">
-                                                <input type="text" class="form-control pt-2" id="accent2" placeholder="Accent 2, s'il n'existe pas" value="" name="accent2">
+                                                <input type="text" class="form-control pt-2" id="accent2" placeholder="" value="{{ old('Accent 2') ?? $ville->Accent2 }}" name="accent2">
                                             </div>
                                     </div>
 
                                     <div class="pt-2">
-                                        <div>
-                                            <select class="form-select pt-2" id="accent3" aria-label="Floating label select example" name="accent3">
-                                                <option selected>{{ old('accent3') ?? $ville->accent3 }}</option>
-                                                    @foreach(App\Models\City:: get() as $ville)
-                                                        <option value="{{ $ville->accent1 }}">{{ $ville->accent1 }}</option>
-                                                    @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="Accent 3, s'il n'existe pas" value="" name="accent3">
+                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="" value="{{ old('Accent 3') ?? $ville->Accent3 }}" name="accent3">
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -290,16 +265,8 @@ Mise à jour | {{ $ville->name }}
 
                                 <div class="form-floating">
                                     <label for="nextCity1">{{ __('Villes voisines 1') }}</label>
-                                                <div>
-                                                    <select class="form-select" id="nextCity1" aria-label="Floating label select example" name="nextCity1">
-                                                            <option selected>{{ old('nextCity1') ?? $ville->nextCity1 }}</option>
-                                                        @foreach(App\Models\City:: get() as $ville)
-                                                            <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
                                                 <div class="pt-2">
-                                                    <input type="text" class="form-control" id="nextCity1" placeholder="Si nouvelle ville" value="" name="nextCity1">
+                                                    <input type="text" class="form-control" id="nextCity1" placeholder="" value="{{ old('nextCity1') ?? $ville->nextCity1 }}" name="nextCity1">
                                                 </div>
                                 </div>
 
@@ -319,16 +286,8 @@ Mise à jour | {{ $ville->name }}
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity2">{{ __('Villes voisines 2') }}</label>
-                                        <div>
-                                            <select class="form-select" id="nextCity2" aria-label="Floating label select example" name="nextCity2">
-                                                <option selected>{{ old('year') ?? $ville->nextCity2 }}</option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control" id="nextCity2" placeholder="Si nouvelle ville" value="" name="nextCity2">
+                                            <input type="text" class="form-control" id="nextCity2" placeholder="" value="{{ old('nextCity2') ?? $ville->nextCity2 }}" name="nextCity2">
                                         </div>
 
                                 </div>
@@ -350,16 +309,8 @@ Mise à jour | {{ $ville->name }}
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity3">{{ __('Villes voisines 3') }}</label>
-                                        <div>
-                                            <select class="form-select" id="nextCity3" aria-label="Floating label select example" name="nextCity3">
-                                                <option selected></option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control" id="nextCity3" placeholder="Si nouvelle ville" value="" name="nextCity3">
+                                            <input type="text" class="form-control" id="nextCity3" placeholder="" value="{{ old('nextCity3') ?? $ville->nextCity3 }}" name="nextCity3">
                                         </div>
 
                                 </div>
@@ -381,16 +332,8 @@ Mise à jour | {{ $ville->name }}
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity4">{{ __('Villes voisines 4') }}</label>
-                                        <div>
-                                            <select class="form-select" id="nextCity4" aria-label="Floating label select example" name="nextCity4">
-                                                <option selected></option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control" id="nextCity4" placeholder="Si nouvelle ville" value="" name="nextCity4">
+                                            <input type="text" class="form-control" id="nextCity4" placeholder="" value="{{ old('nextCity4') ?? $ville->nextCity4 }}" name="nextCity4">
                                         </div>
 
                                 </div>
@@ -412,16 +355,8 @@ Mise à jour | {{ $ville->name }}
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity5">{{ __('Villes voisines 5') }}</label>
-                                        <div>
-                                            <select class="form-select" id="nextCity5" aria-label="Floating label select example" name="nextCity5">
-                                                <option selected></option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control" id="nextCity5" placeholder="Si nouvelle ville" value="" name="nextCity5">
+                                            <input type="text" class="form-control" id="nextCity5" placeholder="" value="{{ old('nextCity5') ?? $ville->nextCity5 }}" name="nextCity5">
                                         </div>
 
                                 </div>
@@ -444,16 +379,8 @@ Mise à jour | {{ $ville->name }}
                             <div class="container border rounded p-4">
                                 <div class="form-floating">
                                     <label for="nextCity6">{{ __('Villes voisines 6') }}</label>
-                                        <div>
-                                            <select class="form-select" id="nextCity6" aria-label="Floating label select example" name="nextCity6">
-                                                <option selected></option>
-                                                @foreach(App\Models\City:: get() as $ville)
-                                                <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
                                         <div class="pt-2">
-                                            <input type="text" class="form-control" id="nextCity6" placeholder="Si nouvelle ville" value="" name="nextCity6">
+                                            <input type="text" class="form-control" id="nextCity6" placeholder="" value="{{ old('nextCity6') ?? $ville->nextCity6 }}" name="nextCity6">
                                         </div>
 
                                 </div>

@@ -67,7 +67,7 @@
                                     <tbody>
                                         <div class="justify-content-center">
                                             @foreach($villes as $ville)
-                                                <button class="btn btn-info p-2"  href="{{ route('ville.city.show', $ville->id) }}">{{ $ville->name }}</button>
+                                            <button class="btn btn-link p-2"><a href="{{ route('ville.city.show', $ville->id) }}">{{ $ville->name }}</a></button>
                                             @endforeach
                                         </div>
                                     </tbody>
