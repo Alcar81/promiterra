@@ -97,7 +97,7 @@
                                                     <td><strong>{{ $ville->wealth }}</strong></td>
                                                 </tr>
                                             </tbody>
-                                    </table>
+                                        </table>
 
 
 
@@ -144,6 +144,7 @@
                                                     </tr>
                                             </tbody>
                                         </table>
+
                                         <div class="table-responsive" style="overflow-x:auto;">
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
@@ -206,43 +207,29 @@
                                         </div>
 
                                         <div class="container border rounded p-4">
-                                            <p><strong>Histoire de la ville</strong></p>
-                                                <div>
-                                                    <p>{!! $ville->story !!}</p>
-                                                </div>
+                                            <span class="lead">
+                                                <p><strong>Histoire de la ville</strong></p>
+                                                <p>
+                                                    {!! $ville->story !!}
+                                                </p>
+                                            </span>
                                         </div>
 
                                         <div class="row p-4">
 
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row" style="width: 10px; text-align: right" height="35px">Version :</th>
-                                                            <td style="width: 10px" height="35px">{{ $ville->version }}</td>
-                                                        <th scope="row" style="width: 50px" height="35px"></th>
-                                                            <td style="width: 50px" height="35px"></td>
-                                                        <th scope="row" style="width: 50px" height="35px"></th>
-                                                            <td style="width: 50px" height="35px"></td>
-                                                        <th scope="row" style="width: 50px" height="35px"></th>
-                                                            <td style="width: 50px" height="35px"></td>
-                                                        <th scope="row" style="width: 20px; text-align: right" height="35px">chapitre :</th>
-                                                            <td style="width: 10px" height="35px">{{ $ville->chapter }}</td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
+                                            <span class="lead">
+                                                <p>Version :{{ $ville->version }}</p>
+                                                <p>chapitre :{{ $ville->chapter }}</p>
+                                            </span>
                                         </div>
 
                                     </div>
-
-
-
-
                                 </div>
-                        </div>
+                            </div>
                     </div>
-                </div>
 
+                </div>
+            </div>
         </div>
     </section>
 
