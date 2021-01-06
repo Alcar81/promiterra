@@ -264,7 +264,7 @@
                     <ul class="dropdown-menu">
                         <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Les carrières de base</a></li>
                         <li class="dropdown"><a href="{{ route('ville.city.index') }}"><i class="fa fa-user"></i>Les cités</a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Le bestière</a></li>
+                        <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Le bestaire</a></li>
                         <li class="dropdown-"><a href="#"><i class="fa fa-user"></i>Les guerres à grand déploiement</a></li>
                         <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Les règles avancées pour maitre de jeu</a></li>
                         <li class="dropdown-submenu"><a href="#"><i class="fa fa-user"></i>Versions</a>

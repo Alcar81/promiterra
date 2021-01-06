@@ -37,18 +37,39 @@
                     </div>
                 </div>
 
+                <div class="card-header"><strong>Les chapitres     <a href="">( ajouter / modifier )</a></strong></div>
+                <div class="card-body">
+                    <div>
+                        <div class="row justify-content-center">
+                            <button class="btn btn-primary" href="">Introduction</button>
+                            <button class="btn btn-primary" href="">1. Monde</button>
+                            <button class="btn btn-primary" href="">2. Personnage</button>
+                            <button class="btn btn-primary" href="">3. Économie</button>
+                            <button class="btn btn-primary" href="">4. Combats</button>
+                            <button class="btn btn-primary" href="">5. Carrières</button>
+                            <button class="btn btn-primary" href="">6. Guerres</button>
+                            <button class="btn btn-primary" href="">7. Cités</button>
+                            <button class="btn btn-primary" href="">8. Bestaire</button>
+                            <button class="btn btn-primary" href="">Règles avancées</button>
+                            <button class="btn btn-primary" href="">Version 3.0</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <div class="card-header"><strong>Villes       <a href="{{ route('ville.city.create') }}">( ajouter )</a></strong></div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <table class="table">
                             @foreach($cities->chunk(8) as $villes)
-                                <div class="justify-content-center">
+                                <div class="row justify-content-center">
                                     <tbody>
-                                        @foreach($villes as $ville)
-                                            <div class="col-3">
-                                                <a href="{{ route('ville.city.show', $ville->id) }}"><p>{{ $ville->name }}</p></a>
-                                            </div>
-                                        @endforeach
+                                        <div class="justify-content-center">
+                                            @foreach($villes as $ville)
+                                                <button class="btn btn-info p-2"  href="{{ route('ville.city.show', $ville->id) }}">{{ $ville->name }}</button>
+                                            @endforeach
+                                        </div>
                                     </tbody>
                                 </div>
                             @endforeach

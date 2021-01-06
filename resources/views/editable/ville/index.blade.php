@@ -28,7 +28,7 @@ Les Citées
                 <div class="card">
                     <div class="card-header">
                         <div class="row justify-content-center pt-4">
-                            <p><h1><strong>Les Citées</strong></h1></p>
+                            <p><h1><strong>Les Cités</strong></h1></p>
                         </div>
                     </div>
 
