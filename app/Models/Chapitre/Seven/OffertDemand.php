@@ -1,0 +1,70 @@
+<?php
+
+namespace App\models\Chapitre\Seven;
+
+use Illuminate\Database\Eloquent\Model;
+
+class OffertDemand extends Model
+{
+    protected $fillable = [
+
+        'citesDataOffertDemandTitle',
+        'citesDataOffertDemandText',
+        'citesDataOffertDemandBuytitle',
+        'citesDataOffertDemandBuytext',
+        'citesDataOffertDemandSellTitle',
+        'citesDataOffertDemandSellText',
+        'citesDataOffertDemandSellTableTitle1',
+        'citesDataOffertDemandSellTableTitle2',
+        'citesDataOffertDemandSellTableTitle3',
+        'citesDataOffertDemandSellTableOffert',
+        'citesDataOffertDemandSellTableOffertCostBuy',
+        'citesDataOffertDemandSellTableOffertCostSell',
+        'citesDataOffertDemandSellTableNextOffert',
+        'citesDataOffertDemandSellTableNextOffertCostBuy',
+        'citesDataOffertDemandSellTableNextOffertCostSell',
+        'citesDataOffertDemandSellTableNoOffertNoDemand',
+        'citesDataOffertDemandSellTableNoOffertNoDemandCostBuy',
+        'citesDataOffertDemandSellTableNoOffertNoDemandCostSell',
+        'citesDataOffertDemandSellTableNoOffert3',
+        'citesDataOffertDemandSellTableNoOffert3CostBuy',
+        'citesDataOffertDemandSellTableNoOffert3CostSell',
+        'citesDataOffertDemandSellTableNoOffert4CostBuy',
+        'citesDataOffertDemandTradeMaxTitle',
+        'citesDataOffertDemandTradeMaxText1',
+        'citesDataOffertDemandTradeMaxTableTitle1',
+        'citesDataOffertDemandTradeMaxTableTitle2',
+        'citesDataOffertDemandTradeMaxTableTitle3',
+        'citesDataOffertDemandTradeMaxTableTitle4',
+        'citesDataOffertDemandTradeMaxTableWealthSize1',
+        'citesDataOffertDemandTradeMaxTableWealthSize2',
+        'citesDataOffertDemandTradeMaxTableWealthSize3',
+        'citesDataOffertDemandTradeMaxTableWealthSize4',
+        'citesDataOffertDemandTradeMaxTableWealthSize5',
+        'citesDataOffertDemandTradeMaxTableWealthSize6',
+        'citesDataOffertDemandTradeMaxTableWealthSize7',
+        'citesDataOffertDemandTradeMaxTableWealthSize8',
+        'citesDataOffertDemandTradeMaxTableWealthSize9',
+        'citesDataOffertDemandTradeMaxTableWealthSize10',
+        'citesDataOffertDemandTradeMaxTableWealthSize11',
+        'citesDataOffertDemandTradeMaxTableWealthSize12',
+        'citesDataOffertDemandTradeMaxTableWealthSize13',
+        'citesDataOffertDemandTradeMaxTableWealthSize14',
+        'citesDataOffertDemandTradeMaxTableMax1',
+        'citesDataOffertDemandTradeMaxTableMax2',
+        'citesDataOffertDemandTradeMaxTableMax3',
+        'citesDataOffertDemandTradeMaxTableMax4',
+        'citesDataOffertDemandTradeMaxTableMax5',
+        'citesDataOffertDemandTradeMaxTableMax6',
+        'citesDataOffertDemandTradeMaxTableMax7',
+        'citesDataOffertDemandTradeMaxTableMax8',
+        'citesDataOffertDemandTradeMaxTableMax9',
+        'citesDataOffertDemandTradeMaxTableMax10',
+        'citesDataOffertDemandTradeMaxTableMax11',
+        'citesDataOffertDemandTradeMaxTableMax12',
+        'citesDataOffertDemandTradeMaxTableMax13',
+        'citesDataOffertDemandTradeMaxTableMax14',
+        'citesDataOffertDemandTradeMaxText2',
+
+    ];
+}

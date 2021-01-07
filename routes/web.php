@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return view('login');
+});
+
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function() {
@@ -37,10 +41,27 @@ Route::namespace('Editable')->prefix('editable')->name('ville.')->group(function
     Route::resource('city', 'EditableCityController');
 });
 
-
-Route::get('logout', 'Auth\LoginController@logout', function () {
-    return view('login');
+Route::namespace('Editable\chapitre\seven')->prefix('cites')->name('cites.')->group(function() {
+    Route::resource('\chapitre\seven\cites', 'EditableCitesController');
 });
+
+Route::namespace('Editable\chapitre\seven')->prefix('commercialProduct')->name('commercialProduct.')->group(function() {
+    Route::resource('\chapitre\seven\commercialProduct', 'EditableCommercialProductController');
+});
+
+Route::namespace('Editable\chapitre\seven')->prefix('offertDemand')->name('offertDemand.')->group(function() {
+    Route::resource('\chapitre\seven\offertDemand', 'EditableOffertDemandController');
+});
+
+Route::namespace('Editable\chapitre\seven')->prefix('tax')->name('tax.')->group(function() {
+    Route::resource('\chapitre\seven\tax', 'EditableTaxController');
+});
+
+Route::namespace('Editable')->prefix('timetravel')->name('timetravel.')->group(function() {
+    Route::resource('\chapitre\seven\timeTravel', 'EditableTimeTravelController');
+});
+
+
 
 
 
