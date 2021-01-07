@@ -5,19 +5,19 @@ Liste des utilisateurs
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container p-4">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">Liste des utilisateurs</div>
                     <table class="table">
                         <thead>
                             <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Rôles</th>
-                            <th scope="col">Action</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Rôles</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,7 +35,7 @@ Liste des utilisateurs
                                                 <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-warning">Supprimer</button>
+                                                    <button type="submit" class="btn btn-sm">Supprimer</button>
                                                 </form>
                                             @endcan
                                         </td>
