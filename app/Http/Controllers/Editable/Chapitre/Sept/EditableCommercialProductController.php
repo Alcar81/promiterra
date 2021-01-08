@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Editable\Chapitre\Sept;
 
 use App\Http\Controllers\Controller;
 use App\models\Chapitre\Sept\CommercialProduct;
+use App\models\City;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 
@@ -16,7 +17,9 @@ class EditableCommercialProductController extends Controller
      */
     public function index()
     {
-        //
+        $cities = City::all();
+        // tu sélectionnes toutes les entrées de la table 'cities'
+        return view('editable.chapitre.sept.commercialProduct.show')->with('cities', $cities);
     }
 
     /**
@@ -48,7 +51,9 @@ class EditableCommercialProductController extends Controller
      */
     public function show($id)
     {
+
         //
+
     }
 
     /**

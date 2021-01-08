@@ -262,15 +262,23 @@
                 </li>
                 <li class="dropdown"> <a href="#">Extras</a>
                     <ul class="dropdown-menu">
-                        <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Les carrières de base</a></li>
-                        <li class="dropdown"><a href="{{ route('ville.city.index') }}"><i class="fa fa-user"></i>Les cités</a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Le bestaire</a></li>
-                        <li class="dropdown-"><a href="#"><i class="fa fa-user"></i>Les guerres à grand déploiement</a></li>
-                        <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Les règles avancées pour maitre de jeu</a></li>
-                        <li class="dropdown-submenu"><a href="#"><i class="fa fa-user"></i>Versions</a>
+                        <li class="dropdown"><a href="#">Les carrières de base</a></li>
+                        <li class="dropdown-submenu"><a href="">Chapitre 7 | Les cités</a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Version 3.2<span class="label label-danger">NEW</span></a></li>
-                                <li class="dropdown"><a href="#"><i class="fa fa-user"></i>Version 3.0</a></li>
+                                <li class="dropdown"><a href="{{ route('chapitre.sept.index') }}">Les cités<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="#">Temps de voyage<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="#">L’offre et la demande<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="#">Taxes<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="#">Produits commerciaux<span class="label label-danger">NEW</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Le bestaire</a></li>
+                        <li class="dropdown"><a href="#">Les guerres à grand déploiement</a></li>
+                        <li class="dropdown"><a href="#">Les règles avancées pour maitre de jeu</a></li>
+                        <li class="dropdown-submenu"><a href="#">Versions</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown"><a href="#">Version 3.2<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="#">Version 3.0</a></li>
                             </ul>
                         </li>
 
@@ -286,7 +294,7 @@
 
                                 @auth
                                     <li class="dropdown">
-                                        <a class="dropdown" href="{{ route('profile.user.index') }}">
+                                        <a class="dropdown" href="{{ route('profile.user.index') }}"><i class="fa fa-user"></i>
                                             {{ Auth::user()->name }}
                                         </a>
                                     </li>

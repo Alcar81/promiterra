@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Editable\Chapitre\Sept;
 
 use App\Http\Controllers\Controller;
-use App\models\Chapitre\Sept\Cites;
+use App\models\City;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 
@@ -16,8 +16,12 @@ class EditableCitesController extends Controller
      */
     public function index()
     {
-        //
+        $cities = City::all();
+        // tu sélectionnes toutes les entrées de la table 'cities'
+        return view('editable.chapitre.sept.cites.show')->with('cities', $cities);
     }
+
+
 
     /**
      * Show the form for creating a new resource.

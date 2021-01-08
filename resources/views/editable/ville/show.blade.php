@@ -17,10 +17,6 @@
     <section class="background-black p-b-60">
         <div class="container">
 
-            <div class="card">
-                <div class="card-body p-4">
-
-                    <div class="card">
                             <div class="card-body pt-4">
                                 <div class="card-header">
                                     <div class="heading heading-center m-b-40 pt-4">
@@ -226,10 +222,9 @@
                                     </div>
                                 </div>
                             </div>
-                    </div>
 
-                </div>
-            </div>
+
+
         </div>
     </section>
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Édition chapire 7 | Les cités
+Édition Chapire 7 | Les cités
 @endsection
 
 @if(session()->has('info'))
