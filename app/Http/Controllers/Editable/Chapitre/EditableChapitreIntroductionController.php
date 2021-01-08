@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Editable\Chapitre\Seven;
+namespace App\Http\Controllers\Editable\Chapitre;
 
 use App\Http\Controllers\Controller;
-use App\models\Chapitre\Seven\OffertDemand;
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\Gate;
 
-class EditableOffertDemandController extends Controller
+class EditableChapitreIntroductionController extends Controller
 {
     /**
      * Display a listing of the resource.

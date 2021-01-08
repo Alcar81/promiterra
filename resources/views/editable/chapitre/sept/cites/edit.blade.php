@@ -27,7 +27,7 @@
 
                     <div class="card-header p-4">
                         <div class="row justify-content-center">
-                          <p><h2><strong>{{ __('Création d’une ville') }}</strong></h2></p>
+                          <p><h2><strong>{{ __('Édition chapitre 7 | Les cités') }}</strong></h2></p>
                         </div>
 
 
@@ -36,37 +36,31 @@
 
 
                     <div class="card-body p-4">
-                        <form class="form-floating">
 
-                            <div class="container border rounded p-4">
+                        <div class="card-body">
 
-                                <div>
-                                    <label for="importCity">{{ __('Importer une ville') }}</label>
-                                                <select class="form-select" id="importCity" aria-label="Floating label select example">
-                                                    <option selected></option>
-                                                    @foreach(App\Models\City:: get() as $ville)
-                                                        <option value="{{ $ville->id }}">{{ $ville->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                </div>
+                                    <span class="row justify-content-center">
+                                        <div class="p-1">
+                                            <a href="{{ route('chapitre.sept.index') }}"><button class="btn btn-primary">Cités</button></a>
+                                        </div>
 
-                                <div class="pt-2">
-                                    <label for="yearwanted">{{ __('Année désirée') }}</label>
-                                                <select class="form-select" id="year" aria-label="Floating label select example">
-                                                    <option selected></option>
-                                                    @foreach(App\Models\City:: get() as $ville)
-                                                        <option value="{{ $ville->id }}">{{ $ville->year }}</option>
-                                                    @endforeach
-                                                </select>
-                                </div>
+                                        <div class="p-1">
+                                            <a href=""><button class="btn btn-primary">Temps de voyage</button><a>
+                                        </div>
 
-                                <div class="pt-4">
-                                    <button type="submit" class="btn btn-secondary form-floating"><i class="fa fa-btn fa-sign-in"></i>Importer une ville existante</button>
-                                </div>
+                                        <div class="p-1">
+                                            <a href=""><button class="btn btn-primary">L’offre et la demande</button><a>
+                                        </div>
 
-                            </div>
+                                        <div class="p-1">
+                                            <a href=""><button class="btn btn-primary">Taxes</button><a>
+                                        </div>
 
-                        </form>
+                                        <div class="p-1">
+                                            <a href=""><button class="btn btn-primary">Produits Commerciaux</button><a>
+                                        </div>
+                                    </span>
+                        </div>
 
                         <form class="form-floating" action="{{ route('ville.city.store') }}" method="POST">
 

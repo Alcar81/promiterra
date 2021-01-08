@@ -966,5 +966,6 @@ Les Citées
             </div>
         </div>
     </section>
+
 <!-- end: Chapitre 7 Les Cités -->
 @endsection

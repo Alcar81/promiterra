@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Editable\Chapitre\Seven;
+namespace App\Http\Controllers\Editable\Chapitre;
 
 use App\Http\Controllers\Controller;
-use App\models\Chapitre\Seven\CommercialProduct;
 use Illuminate\Http\Request;
+use Illuminate\support\Facades\Gate;
 
-class EditableCommercialProductController extends Controller
+class EditableChapitreReglesAvanceesController extends Controller
 {
     /**
      * Display a listing of the resource.

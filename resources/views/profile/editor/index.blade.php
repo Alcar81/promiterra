@@ -48,7 +48,7 @@
                             <button class="btn btn-primary" href="">4. Combats</button>
                             <button class="btn btn-primary" href="">5. Carrières</button>
                             <button class="btn btn-primary" href="">6. Guerres</button>
-                            <button class="btn btn-primary" href="">7. Cités</button>
+                            <button class="btn btn-primary"><a href="{{ route('chapitre.sept.index') }}">7. Cités</a></button>
                             <button class="btn btn-primary" href="">8. Bestaire</button>
                             <button class="btn btn-primary" href="">Règles avancées</button>
                             <button class="btn btn-primary" href="">Version 3.0</button>
