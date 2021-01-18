@@ -25,25 +25,9 @@ Chapire 7 | Les cités
         <div class="container">
             <div class="row" display="inline-block">
 
-                <div class="card" display="flex">
-                    <div class="card-body p-4">
-                        <div class="row justify-content-center">
-                            <table class="table">
-                                @foreach($cities->chunk(8) as $villes)
-                                    <div class="justify-content-center">
-                                        <tbody>
-                                            @foreach($villes as $ville)
-                                                <div class="col-3">
-                                                <a href="{{ route('ville.city.show', $ville->id) }}"><p>{{ $ville->name }}</p></a>
-                                                </div>
-                                            @endforeach
-                                        </tbody>
-                                    </div>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                <!-- Menu villes -->
+                @include('partials.menus.menuVilles')
+                <!-- end: Menu villes -->
 
 
 
@@ -56,30 +40,10 @@ Chapire 7 | Les cités
                                             <h2>Les Cités</h2>
                                         </div>
                                     </div>
-                                    <div class="card-body">
 
-                                        <span class="row justify-content-center">
-                                            <div class="p-1">
-                                                <a href="{{ route('sept.cites.index') }}"><button class="btn btn-primary">Cités</button></a>
-                                            </div>
-
-                                            <div class="p-1">
-                                                <a href=""><button class="btn btn-primary">Temps de voyage</button><a>
-                                            </div>
-
-                                            <div class="p-1">
-                                                <a href=""><button class="btn btn-primary">L’offre et la demande</button><a>
-                                            </div>
-
-                                            <div class="p-1">
-                                                <a href=""><button class="btn btn-primary">Taxes</button><a>
-                                            </div>
-
-                                            <div class="p-1">
-                                                <a href=""><button class="btn btn-primary">Produits Commerciaux</button><a>
-                                            </div>
-                                        </span>
-                                    </div>
+                                    <!-- Menu Chapitre 7 -->
+                                    @include('editable.chapitre.sept.partials.menuChapitreSept.menu')
+                                    <!-- end: Menu Chapitre 7 -->
 
                                     <div class="row p-4">
                                         <div class="col-md-12">
