@@ -65,7 +65,7 @@ class EditableCitesController extends Controller
      * @param  \App\models\Chapitre\7\Cites  $cites
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cites $cites)
+    public function edit()
     {
         if (Gate::denies('edit-users')) {
             return redirect()->route('login');
