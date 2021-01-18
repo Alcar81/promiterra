@@ -39,6 +39,15 @@ Chapire 7 | Les cités
                                         <div class="heading heading-center m-b-40 pt-4">
                                             <h2>Les Cités</h2>
                                         </div>
+                                        <div class="row justify-content-center">
+                                            <p>
+                                                <a href="">
+                                                @can ('edit-users')
+                                                    ( modifier / supprimer )
+                                                @endcan
+                                                </a>
+                                            </p>
+                                        </div>
                                     </div>
 
                                     <!-- Menu Chapitre 7 -->

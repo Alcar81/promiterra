@@ -14,6 +14,11 @@
             @include('partials.header.header')
         <!-- end: Header -->
 
+        <!-- summernote header -->
+                @include('partials.summernote.summernoteHeader')
+        <!-- end: summernote header -->
+
+
         <!-- HISTORY -->
         <main>
             @yield('content')
@@ -32,6 +37,11 @@
 
     <!--Template functions-->
     @include('partials.templatefunctions.templatefunctions')
+
+    <!-- summernote footer -->
+                @include('partials.summernote.summernoteFooter')
+    <!-- end: summernote footer -->
+
 </body>
 
 </html>

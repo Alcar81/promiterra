@@ -25,25 +25,9 @@ Chapire 7 | Taxes
         <div class="container">
             <div class="row" display="inline-block">
 
-                <div class="card" display="flex">
-                    <div class="card-body p-4">
-                        <div class="row justify-content-center">
-                            <table class="table">
-                                @foreach($cities->chunk(8) as $villes)
-                                    <div class="justify-content-center">
-                                        <tbody>
-                                            @foreach($villes as $ville)
-                                                <div class="col-3">
-                                                <a href="{{ route('ville.city.show', $ville->id) }}"><p>{{ $ville->name }}</p></a>
-                                                </div>
-                                            @endforeach
-                                        </tbody>
-                                    </div>
-                                @endforeach
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                <!-- Menu villes -->
+                @include('partials.menus.menuVilles')
+                <!-- end: Menu villes -->
 
 
 
@@ -54,7 +38,16 @@ Chapire 7 | Taxes
                                 <div class="card-body pt-4">
                                     <div class="card-header">
                                         <div class="heading heading-center m-b-40 pt-4">
-                                            <h2>Les Cités</h2>
+                                            <h2>Taxes</h2>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <p>
+                                                <a href="">
+                                                @can ('edit-users')
+                                                    ( modifier / supprimer )
+                                                @endcan
+                                                </a>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -89,6 +82,15 @@ Chapire 7 | Taxes
                                 <div class="card-header">
                                     <div class="heading heading-center m-b-40 pt-4">
                                         <h2>Taxes</h2>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <p>
+                                            <a href="">
+                                            @can ('edit-users')
+                                                ( modifier / supprimer )
+                                            @endcan
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
 
