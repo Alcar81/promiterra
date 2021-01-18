@@ -56,7 +56,7 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
 
 // <!-- Les Chapitres -->
 
-    Route::namespace('Editable\chapitre')->prefix('chapitre')->name('chapitre.')->group(function() {
+/*    Route::namespace('Editable\chapitre')->prefix('chapitre')->name('chapitre.')->group(function() {
         Route::resource('introduction', 'EditableChapitreIntroductionController');
     });
 
@@ -103,7 +103,7 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
     Route::namespace('Editable\chapitre')->prefix('chapitre')->name('chapitre.')->group(function() {
         Route::resource('version3', 'EditableChapitreVersion3Controller');
     });
-
+*/
 // <!-- >End: Les Chapitres -->
 
 

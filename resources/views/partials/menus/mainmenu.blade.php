@@ -263,9 +263,9 @@
                 <li class="dropdown"> <a href="#">Extras</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown"><a href="#">Les carrières de base</a></li>
-                        <li class="dropdown-submenu"><a href="">Chapitre 7 | Les cités</a>
+                        <li class="dropdown-submenu"><a href=""><i class="fa fa-navicon"></i>Chapitre 7 | Les cités</a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown"><a href="{{ route('chapitre.sept.index') }}">Les cités<span class="label label-danger">NEW</span></a></li>
+                                <li class="dropdown"><a href="{{ route('sept.cites.index') }}">Les cités<span class="label label-danger">NEW</span></a></li>
                                 <li class="dropdown"><a href="#">Temps de voyage<span class="label label-danger">NEW</span></a></li>
                                 <li class="dropdown"><a href="#">L’offre et la demande<span class="label label-danger">NEW</span></a></li>
                                 <li class="dropdown"><a href="#">Taxes<span class="label label-danger">NEW</span></a></li>

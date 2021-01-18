@@ -16,10 +16,12 @@ class EditableCitesController extends Controller
      */
     public function index()
     {
+
         $cities = City::all();
         // tu sélectionnes toutes les entrées de la table 'cities'
         return view('editable.chapitre.sept.cites.show')->with('cities', $cities);
     }
+
 
 
 
@@ -54,6 +56,8 @@ class EditableCitesController extends Controller
     {
         //
     }
+
+
 
     /**
      * Show the form for editing the specified resource.

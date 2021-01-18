@@ -41,7 +41,7 @@
 
                                     <span class="row justify-content-center">
                                         <div class="p-1">
-                                            <a href="{{ route('chapitre.sept.index') }}"><button class="btn btn-primary">Cités</button></a>
+                                            <a href="{{ route('sept.cites.index') }}"><button class="btn btn-primary">Cités</button></a>
                                         </div>
 
                                         <div class="p-1">
