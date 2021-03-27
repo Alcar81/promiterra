@@ -89,7 +89,7 @@ class City extends FormRequest
             'demand2NextCity5' => ['string', 'max:30'],
             'demand1NextCity6' => ['required', 'string', 'max:30'],
             'demand2NextCity6' => ['string', 'max:30'],
-            'story' => ['required', 'string', 'max:5000'],
+            'story' => ['required', 'string'],
             'version' => ['required', 'numeric'],
             'chapter' => ['required', 'numeric'],
         ];

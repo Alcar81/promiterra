@@ -46,13 +46,15 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
     });
 
 
-    /*Route::get('/player', 'PlayerController@index')->name('player')->middleware('player');
-    Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
-    Route::get('/superadmin', 'SuperAdminController@index')->name('superadmin')->middleware('superadmin');
-    Route::get('/team', 'TeamController@index')->name('team')->middleware('team');
-    Route::get('/masterteam', 'MasterTeamController@index')->name('masterteam')->middleware('masterteam');
-    */
 // <!-- End: Profil utilisateur -->
+
+// <!-- Character -->
+
+Route::namespace('Character')->prefix('character')->name('character.')->group(function() {
+    Route::resource('character', 'CharacterController');
+});
+
+// <!-- End: Character -->
 
 // <!-- Les Chapitres -->
 
