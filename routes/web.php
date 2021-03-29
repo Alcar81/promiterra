@@ -51,7 +51,7 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
 // <!-- Character -->
 
 Route::namespace('Character')->prefix('character')->name('character.')->group(function() {
-    Route::resource('character', 'CharacterController');
+    Route::resource('user', 'CharacterController');
 });
 
 // <!-- End: Character -->

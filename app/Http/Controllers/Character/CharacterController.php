@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Character;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\User;
+use App\Models\Character;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\support\Facades\Gate;
 
 class CharacterController extends Controller
@@ -28,6 +30,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
+
         return view('character.create');
     }
 
@@ -39,9 +42,17 @@ class CharacterController extends Controller
      */
     public function store(Request $request)
     {
-        Character::create($request->all());
 
-            return redirect()->route('character.index');
+        //$user = Auth::user(); // Retrieve the currently authenticated user...
+        // Retrieve the currently authenticated user's ID..
+        //$user_id = Auth::user()->id;
+        //$user_id = User::findOrFail($id);
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+        Character::create($data);
+
+
+        return view('character.index');
     }
 
     /**

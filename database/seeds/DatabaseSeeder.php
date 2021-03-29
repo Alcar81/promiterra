@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
         factory(App\Models\City::class, 10)->create();
-        factory(App\Models\Character::class, 1)->create();
+        //factory(App\Models\Character::class, 1)->create();
         $this->call(RolesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
 

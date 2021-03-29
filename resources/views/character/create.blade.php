@@ -11,10 +11,10 @@ Création personnage
                 <div class="card-header">Création d’un personnage</div>
 
                 <div class="card-body">
-                    <form class="form-floating" action="{{ route('character.character.store') }}" method="POST">
+                    <form class="form-floating" action="{{ route('character.user.store') }}" method="POST">
 
                         @csrf
-
+                        <input type="hidden" id="user_id" value="{{ Auth::user()->id }}" name="user_id">
 
                         <div class="container border rounded p-4">
 
@@ -659,6 +659,7 @@ Création personnage
                                                     <th scope="col">Type</th>
                                                     <th scope="col">Portée</th>
                                                     <th scope="col">Attaque</th>
+                                                    <th scope="col">Att. B</th>
                                                     <th scope="col">Maladr.</th>
                                                     <th scope="col">Dégâts</th>
                                                     <th scope="col">Dés</th>
@@ -672,192 +673,207 @@ Création personnage
 
                                             <tbody>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_weapon1_name" placeholder="" value="" name="character_weapon1_name">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_type" placeholder="" value="" name="character_weapon1_type">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_scope" placeholder="" value="" name="character_weapon1_scope">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_attack" placeholder="" value="" name="character_weapon1_attack">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
+                                                        <input type="text" class="form-control" id="character_weapon1_attack_b" placeholder="" value="" name="character_weapon1_attack_b">
+                                                    </td>
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_fumble" placeholder="" value="" name="character_weapon1_fumble">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_damage" placeholder="" value="" name="character_weapon1_damage">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_dices" placeholder="" value="" name="character_weapon1_dices">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_critic" placeholder="" value="" name="character_weapon1_critic">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_face" placeholder="" value="" name="character_weapon1_face">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_flank" placeholder="" value="" name="character_weapon1_flank">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_back" placeholder="" value="" name="character_weapon1_back">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon1_value" placeholder="" value="" name="character_weapon1_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_weapon2_name" placeholder="" value="" name="character_weapon2_name">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_type" placeholder="" value="" name="character_weapon2_type">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_scope" placeholder="" value="" name="character_weapon2_scope">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_attack" placeholder="" value="" name="character_weapon2_attack">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
+                                                        <input type="text" class="form-control" id="character_weapon2_attack_b" placeholder="" value="" name="character_weapon2_attack_b">
+                                                    </td>
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_fumble" placeholder="" value="" name="character_weapon2_fumble">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_damage" placeholder="" value="" name="character_weapon2_damage">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_dices" placeholder="" value="" name="character_weapon2_dices">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_critic" placeholder="" value="" name="character_weapon2_critic">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_face" placeholder="" value="" name="character_weapon2_face">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_flank" placeholder="" value="" name="character_weapon2_flank">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_back" placeholder="" value="" name="character_weapon2_back">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon2_value" placeholder="" value="" name="character_weapon2_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_weapon3_name" placeholder="" value="" name="character_weapon3_name">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_type" placeholder="" value="" name="character_weapon3_type">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_scope" placeholder="" value="" name="character_weapon3_scope">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_attack" placeholder="" value="" name="character_weapon3_attack">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
+                                                        <input type="text" class="form-control" id="character_weapon3_attack_b" placeholder="" value="" name="character_weapon3_attack_b">
+                                                    </td>
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_fumble" placeholder="" value="" name="character_weapon3_fumble">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_damage" placeholder="" value="" name="character_weapon3_damage">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_dices" placeholder="" value="" name="character_weapon3_dices">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_critic" placeholder="" value="" name="character_weapon3_critic">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_face" placeholder="" value="" name="character_weapon3_face">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_flank" placeholder="" value="" name="character_weapon3_flank">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_back" placeholder="" value="" name="character_weapon3_back">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon3_value" placeholder="" value="" name="character_weapon3_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_weapon4_name" placeholder="" value="" name="character_weapon4_name">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_type" placeholder="" value="" name="character_weapon4_type">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_scope" placeholder="" value="" name="character_weapon4_scope">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_attack" placeholder="" value="" name="character_weapon4_attack">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
+                                                        <input type="text" class="form-control" id="character_weapon4_attack_b" placeholder="" value="" name="character_weapon4_attack_b">
+                                                    </td>
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_fumble" placeholder="" value="" name="character_weapon4_fumble">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_damage" placeholder="" value="" name="character_weapon4_damage">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_dices" placeholder="" value="" name="character_weapon4_dices">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_critic" placeholder="" value="" name="character_weapon4_critic">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_face" placeholder="" value="" name="character_weapon4_face">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_flank" placeholder="" value="" name="character_weapon4_flank">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_back" placeholder="" value="" name="character_weapon4_back">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon4_value" placeholder="" value="" name="character_weapon4_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_weapon5_name" placeholder="" value="" name="character_weapon5_name">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_type" placeholder="" value="" name="character_weapon5_type">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_scope" placeholder="" value="" name="character_weapon5_scope">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_attack" placeholder="" value="" name="character_weapon5_attack">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
+                                                        <input type="text" class="form-control" id="character_weapon5_attack_b" placeholder="" value="" name="character_weapon5_attack_b">
+                                                    </td>
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_fumble" placeholder="" value="" name="character_weapon5_fumble">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_damage" placeholder="" value="" name="character_weapon5_damage">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_dices" placeholder="" value="" name="character_weapon5_dices">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_critic" placeholder="" value="" name="character_weapon5_critic">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_face" placeholder="" value="" name="character_weapon5_face">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_flank" placeholder="" value="" name="character_weapon5_flank">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_back" placeholder="" value="" name="character_weapon5_back">
                                                     </td>
-                                                    <td style="width: 6.25%;">
+                                                    <td style="width: 7%;">
                                                         <input type="text" class="form-control" id="character_weapon5_value" placeholder="" value="" name="character_weapon5_value">
                                                     </td>
                                                 </tr>
@@ -878,13 +894,15 @@ Création personnage
                                                     <th scope="col">Contondant</th>
                                                     <th scope="col">Feu</th>
                                                     <th scope="col">Sortilège</th>
+                                                    <th scope="col">Encombrement</th>
+                                                    <th scope="col">Magie</th>
                                                     <th scope="col">Valeur</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_armor1_name" placeholder="" value="" name="character_armor1_name">
                                                     </td>
                                                     <td>
@@ -903,11 +921,17 @@ Création personnage
                                                         <input type="text" class="form-control" id="character_armor1_spell" placeholder="" value="" name="character_armor1_spell">
                                                     </td>
                                                     <td>
+                                                        <input type="text" class="form-control" id="character_armor1_clutter" placeholder="" value="" name="character_armor1_clutter">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="character_armor1_magic" placeholder="" value="" name="character_armor1_magic">
+                                                    </td>
+                                                    <td>
                                                         <input type="text" class="form-control" id="character_armor1_value" placeholder="" value="" name="character_armor1_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_armor2_name" placeholder="" value="" name="character_armor2_name">
                                                     </td>
                                                     <td>
@@ -926,11 +950,17 @@ Création personnage
                                                         <input type="text" class="form-control" id="character_armor2_spell" placeholder="" value="" name="character_armor2_spell">
                                                     </td>
                                                     <td>
+                                                        <input type="text" class="form-control" id="character_armor2_clutter" placeholder="" value="" name="character_armor2_clutter">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="character_armor2_magic" placeholder="" value="" name="character_armor2_magic">
+                                                    </td>
+                                                    <td>
                                                         <input type="text" class="form-control" id="character_armor2_value" placeholder="" value="" name="character_armor2_value">
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="width: 37.5%;" >
+                                                    <td style="width: 16%;" >
                                                         <input type="text" class="form-control" id="character_armor3_name" placeholder="" value="" name="character_armor3_name">
                                                     </td>
                                                     <td>
@@ -947,6 +977,12 @@ Création personnage
                                                     </td>
                                                     <td>
                                                         <input type="text" class="form-control" id="character_armor3_spell" placeholder="" value="" name="character_armor3_spell">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="character_armor3_clutter" placeholder="" value="" name="character_armor3_clutter">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="character_armor3_magic" placeholder="" value="" name="character_armor3_magic">
                                                     </td>
                                                     <td>
                                                         <input type="text" class="form-control" id="character_armor3_value" placeholder="" value="" name="character_armor3_value">
