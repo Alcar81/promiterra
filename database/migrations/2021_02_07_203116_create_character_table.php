@@ -13,9 +13,18 @@ class CreateCharacterTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('characters', function (Blueprint $table) {
+
             $table->bigIncrements('id');
-            $table->bigInteger('user_id');
+
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')
+                ->references('id');
+                //->on('user')
+                //->onDelete('restrict')
+                //->onUpdate('restrict');
+
             $table->string('character_name')->unique();
             $table->Integer('character_age')->nullable();
             $table->string('character_title')->nullable();
@@ -540,6 +549,7 @@ class CreateCharacterTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('characters');
     }
 }

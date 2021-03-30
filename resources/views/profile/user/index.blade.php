@@ -28,7 +28,9 @@
 
                     <div class="card-body">
                         <span><p><strong>Mes personnages</strong><a href="{{ route('character.user.create') }}"> (créer un personnage)</a></p></span>
-                        <span><p><a href="/character.show">Benjamin</a></p></span>
+
+
+
                     </div>
 
                     <div class="card">

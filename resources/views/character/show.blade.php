@@ -18,7 +18,7 @@ Show personnage
 
                     <div class="card-body">
                         <span><p><strong>Mes personnages</strong><a href=""> (créer un personnage)</a></p></span>
-                        <span><p><a href="">Benjamin</a></p></span>
+                        <span><p><a href="">Vue Show</a></p></span>
                     </div>
 
 

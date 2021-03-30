@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Character extends Model
 {
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     protected $fillable = [
         'user_id',
         'character_name',
@@ -464,4 +469,7 @@ class Character extends Model
         'character_deco8_day',
 
     ];
+
+
+
 }

@@ -52,7 +52,7 @@ class CharacterController extends Controller
         Character::create($data);
 
 
-        return view('character.index');
+        return view('profile.user.index');
     }
 
     /**
@@ -63,7 +63,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        return view('character.show', [
+        return view('character.index', [
             'character' => Character::findOrFail($id)
         ]);
     }
