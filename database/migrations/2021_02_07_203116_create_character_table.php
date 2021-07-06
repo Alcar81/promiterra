@@ -13,17 +13,20 @@ class CreateCharacterTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
+
+
+
         Schema::create('characters', function (Blueprint $table) {
 
-            $table->bigIncrements('id');
-
+            Schema::disableForeignKeyConstraints();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')
-                ->references('id');
-                //->on('user')
-                //->onDelete('restrict')
-                //->onUpdate('restrict');
+            ->references('id');
+            //->on('user')
+            //->onDelete('restrict')
+            //->onUpdate('restrict');
+
+            $table->bigIncrements('id');
 
             $table->string('character_name')->unique();
             $table->Integer('character_age')->nullable();
@@ -84,6 +87,7 @@ class CreateCharacterTable extends Migration
             $table->bigInteger('character_gold')->nullable();
             $table->bigInteger('character_bank')->nullable();
             $table->Integer('character_lap_speed')->nullable();
+            $table->Integer('character_init')->nullable();
 
             $table->Integer('character_movement')->nullable();
             $table->Integer('character_movement_bonus_humanTerritory')->nullable();
@@ -94,6 +98,7 @@ class CreateCharacterTable extends Migration
 
             $table->Integer('character_fields')->nullable();
             $table->Integer('character_fields_bonus_spell')->nullable();
+            $table->Integer('character_fields_bonus_singing')->nullable();
 
             $table->string('character_weapon1_name')->nullable();
             $table->string('character_weapon1_type')->nullable();
@@ -211,12 +216,12 @@ class CreateCharacterTable extends Migration
 
             $table->bigInteger('character_tma_alcool')->nullable();
             $table->Integer('character_tma_alcool_b')->nullable();
-            $table->bigInteger('character_tma_arts&crafts')->nullable();
-            $table->Integer('character_tma_arts&crafts_b')->nullable();
+            $table->bigInteger('character_tma_artsNcrafts')->nullable();
+            $table->Integer('character_tma_artsNcrafts_b')->nullable();
             $table->bigInteger('character_tma_carpentry')->nullable();
             $table->Integer('character_tma_carpentry_b')->nullable();
-            $table->bigInteger('character_tma_hunting&fishing')->nullable();
-            $table->Integer('character_tma_hunting&fishing_b')->nullable();
+            $table->bigInteger('character_tma_huntingNfishing')->nullable();
+            $table->Integer('character_tma_huntingNfishing_b')->nullable();
             $table->bigInteger('character_tma_drive')->nullable();
             $table->Integer('character_tma_drive_b')->nullable();
             $table->bigInteger('character_tma_strings')->nullable();
@@ -540,6 +545,9 @@ class CreateCharacterTable extends Migration
             $table->timestamps();
 
         });
+
+
+
     }
 
     /**

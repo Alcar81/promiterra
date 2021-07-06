@@ -43,10 +43,7 @@ class CharacterController extends Controller
     public function store(Request $request)
     {
 
-        //$user = Auth::user(); // Retrieve the currently authenticated user...
-        // Retrieve the currently authenticated user's ID..
-        //$user_id = Auth::user()->id;
-        //$user_id = User::findOrFail($id);
+
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
         Character::create($data);
@@ -61,9 +58,9 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
-    public function show(Character $character)
+    public function show($id)
     {
-        return view('character.index', [
+        return view('character.show', [
             'character' => Character::findOrFail($id)
         ]);
     }
@@ -74,7 +71,7 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
-    public function edit(Character $character)
+    public function edit($id)
     {
         return view('character.edit', [
 
@@ -89,10 +86,21 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Character $character)
+    public function update(Request $request,$id)
     {
-        //
+        /*if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }*/
+
+        $character = $request->all();
+        $character = Character::find($id);
+        $character->update($request->all());
+
+
+        return redirect()->route('profile.user.index');
+
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -100,12 +108,12 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Character $character)
+    public function destroy(Request $request, $id)
     {
         $character = $request->all();
         $character = Character::find($id);
         $character->delete();
 
-        return redirect()->route('editor.user.index');
+        return redirect()->route('profile.user.index');
     }
 }

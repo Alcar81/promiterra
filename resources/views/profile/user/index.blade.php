@@ -36,7 +36,12 @@
                     <div class="card">
                         <div class="card-body p-4">
                             <div class="row justify-content-center">
+                                <tbody>
 
+                                    @foreach($user->characters as $character)
+                                        <a href="{{ route('character.user.show', $character->id) }}"><p> {{ $character->character_name }}, </p></a>
+                                    @endforeach
+                                </tbody>
                             </div>
                         </div>
                     </div>

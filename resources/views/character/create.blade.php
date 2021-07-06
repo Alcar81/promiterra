@@ -558,7 +558,12 @@ Création personnage
                                 </div>
 
                                 <div class="row g-3">
-
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="character_lap_speed">{{ __('Initiative') }}</label>
+                                            <input type="text" class="form-control" id="character_init" placeholder="" value="" name="character_init">
+                                        </div>
+                                    </div>
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="character_lap_speed">{{ __('Vitesse de tour') }}</label>
@@ -627,7 +632,7 @@ Création personnage
 
                             <div class="container border rounded p-4">
                                 <p>Champs d’action</p>
-                                <div class="row g-2">
+                                <div class="row g-3">
 
                                     <div class="col-md">
                                         <div class="form-floating">
@@ -639,6 +644,12 @@ Création personnage
                                         <div class="form-floating">
                                             <label for="character_fields_bonus_spell">{{ __('Sortilège') }}</label>
                                             <input type="text" class="form-control" id="character_fields_bonus_spell" placeholder="" value="" name="character_fields_bonus_spell">
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="character_fields_bonus_singing">{{ __('Chant') }}</label>
+                                            <input type="text" class="form-control" id="character_fields_bonus_singing" placeholder="" value="" name="character_fields_bonus_singing">
                                         </div>
                                     </div>
 
@@ -1138,10 +1149,10 @@ Création personnage
                                                 <tr>
                                                     <th scope="row">Artisanat</th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="character_tma_arts&crafts" placeholder="" value="" name="character_tma_arts&crafts">
+                                                        <input type="text" class="form-control" id="character_tma_artsNcrafts" placeholder="" value="" name="character_tma_arts&crafts">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control" id="character_tma_arts&crafts_b" placeholder="" value="" name="character_tma_arts&crafts_b">
+                                                        <input type="text" class="form-control" id="character_tma_artsNcrafts_b" placeholder="" value="" name="character_tma_arts&crafts_b">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1156,10 +1167,10 @@ Création personnage
                                                 <tr>
                                                     <th scope="row">Chasse et pêche</th>
                                                     <td>
-                                                        <input type="text" class="form-control" id="character_tma_hunting&fishing" placeholder="" value="" name="character_tma_hunting&fishing">
+                                                        <input type="text" class="form-control" id="character_tma_huntingNfishing" placeholder="" value="" name="character_tma_huntingNfishing">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control" id="character_tma_hunting&fishing_b" placeholder="" value="" name="character_tma_hunting&fishing_b">
+                                                        <input type="text" class="form-control" id="character_tma_huntingNfishing_b" placeholder="" value="" name="character_tma_huntingNfishing_b">
                                                     </td>
                                                 </tr>
                                                 <tr>
