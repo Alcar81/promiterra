@@ -46,10 +46,11 @@ class CharacterController extends Controller
 
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
+        $user = auth()->user();
         Character::create($data);
 
 
-        return view('profile.user.index');
+        return view('profile.user.index', compact('user'));
     }
 
     /**
