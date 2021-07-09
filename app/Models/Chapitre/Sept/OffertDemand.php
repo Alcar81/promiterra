@@ -1,6 +1,6 @@
 <?php
 
-namespace App\models\Chapitre\Sept;
+namespace App\Models\Chapitre\Sept;
 
 use Illuminate\Database\Eloquent\Model;
 

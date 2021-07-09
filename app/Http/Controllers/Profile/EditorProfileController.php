@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\User;
-use App\models\City;
+use App\Models\City;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 

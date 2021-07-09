@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Editable\Chapitre\Sept;
 
 use App\Http\Controllers\Controller;
-use App\models\City;
+use App\Models\City;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 

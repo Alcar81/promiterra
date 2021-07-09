@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Editable\Chapitre\Sept;
 
 use App\Http\Controllers\Controller;
-use App\models\Chapitre\Sept\TimeTravel;
+use App\Models\Chapitre\Sept\TimeTravel;
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 
