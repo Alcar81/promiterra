@@ -1,139 +1,131 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Validation Language Lines
+|--------------------------------------------------------------------------
+|
+| The following language lines contain the default error messages used by
+| the validator class. Some of these rules have multiple versions such
+| as the size rules. Feel free to tweak each of these messages here.
+|
+*/
+
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
-    'accepted'        => 'This field must be accepted.',
-    'active_url'      => 'This is not a valid URL.',
-    'after'           => 'This must be a date after :date.',
-    'after_or_equal'  => 'This must be a date after or equal to :date.',
-    'alpha'           => 'This field may only contain letters.',
-    'alpha_dash'      => 'This field may only contain letters, numbers, dashes and underscores.',
-    'alpha_num'       => 'This field may only contain letters and numbers.',
-    'array'           => 'This field must be an array.',
-    'before'          => 'This must be a date before :date.',
-    'before_or_equal' => 'This must be a date before or equal to :date.',
-    'between'         => [
-        'numeric' => 'This value must be between :min and :max.',
-        'file'    => 'This file must be between :min and :max kilobytes.',
-        'string'  => 'This string must be between :min and :max characters.',
-        'array'   => 'This content must have between :min and :max items.',
+    'accepted'             => 'Polje mora biti sprejeto.',
+    'active_url'           => 'URL ni veljaven.',
+    'after'                => 'Datum mora biti kasneje kot :date.',
+    'after_or_equal'       => 'Datum mora bit enak ali kasneje kot :date.',
+    'alpha'                => 'Polje lahko vsebuje le črke.',
+    'alpha_dash'           => 'Polje lahko vsebuje le črke, številke, pomišljaje in podčrtaje.',
+    'alpha_num'            => 'Polje lahko vsebuje le črke in številke.',
+    'array'                => 'Polje mora biti lista.',
+    'attached'             => 'This field is already attached.',
+    'before'               => 'Datum mora biti pred :date.',
+    'before_or_equal'      => 'Datum mora biti pred ali enak :date.',
+    'between'              => [
+        'array'   => 'Polje mora imeti od :min do :max elementov.',
+        'file'    => 'Datoteka mora biti med :min in :max kilobajti.',
+        'numeric' => 'Vrednost mora biti med :min in :max.',
+        'string'  => 'Vnos mora biti dolg od :min do :max znakov.',
     ],
-    'boolean'        => 'This field must be true or false.',
-    'confirmed'      => 'The confirmation does not match.',
-    'date'           => 'This is not a valid date.',
-    'date_equals'    => 'This must be a date equal to :date.',
-    'date_format'    => 'This does not match the format :format.',
-    'different'      => 'This value must be different from :other.',
-    'digits'         => 'This must be :digits digits.',
-    'digits_between' => 'This must be between :min and :max digits.',
-    'dimensions'     => 'This image has invalid dimensions.',
-    'distinct'       => 'This field has a duplicate value.',
-    'email'          => 'This must be a valid email address.',
-    'ends_with'      => 'This must end with one of the following: :values.',
-    'exists'         => 'The selected value is invalid.',
-    'file'           => 'The content must be a file.',
-    'filled'         => 'This field must have a value.',
-    'gt'             => [
-        'numeric' => 'The value must be greater than :value.',
-        'file'    => 'The file size must be greater than :value kilobytes.',
-        'string'  => 'The string must be greater than :value characters.',
-        'array'   => 'The content must have more than :value items.',
+    'boolean'              => 'Polje mora biti da ali ne.',
+    'confirmed'            => 'Potrditev se ne ujema.',
+    'date'                 => 'Datum ni veljaven.',
+    'date_equals'          => 'Datum mora biti enak :date.',
+    'date_format'          => 'Datum ne ustreza formatu :format.',
+    'different'            => 'Vrednost mora biti drugačna od :other.',
+    'digits'               => 'Vnos mora vsebovati :digits števk.',
+    'digits_between'       => 'Vnos mora vsebovati od :min do :max števk.',
+    'dimensions'           => 'Slika ni pravilnih dimenzij.',
+    'distinct'             => 'Polje ima podvojeno vrednost.',
+    'email'                => 'Elektronski naslov mora biti veljaven.',
+    'ends_with'            => 'Vnos se mora končati z eno od naslednjih vrednosti: :values.',
+    'exists'               => 'Izbrana vrednost ni veljavna.',
+    'file'                 => 'Vsebina mora biti datoteka.',
+    'filled'               => 'Polje mora biti izpolnjeno.',
+    'gt'                   => [
+        'array'   => 'Polje mora imeti več kot :value vrednosti.',
+        'file'    => 'Velikost datoteke mora biti večja od :value kilobajtov.',
+        'numeric' => 'Vrednost mora biti večja od :value.',
+        'string'  => 'Vnos mora biti daljši od :value znakov.',
     ],
-    'gte' => [
-        'numeric' => 'The value must be greater than or equal :value.',
-        'file'    => 'The file size must be greater than or equal :value kilobytes.',
-        'string'  => 'The string must be greater than or equal :value characters.',
-        'array'   => 'The content must have :value items or more.',
+    'gte'                  => [
+        'array'   => 'Polje mora vsebovati najmanj :value elementov.',
+        'file'    => 'Velikost datoteke mora biti najmanj :value kilobajtov.',
+        'numeric' => 'Vrednost mora biti najmanj :value.',
+        'string'  => 'Vnos mora biti dolg najmanj :value znakov.',
     ],
-    'image'    => 'This must be an image.',
-    'in'       => 'The selected value is invalid.',
-    'in_array' => 'This value does not exist in :other.',
-    'integer'  => 'This must be an integer.',
-    'ip'       => 'This must be a valid IP address.',
-    'ipv4'     => 'This must be a valid IPv4 address.',
-    'ipv6'     => 'This must be a valid IPv6 address.',
-    'json'     => 'This must be a valid JSON string.',
-    'lt'       => [
-        'numeric' => 'The value must be less than :value.',
-        'file'    => 'The file size must be less than :value kilobytes.',
-        'string'  => 'The string must be less than :value characters.',
-        'array'   => 'The content must have less than :value items.',
+    'image'                => 'To polje mora biti slika.',
+    'in'                   => 'Izbrana vrednost ni veljavna.',
+    'in_array'             => 'Izbrana vrednost ne obstaja v :other.',
+    'integer'              => 'To polje mora biti številka.',
+    'ip'                   => 'To polje mora biti veljaven IP naslov.',
+    'ipv4'                 => 'To polje mora biti veljaven IPv4 naslov.',
+    'ipv6'                 => 'To polje mora biti veljaven IPv6 naslov.',
+    'json'                 => 'To polje mora biti veljaven JSON vnos.',
+    'lt'                   => [
+        'array'   => 'Polje mora vsebovati manj kot :value elementov.',
+        'file'    => 'Velikost datoteke mora biti manjša od :value kilobajtov.',
+        'numeric' => 'Vrednost mora biti manjša od :value.',
+        'string'  => 'Vnos mora biti krajši od :value znakov.',
     ],
-    'lte' => [
-        'numeric' => 'The value must be less than or equal :value.',
-        'file'    => 'The file size must be less than or equal :value kilobytes.',
-        'string'  => 'The string must be less than or equal :value characters.',
-        'array'   => 'The content must not have more than :value items.',
+    'lte'                  => [
+        'array'   => 'Polje ne sme vsebovati več kot :value elementov.',
+        'file'    => 'Velikost datoteke ne sme presegati :value kilobajtov.',
+        'numeric' => 'Vrednost ne sme biti večja od :value.',
+        'string'  => 'Vnos ne sme biti daljši od :value znakov.',
     ],
-    'max' => [
-        'numeric' => 'The value may not be greater than :max.',
-        'file'    => 'The file size may not be greater than :max kilobytes.',
-        'string'  => 'The string may not be greater than :max characters.',
-        'array'   => 'The content may not have more than :max items.',
+    'max'                  => [
+        'array'   => 'Polje ne sme vsebovati več kot :max elementov.',
+        'file'    => 'Velikost datoteke ne sme presegati :max kilobajtov.',
+        'numeric' => 'Vrednost ne sme biti večja od :max.',
+        'string'  => 'Vnos ne sme biti daljši od :max znakov.',
     ],
-    'mimes'     => 'This must be a file of type: :values.',
-    'mimetypes' => 'This must be a file of type: :values.',
-    'min'       => [
-        'numeric' => 'The value must be at least :min.',
-        'file'    => 'The file size must be at least :min kilobytes.',
-        'string'  => 'The string must be at least :min characters.',
-        'array'   => 'The value must have at least :min items.',
+    'mimes'                => 'Datoteka mora biti tipa: :values.',
+    'mimetypes'            => 'Datoteka mora biti tipa: :values.',
+    'min'                  => [
+        'array'   => 'Polje mora vsebovati najmanj :min elementov.',
+        'file'    => 'Velikost datoteke je lahko najmanj :min kilobajtov.',
+        'numeric' => 'Vrednost je lahko najmanj :min.',
+        'string'  => 'Vnos ima lahko najmanj :min znakov.',
     ],
-    'multiple_of'          => 'The value must be a multiple of :value',
-    'not_in'               => 'The selected value is invalid.',
-    'not_regex'            => 'This format is invalid.',
-    'numeric'              => 'This must be a number.',
-    'password'             => 'The password is incorrect.',
-    'present'              => 'This field must be present.',
-    'regex'                => 'This format is invalid.',
-    'required'             => 'This field is required.',
-    'required_if'          => 'This field is required when :other is :value.',
-    'required_unless'      => 'This field is required unless :other is in :values.',
-    'required_with'        => 'This field is required when :values is present.',
-    'required_with_all'    => 'This field is required when :values are present.',
-    'required_without'     => 'This field is required when :values is not present.',
-    'required_without_all' => 'This field is required when none of :values are present.',
-    'same'                 => 'The value of this field must match the one from :other.',
+    'multiple_of'          => 'Vrednost mora biti večkratnik :value',
+    'not_in'               => 'Izbrana vrednost ni veljavna.',
+    'not_regex'            => 'Oblika vnosa ni veljavna.',
+    'numeric'              => 'Vnešena mora biti številka.',
+    'password'             => 'Geslo ni pravilno.',
+    'present'              => 'Polje mora biti izpolnjeno.',
+    'prohibited'           => 'This field is prohibited.',
+    'prohibited_if'        => 'This field is prohibited when :other is :value.',
+    'prohibited_unless'    => 'This field is prohibited unless :other is in :values.',
+    'regex'                => 'Oblika vnosa ni veljavna.',
+    'relatable'            => 'This field may not be associated with this resource.',
+    'required'             => 'Polje je obvezno.',
+    'required_if'          => 'Polje je obvezno, ko je v polju :other izbrana vrednost :value.',
+    'required_unless'      => 'Polje je obvezno, razen če je v polju :other izbrana vrednost :values.',
+    'required_with'        => 'Polje je obvezno, ko je vnešena vrednost :values.',
+    'required_with_all'    => 'Polje je obvezno, ko so vnešene vrednosti :values.',
+    'required_without'     => 'Polje je obvezno, ko ni vnešena vrednost :values.',
+    'required_without_all' => 'Polje je obvezno, če niso vnešene vrednosti :values.',
+    'same'                 => 'Vrednost polja se mora ujemati z vrednostjo polja :other.',
     'size'                 => [
-        'numeric' => 'The value must be :size.',
-        'file'    => 'The file size must be :size kilobytes.',
-        'string'  => 'The string must be :size characters.',
-        'array'   => 'The content must contain :size items.',
+        'array'   => 'Polje mora vsebovati :size elementov.',
+        'file'    => 'Datoteka mora biti velika :size kilobajtov.',
+        'numeric' => 'Vrednost mora biti :size.',
+        'string'  => 'Vnos mora biti dolg :size znakov.',
     ],
-    'starts_with' => 'This must start with one of the following: :values.',
-    'string'      => 'This must be a string.',
-    'timezone'    => 'This must be a valid zone.',
-    'unique'      => 'This has already been taken.',
-    'uploaded'    => 'This failed to upload.',
-    'url'         => 'This format is invalid.',
-    'uuid'        => 'This must be a valid UUID.',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
-    'custom' => [
+    'starts_with'          => 'Vrednost se mora začeti z eno od naslednjih možnosti: :values.',
+    'string'               => 'Vnos mora biti besedilo.',
+    'timezone'             => 'Časovni pas mora biti veljaven.',
+    'unique'               => 'Vnešeno je že zasedeno.',
+    'uploaded'             => 'Prenos ni bil uspešen.',
+    'url'                  => 'Oblika ni pravilna.',
+    'uuid'                 => 'Vnos mora biti veljaven UUID.',
+    'custom'               => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
+    'attributes'           => [],
 ];

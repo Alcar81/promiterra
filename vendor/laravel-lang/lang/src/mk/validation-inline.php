@@ -1,139 +1,131 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Validation Language Lines
+|--------------------------------------------------------------------------
+|
+| The following language lines contain the default error messages used by
+| the validator class. Some of these rules have multiple versions such
+| as the size rules. Feel free to tweak each of these messages here.
+|
+*/
+
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
-    'accepted'             => 'This field must be accepted.',
-    'active_url'           => 'This is not a valid URL.',
-    'after'                => 'This must be a date after :date.',
-    'after_or_equal'       => 'This must be a date after or equal to :date.',
-    'alpha'                => 'This field may only contain letters.',
-    'alpha_dash'           => 'This field may only contain letters, numbers, dashes and underscores.',
-    'alpha_num'            => 'This field may only contain letters and numbers.',
-    'array'                => 'This field must be an array.',
-    'before'               => 'This must be a date before :date.',
-    'before_or_equal'      => 'This must be a date before or equal to :date.',
+    'accepted'             => 'Ова поле мора да биде прифатено.',
+    'active_url'           => 'Ова не е валидна URL-адреса.',
+    'after'                => 'Ова мора да биде датум после :date.',
+    'after_or_equal'       => 'Ова мора да биде датум кој е после или еднаков на :date.',
+    'alpha'                => 'Ова поле може да содржи само букви.',
+    'alpha_dash'           => 'Ова поле може да содржи само букви, бројки, долна црта и тире.',
+    'alpha_num'            => 'Ова поле може да содржи само букви и бројки.',
+    'array'                => 'Ова поле мора да биде низа.',
+    'attached'             => 'This field is already attached.',
+    'before'               => 'Ова поле мора да биде датум пред :date.',
+    'before_or_equal'      => 'Ова поле мора да биде датум пред или еднаков на :date.',
     'between'              => [
-        'numeric' => 'This value must be between :min and :max.',
-        'file'    => 'This file must be between :min and :max kilobytes.',
-        'string'  => 'This string must be between :min and :max characters.',
-        'array'   => 'This content must have between :min and :max items.',
+        'array'   => 'Ова поле мора да има помеѓу :min и :max број на елементи.',
+        'file'    => 'Оваа датотека мора да биде помеѓу :min и :max килобајти.',
+        'numeric' => 'Овој број мора да биде помеѓу :min и :max.',
+        'string'  => 'Овој текст мора да биде со должина помеѓу :min и :max број на карактери.',
     ],
-    'boolean'              => 'This field must be true or false.',
-    'confirmed'            => 'The confirmation does not match.',
-    'date'                 => 'This is not a valid date.',
-    'date_equals'          => 'This must be a date equal to :date.',
-    'date_format'          => 'This does not match the format :format.',
-    'different'            => 'This value must be different from :other.',
-    'digits'               => 'This must be :digits digits.',
-    'digits_between'       => 'This must be between :min and :max digits.',
-    'dimensions'           => 'This image has invalid dimensions.',
-    'distinct'             => 'This field has a duplicate value.',
-    'email'                => 'This must be a valid email address.',
-    'ends_with'            => 'This must end with one of the following: :values.',
-    'exists'               => 'The selected value is invalid.',
-    'file'                 => 'The content must be a file.',
-    'filled'               => 'This field must have a value.',
+    'boolean'              => 'Ова поле мора да има вредност вистинито (true) или невистинито (false).',
+    'confirmed'            => 'Ова поле не е потврдено.',
+    'date'                 => 'Ова не е валиден датум.',
+    'date_equals'          => 'Ова мора да биде датум еднаков на :date.',
+    'date_format'          => 'Oва не одговара на форматот :format.',
+    'different'            => 'Оваа вредност мора да биде различна од :other.',
+    'digits'               => 'Ова мора да содржи :digits цифри.',
+    'digits_between'       => 'Ова мора да има помеѓу :min и :max цифри.',
+    'dimensions'           => 'Оваа слика има невалидни димензии.',
+    'distinct'             => 'Ова поле има дупликат вредност.',
+    'email'                => 'Ова мора да биде валидна e-mail адреса.',
+    'ends_with'            => 'Ова мора да завршува со една од следните вредности: :values.',
+    'exists'               => 'Избраната вредност не е валидна.',
+    'file'                 => 'Содржината мора да биде датотека.',
+    'filled'               => 'Ова поле мора да има вредност.',
     'gt'                   => [
-        'numeric' => 'The value must be greater than :value.',
-        'file'    => 'The file size must be greater than :value kilobytes.',
-        'string'  => 'The string must be greater than :value characters.',
-        'array'   => 'The content must have more than :value items.',
+        'array'   => 'Ова поле мора да има повеќе од :value елементи.',
+        'file'    => 'Оваа датотека мора да биде поголема од :value килобајти.',
+        'numeric' => 'Овој број мора да биде поголем од :value.',
+        'string'  => 'Овој текст мора да има биде со должина поголема од :value карактери.',
     ],
     'gte'                  => [
-        'numeric' => 'The value must be greater than or equal :value.',
-        'file'    => 'The file size must be greater than or equal :value kilobytes.',
-        'string'  => 'The string must be greater than or equal :value characters.',
-        'array'   => 'The content must have :value items or more.',
+        'array'   => 'Ова поле мора да има :value елементи или повеќе.',
+        'file'    => 'Оваа датотека мора да биде поголема или еднаква на :value килобајти.',
+        'numeric' => 'Овој број мора да биде поголем или еднаков на :value.',
+        'string'  => 'Овој текст мора да биде со должина поголема или еднаква на :value карактери.',
     ],
-    'image'                => 'This must be an image.',
-    'in'                   => 'The selected value is invalid.',
-    'in_array'             => 'This value does not exist in :other.',
-    'integer'              => 'This must be an integer.',
-    'ip'                   => 'This must be a valid IP address.',
-    'ipv4'                 => 'This must be a valid IPv4 address.',
-    'ipv6'                 => 'This must be a valid IPv6 address.',
-    'json'                 => 'This must be a valid JSON string.',
+    'image'                => 'Ова мора да биде слика.',
+    'in'                   => 'Избраната вредност не е валидна.',
+    'in_array'             => 'Оваа вредност не постои во :other.',
+    'integer'              => 'Ова мора да биде цел број.',
+    'ip'                   => 'Ова мора да биде валидна IP адреса.',
+    'ipv4'                 => 'Ова мора да биде валидна IPv4 адреса.',
+    'ipv6'                 => 'Ова мора да биде валидна IPv6 адреса.',
+    'json'                 => 'Ова мора да биде валиден JSON објект.',
     'lt'                   => [
-        'numeric' => 'The value must be less than :value.',
-        'file'    => 'The file size must be less than :value kilobytes.',
-        'string'  => 'The string must be less than :value characters.',
-        'array'   => 'The content must have less than :value items.',
+        'array'   => 'Ова поле мора да има помалку од :value елементи.',
+        'file'    => 'Оваа датотека мора да биде помала од :value килобајти.',
+        'numeric' => 'Овој број мора да биде помал од :value.',
+        'string'  => 'Овој текст мора да биде со должина помала од :value карактери.',
     ],
     'lte'                  => [
-        'numeric' => 'The value must be less than or equal :value.',
-        'file'    => 'The file size must be less than or equal :value kilobytes.',
-        'string'  => 'The string must be less than or equal :value characters.',
-        'array'   => 'The content must not have more than :value items.',
+        'array'   => 'Ова поле мора да има :value елементи или помалку.',
+        'file'    => 'Оваа датотека мора да биде помала или еднаква на :value килобајти.',
+        'numeric' => 'Овој број мора да биде помал или еднаков на :value.',
+        'string'  => 'Овој текст мора да биде со должина помала или еднаква на :value карактери.',
     ],
     'max'                  => [
-        'numeric' => 'The value may not be greater than :max.',
-        'file'    => 'The file size may not be greater than :max kilobytes.',
-        'string'  => 'The string may not be greater than :max characters.',
-        'array'   => 'The content may not have more than :max items.',
+        'array'   => 'Ова поле не може да има повеќе од :max елементи.',
+        'file'    => 'Оваа датотека не може да биде поголема од :max килобајти.',
+        'numeric' => 'Овој број не може да биде поголем од :max.',
+        'string'  => 'Овој текст не може да биде со должина поголема од :max карактери.',
     ],
-    'mimes'                => 'This must be a file of type: :values.',
-    'mimetypes'            => 'This must be a file of type: :values.',
+    'mimes'                => 'Ова мора да биди датотека од тип: :values.',
+    'mimetypes'            => 'Ова мора да биди датотека од тип: :values.',
     'min'                  => [
-        'numeric' => 'The value must be at least :min.',
-        'file'    => 'The file size must be at least :min kilobytes.',
-        'string'  => 'The string must be at least :min characters.',
-        'array'   => 'The value must have at least :min items.',
+        'array'   => 'Ова поле мора да има најмалку :min елементи.',
+        'file'    => 'Оваа датотека мора да биде најмалку :min килобајти.',
+        'numeric' => 'Овој број мора да биде најмалку :min.',
+        'string'  => 'Овој текст мора да биде со должина најмалку од :min карактери.',
     ],
-    'multiple_of'          => 'The value must be a multiple of :value',
-    'not_in'               => 'The selected value is invalid.',
-    'not_regex'            => 'This format is invalid.',
-    'numeric'              => 'This must be a number.',
-    'password'             => 'The password is incorrect.',
-    'present'              => 'This field must be present.',
-    'regex'                => 'This format is invalid.',
-    'required'             => 'This field is required.',
-    'required_if'          => 'This field is required when :other is :value.',
-    'required_unless'      => 'This field is required unless :other is in :values.',
-    'required_with'        => 'This field is required when :values is present.',
-    'required_with_all'    => 'This field is required when :values are present.',
-    'required_without'     => 'This field is required when :values is not present.',
-    'required_without_all' => 'This field is required when none of :values are present.',
-    'same'                 => 'The value of this field must match the one from :other.',
+    'multiple_of'          => 'Оваа вредност мора да биде повеќекратна вредност од :value',
+    'not_in'               => 'Избраната вредност не е валидна.',
+    'not_regex'            => 'Овој формат не е валиден.',
+    'numeric'              => 'Ова мора да биде број.',
+    'password'             => 'Лозинката не е точна.',
+    'present'              => 'Ова поле мора да биде присутно.',
+    'prohibited'           => 'This field is prohibited.',
+    'prohibited_if'        => 'This field is prohibited when :other is :value.',
+    'prohibited_unless'    => 'This field is prohibited unless :other is in :values.',
+    'regex'                => 'Овој формат не е валиден.',
+    'relatable'            => 'This field may not be associated with this resource.',
+    'required'             => 'Ова поле е задолжително.',
+    'required_if'          => 'Ова поле е задолжително кога :other е :value.',
+    'required_unless'      => 'Ова поле е задолжително освен кога :other е во :values.',
+    'required_with'        => 'Ова поле е задолжително кога :values постои.',
+    'required_with_all'    => 'Ова поле е задолжително кога :values постојат.',
+    'required_without'     => 'Ова поле е задолжително кога не се присутни :values.',
+    'required_without_all' => 'Ова поле е задолжително кога ниту една вредност од следните: :values се присутни.',
+    'same'                 => 'Вредноста на ова поле мора да одговара на вредностна од :other.',
     'size'                 => [
-        'numeric' => 'The value must be :size.',
-        'file'    => 'The file size must be :size kilobytes.',
-        'string'  => 'The string must be :size characters.',
-        'array'   => 'The content must contain :size items.',
+        'array'   => 'Ова поле мора да има :size елементи.',
+        'file'    => 'Оваа датотека мора да биде :size килобајти.',
+        'numeric' => 'Овој број мора да биде :size.',
+        'string'  => 'Овој текст мора да биде со должина од :size карактери.',
     ],
-    'starts_with'          => 'This must start with one of the following: :values.',
-    'string'               => 'This must be a string.',
-    'timezone'             => 'This must be a valid zone.',
-    'unique'               => 'This has already been taken.',
-    'uploaded'             => 'This failed to upload.',
-    'url'                  => 'This format is invalid.',
-    'uuid'                 => 'This must be a valid UUID.',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
-    'custom' => [
+    'starts_with'          => 'Ова поле мора да започнува со една од следните вредности: :values.',
+    'string'               => 'Ова поле мора да биде текст.',
+    'timezone'             => 'Ова поле мора да биде валидна временска зона.',
+    'unique'               => 'Внесената вредност веќе постои.',
+    'uploaded'             => 'Грешка при прикачување.',
+    'url'                  => 'Овој формат не е валиден.',
+    'uuid'                 => 'Ова поле мора да биде валиден УУИД.',
+    'custom'               => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
+    'attributes'           => [],
 ];
