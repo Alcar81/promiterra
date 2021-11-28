@@ -69,6 +69,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5'
 
         ]);
 

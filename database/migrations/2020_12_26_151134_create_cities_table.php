@@ -23,7 +23,7 @@ class CreateCitiesTable extends Migration
             $table->string('weather')->nullable();
             $table->string('accent1')->nullable();
             $table->string('accent2')->nullable();
-            $table->string('localSpeciality');
+            $table->string('localSpeciality')->nullable();
             $table->string('mayor')->nullable();
             $table->bigInteger('urbanPopulation')->nullable();
             $table->bigInteger('ruralPopulation')->nullable();

@@ -1,5 +1,15 @@
 @extends('template')
-
+<head2>
+    <!-- captcha -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .help-block{
+            color: red;
+        }
+    </style>
+    {!! RecaptchaV3::initJs() !!}
+</head2>
 @section('title')
     Enregistrement
 @endsection
@@ -62,6 +72,17 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                            <div class="col-md-6">
+                                {!! RecaptchaV3::field('register') !!}
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
