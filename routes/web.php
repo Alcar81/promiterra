@@ -116,23 +116,23 @@ Route::namespace('Character')->prefix('character')->name('character.')->group(fu
         Route::resource('city', 'EditableCityController');
     });
 
-    Route::namespace('Editable\chapitre\sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
+    Route::namespace('Editable\Chapitre\Sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
         Route::resource('cites', 'EditableCitesController');
     });
 
-    Route::namespace('Editable\chapitre\sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
+    Route::namespace('Editable\Chapitre\Sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
         Route::resource('commercialProduct', 'EditableCommercialProductController');
     });
 
-    Route::namespace('Editable\chapitre\sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
+    Route::namespace('Editable\Chapitre\Sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
         Route::resource('offertDemand', 'EditableOffertDemandController');
     });
 
-    Route::namespace('Editable\chapitre\sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
+    Route::namespace('Editable\Chapitre\Sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
         Route::resource('tax', 'EditableTaxController');
     });
 
-    Route::namespace('Editable\chapitre\sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
+    Route::namespace('Editable\Chapitre\Sept')->prefix('chapitre/sept')->name('sept.')->group(function() {
         Route::resource('timetravel', 'EditableTimeTravelController');
     });
 

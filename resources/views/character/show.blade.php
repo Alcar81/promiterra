@@ -101,7 +101,9 @@ Show personnage
                                                 <th scope="col" style="width: 5%; text-align: center;">RM</th>
                                             </tr>
                                         </thead>
-                                            <tbody>
+                                            <tbody>                                             
+                                                
+                                               
                                             <tr>
                                                 <th scope="row" style="width: 55%" height="35px">{{ $character->character_career_name }}</th>
                                                     <td style="width: 5%" height="35px">{{ $character->character_career_physic }}</td>
@@ -113,7 +115,7 @@ Show personnage
                                                     <td style="width: 5%" height="35px">{{ $character->character_career_reaction }}</td>
                                                     <td style="width: 5%" height="35px">{{ $character->character_career_reaction_bonus }}</td>
                                                     <td style="width: 5%" height="35px">{{ $character->character_career_reaction_penalty }}</td>
-
+                                            
                                             </tr>
 
                                         </tbody>
