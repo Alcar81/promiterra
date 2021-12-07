@@ -1,0 +1,1 @@
+ {{ ( ((((((( $character->career_Phy_T) + 1) * $character->x_P) /10) + 10) + $character->life_Bonus) * ($character->l_P_P /100) ) + (((((($character->career_Phy_T) + 1) * $character->x_P) /10) + 10) + $character->life_Bonus) ) }}

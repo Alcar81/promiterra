@@ -369,174 +369,183 @@ Modification personnage
 
 
 
-                            <div class="container border rounded p-4">
-                                <p>Points de vie</p>
-                                <div class="row g-4">
+                            
+                            <div class="table-responsive" style="overflow-x:auto;">
+                                    <table class="table table-bordered">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col" style="width: 20%">{{ __('Points de vie') }}</th>
+                                                <th scope="col" style="width: 20%">{{ __('Pv Max') }}</th>                                                                                    
+                                                <th scope="col" style="width: 20%">{{ __('Bonus') }}</th>
+												<th scope="col" style="width: 20%">{{ __('% de bonus') }}</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                            <tbody>
+                                            <tr>                                                
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+															<div class="form-floating">
+                                                                <div>                                                                    
+                                                                    <input type="text" class="form-control" id="character_life_point_game" placeholder="" value="{{ old('character_life_point_game') ?? $character->character_life_point_game }}" name="character_life_point_game">
+                                                                </div>   
+                                                            </div>
+														</div>  
+                                                    </td>
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+															<div class="form-floating">
+                                                                <div>                                                                  
+                                                                                    
+                                                                    <!-- calcul lifemax -->
+                                                                        @include('calculations.lifemax') 
+                                                                    <!-- end: calcul lifemax -->
+                                                                </div>   
+                                                            </div>
+														</div>  
+                                                    </td>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_life_point_max">{{ __('Max') }}</label>
-                                            <input type="text" class="form-control" id="character_life_point_max" placeholder="" value="{{ old('character_life_point_max') ?? $character->character_life_point_max }}" name="character_life_point_max">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_life_point_game">{{ __('Point de vie') }}</label>
-                                            <input type="text" class="form-control" id="character_life_point_game" placeholder="" value="{{ old('character_life_point_game') ?? $character->character_life_point_game }}" name="character_life_point_game">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_life_point_bonus">{{ __('Bonus') }}</label>
-                                            <input type="text" class="form-control" id="character_life_point_bonus" placeholder="" value="{{ old('character_life_point_bonus') ?? $character->character_life_point_bonus }}" name="character_life_point_bonus">
-                                        </div>
-                                    </div>
+													<td style="width: 20%" height="35px">
+														<div class="col-md">
+															<div class="form-floating">																
+																<input type="text" class="form-control" id="character_life_point_bonus" placeholder="" value="{{ old('character_life_point_bonus') ?? $character->character_life_point_bonus }}" name="character_life_point_bonus">
+															</div>
+														</div>
+													</td>
+													<td style="width: 20%" height="35px">
+														<div class="col-md">
+															<div class="form-floating">																
+																<input type="text" class="form-control" id="character_life_point_percentage_bonus" placeholder="" value="{{ old('character_life_point_percentage_bonus') ?? $character->character_life_point_percentage_bonus }}" name="character_life_point_percentage_bonus">
+															</div>
+														</div>
+													</td>
+													
+                                            </tr>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_life_point_percentage_bonus">{{ __('% de bonus') }}</label>
-                                            <input type="text" class="form-control" id="character_life_point_percentage_bonus" placeholder="" value="{{ old('character_life_point_bonus') ?? $character->character_life_point_bonus }}" name="character_life_point_percentage_bonus">
-                                        </div>
-                                    </div>
-
-                                </div>
+                                        </tbody>
+                                    </table>
+                                
                             </div>
 
-                            <div class="container border rounded p-4">
-                                <p>Points de magie</p>
-                                <div class="row g-4">
+                            
+                            <div class="table-responsive" style="overflow-x:auto;">
+                                    <table class="table table-bordered">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col" style="width: 20%">{{ __('Points de magie') }}</th>
+                                                <th scope="col" style="width: 20%">{{ __('Pm Max') }}</th>                                                                                    
+                                                <th scope="col" style="width: 20%">{{ __('Bonus') }}</th>
+                                                <th scope="col" style="width: 20%">{{ __('% de bonus') }}</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                            <tbody>
+                                            <tr>                                                
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+                                                            <div class="form-floating">
+                                                                <div>                                                                    
+                                                                    <input type="text" class="form-control" id="character_magic_point_game" placeholder="" value="{{ old('character_magic_point_game') ?? $character->character_magic_point_game }}" name="character_magic_point_game">
+                                                                </div>   
+                                                            </div>
+                                                        </div>  
+                                                    </td>
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+                                                            <div class="form-floating">
+                                                                <div>                                                                  
+                                                                                    
+                                                                    <!-- calcul magicpointmax -->
+                                                                        @include('calculations.magicpointmax') 
+                                                                    <!-- end: calcul magicpointmax -->
+                                                                </div>   
+                                                            </div>
+                                                        </div>  
+                                                    </td>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_point_max">{{ __('Max') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_point_max" placeholder="" value="{{ old('character_magic_point_max') ?? $character->character_magic_point_max }}" name="character_magic_point_max">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_point_game">{{ __('Point de magie') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_point_game" placeholder="" value="{{ old('character_magic_point_game') ?? $character->character_magic_point_game }}" name="character_magic_point_game">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_point_bonus">{{ __('Bonus') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_point_bonus" placeholder="" value="{{ old('character_magic_point_bonus') ?? $character->character_magic_point_bonus }}" name="character_magic_point_bonus">
-                                        </div>
-                                    </div>
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+                                                            <div class="form-floating">																
+                                                                <input type="text" class="form-control" id="character_magic_point_bonus" placeholder="" value="{{ old('character_magic_point_bonus') ?? $character->character_magic_point_bonus }}" name="character_magic_point_bonus">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 20%" height="35px">
+                                                        <div class="col-md">
+                                                            <div class="form-floating">																
+                                                                <input type="text" class="form-control" id="character_magic_point_percentage_bonus" placeholder="" value="{{ old('character_magic_point_percentage_bonus') ?? $character->character_magic_point_percentage_bonus }}" name="character_magic_point_percentage_bonus">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    
+                                            </tr>
 
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_point_percentage_bonus">{{ __('% de bonus') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_point_percentage_bonus" placeholder="" value="{{ old('character_magic_point_percentage_bonus') ?? $character->character_magic_point_percentage_bonus }}" name="character_magic_point_percentage_bonus">
-                                        </div>
-                                    </div>
-                                </div>
+                                        </tbody>
+                                    </table>
+                                
+                            </div>
+                            
+                            <div class="table-responsive" style="overflow-x:auto;">
+                                <table class="table table-bordered">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" style="width: 20%">Naturelle
+                                            <!-- calcul fmarcana -->
+                                            (@include('calculations.fmnaturelle')) 
+                                                <!-- end: calcul fmarcana -->
+                                            </th>
+                                            <th scope="col" style="width: 20%; text-align: center;">Force magique</th>                                                
+                                            <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
+                                            <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" style="width: 20%" height="35px">Sortilège</th>
+                                                <td style="width: 20%" height="35px">
+                                                <!-- calcul fmarcana -->
+                                                @include('calculations.fmarcana') 
+                                                <!-- end: calcul fmarcana --> 
+                                                </td>
+
+                                                
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="magic_force_arcana_bonus" placeholder="" value="{{ old('magic_force_arcana_bonus') ?? $character->magic_force_arcana_bonus }}" name="magic_force_arcana_bonus"></td>
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="character_magic_force_arcana_percentage_bonus" placeholder="" value="{{ old('character_magic_force_arcana_percentage_bonus') ?? $character->character_magic_force_arcana_percentage_bonus }}" name="character_magic_force_arcana_percentage_bonus"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" style="width: 20%" height="35px">Sacrée</th>
+                                                <td style="width: 20%" height="35px">
+                                                <!-- calcul fmholy -->
+                                                @include('calculations.fmholy') 
+                                                <!-- end: calcul fmholy --> 
+                                                </td>
+                                                
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="character_magic_force_holy_bonu" placeholder="" value="{{ old('character_magic_force_holy_bonu') ?? $character->character_magic_force_holy_bonu }}" name="character_magic_force_holy_bonus"></td>
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="character_magic_force_holy_percentage_bonus" placeholder="" value="{{ old('character_magic_force_holy_percentage_bonus') ?? $character->character_magic_force_holy_percentage_bonus }}" name="character_magic_force_holy_percentage_bonus"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" style="width: 20%" height="35px">Maudite</th>
+                                                <td style="width: 20%" height="35px">
+                                                <!-- calcul fmcursed -->
+                                                @include('calculations.fmcursed') 
+                                                <!-- end: calcul fmcursed --> 
+                                                </td>
+                                                
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="character_magic_force_cursed_bonus" placeholder="" value="{{ old('character_magic_force_cursed_bonus') ?? $character->character_magic_force_cursed_bonus }}" name="character_magic_force_cursed_bonus"></td>
+                                                <td style="width: 20%" height="35px"><input type="text" class="form-control" id="character_magic_force_cursed_percentage_bonus" placeholder="" value="{{ old('character_magic_force_cursed_percentage_bonus') ?? $character->character_magic_force_cursed_percentage_bonus }}" name="character_magic_force_cursed_percentage_bonus"></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
 
-                            <div class="container border rounded p-4">
-                                <p>Forces magiques</p>
-                                <div class="row g-4">
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_arcana_max">{{ __('Naturelle max') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_arcana_max" placeholder="" value="{{ old('character_magic_force_arcana_max') ?? $character->character_magic_force_arcana_max }}" name="character_magic_force_arcana_max">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_arcana_game">{{ __('Naturelle') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_arcana_game" placeholder="" value="{{ old('character_magic_force_arcana_game') ?? $character->character_magic_force_arcana_game }}" name="character_magic_force_arcana_game">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="magic_force_arcana_bonus">{{ __('Bonus naturelle') }}</label>
-                                            <input type="text" class="form-control" id="magic_force_arcana_bonus" placeholder="" value="{{ old('magic_force_arcana_bonus') ?? $character->magic_force_arcana_bonus }}" name="magic_force_arcana_bonus">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_arcana_percentage_bonus">{{ __('% bonus naturelle') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_arcana_percentage_bonus" placeholder="" value="{{ old('character_magic_force_arcana_percentage_bonus') ?? $character->character_magic_force_arcana_percentage_bonus }}" name="character_magic_force_arcana_percentage_bonus">
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row g-4">
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_holy_max">{{ __('Sacrée max') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_holy_max" placeholder="" value="{{ old('character_magic_force_holy_max') ?? $character->character_magic_force_holy_max }}" name="character_magic_force_holy_max">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_holy_game">{{ __('Sacrée') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_holy_game" placeholder="" value="{{ old('character_magic_force_holy_game') ?? $character->character_magic_force_holy_game }}" name="character_magic_force_holy_game">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_holy_bonus">{{ __('Bonus sacrée') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_holy_bonu" placeholder="" value="{{ old('character_magic_force_holy_bonu') ?? $character->character_magic_force_holy_bonu }}" name="character_magic_force_holy_bonus">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_holy_percentage_bonus">{{ __('% bonus sacrée') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_holy_percentage_bonus" placeholder="" value="{{ old('character_magic_force_holy_percentage_bonus') ?? $character->character_magic_force_holy_percentage_bonus }}" name="character_magic_force_holy_percentage_bonus">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row g-4">
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_cursed_max">{{ __('Maudite max') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_cursed_max" placeholder="" value="{{ old('character_magic_force_cursed_max') ?? $character->character_magic_force_cursed_max }}" name="character_magic_force_cursed_max">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_cursed_game">{{ __('Maudite') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_cursed_game" placeholder="" value="{{ old('character_magic_force_cursed_game') ?? $character->character_magic_force_cursed_game }}" name="character_magic_force_cursed_game">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_cursed_bonus">{{ __('Bonus Maudite') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_cursed_bonus" placeholder="" value="{{ old('character_magic_force_cursed_bonus') ?? $character->character_magic_force_cursed_bonus }}" name="character_magic_force_cursed_bonus">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="character_magic_force_cursed_percentage_bonus">{{ __('% bonus maudite') }}</label>
-                                            <input type="text" class="form-control" id="character_magic_force_cursed_percentage_bonus" placeholder="" value="{{ old('character_magic_force_cursed_percentage_bonus') ?? $character->character_magic_force_cursed_percentage_bonus }}" name="character_magic_force_cursed_percentage_bonus">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                            
 
                             <div class="container border rounded p-4">
 

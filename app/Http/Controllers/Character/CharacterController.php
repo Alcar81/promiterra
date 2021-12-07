@@ -59,10 +59,18 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
+    
+
     public function show($id)
     {
+        
         return view('character.show', [
             'character' => Character::findOrFail($id)
+    //    public function show(Caracter $caracter)
+    //return view ('caracter.show', compact($caracter)); 
+
+
+
         ]);
     }
 

@@ -90,32 +90,20 @@ Show personnage
                                         <thead class="thead-light">
                                             <tr>
                                                 <th scope="col" style="width: 55%">Carrière</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">Physique</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">PB</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">PM</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">Mental</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">MB</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">MM</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">Réaction</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">RB</th>
-                                                <th scope="col" style="width: 5%; text-align: center;">RM</th>
+                                                <th scope="col" style="width: 5%; text-align: center;">Physique</th>                                                
+                                                <th scope="col" style="width: 5%; text-align: center;">Mental</th>                                                
+                                                <th scope="col" style="width: 5%; text-align: center;">Réaction</th>                                                
                                             </tr>
                                         </thead>
                                             <tbody>                                             
-                                                
-                                               
+                                            
+                                        
+                                            
                                             <tr>
                                                 <th scope="row" style="width: 55%" height="35px">{{ $character->character_career_name }}</th>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_physic }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_physic_bonus }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_physic_penalty }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_mental }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_mental_bonus }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_mental_penalty }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_reaction }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_reaction_bonus }}</td>
-                                                    <td style="width: 5%" height="35px">{{ $character->character_career_reaction_penalty }}</td>
-                                            
+                                                    <td style="width: 5%"; text-align: center; height="35px";> {{ $character->career_Phy_T }}</td>                                                  
+                                                    <td style="width: 5%" height="35px">{{ $character->career_Ment_T }}</td>                                                    
+                                                    <td style="width: 5%" height="35px">{{ $character->career_React_T  }}</td>                                                                                       
                                             </tr>
 
                                         </tbody>
@@ -128,20 +116,23 @@ Show personnage
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Points de vie</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">Max</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">En jeu</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
+                                                <th scope="col" style="width: 20%">Points de vie</th>                                                                                     
+                                                
+                                                
                                             </tr>
                                         </thead>
                                             <tbody>
-                                            <tr>
-                                                <th scope="row" style="width: 20%" height="35px"></th>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_life_point_max }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_life_point_game }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_life_point_bonus }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_life_point_percentage_bonus }}</td>
+                                            <tr>                                                
+                                                    <td style="width: 20%" height="35px">
+                                                                                    
+                                                        {{ $character->life_G }} /                                                        
+                                                        
+                                                        <!-- calcul lifemax -->
+                                                            @include('calculations.lifemax') 
+                                                        <!-- end: calcul lifemax -->
+                                                        
+                                                                                    
+                                                    </td>       
                                             </tr>
 
                                         </tbody>
@@ -154,18 +145,22 @@ Show personnage
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Points de magie</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">Max</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">En jeu</th>
+                                                <th scope="col" style="width: 20%">Points de magie</th>  
                                                 <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
                                                 <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
                                             </tr>
                                         </thead>
                                             <tbody>
-                                            <tr>
-                                                <th scope="row" style="width: 20%" height="35px"></th>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_point_max }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_point_game }}</td>
+                                            <tr>                                              
+
+                                                    <td style="width: 20%" height="35px">
+                                                    {{ $character->character_magic_point_game }}/                                                     
+                                                    
+                                                    <!-- calcul lifemax -->
+                                                    @include('calculations.magicpointmax') 
+                                                    <!-- end: calcul lifemax -->                                                  
+                                                                                                   
+                                                    </td>                                                                                                     
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_point_bonus }}</td>
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_point_percentage_bonus }}</td>
                                             </tr>
@@ -180,9 +175,12 @@ Show personnage
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Force magique</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">Max</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">En jeu</th>
+                                                <th scope="col" style="width: 20%">Naturelle
+                                                <!-- calcul fmarcana -->
+                                                (@include('calculations.fmnaturelle')) 
+                                                    <!-- end: calcul fmarcana -->
+                                                </th>
+                                                <th scope="col" style="width: 20%; text-align: center;">Force magique</th>                                                
                                                 <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
                                                 <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
                                             </tr>
@@ -190,24 +188,37 @@ Show personnage
                                             <tbody>
                                             <tr>
                                                 <th scope="row" style="width: 20%" height="35px">Sortilège</th>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_max }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_game }}</td>
+                                                    <td style="width: 20%" height="35px">
+                                                    <!-- calcul fmarcana -->
+                                                    @include('calculations.fmarcana') 
+                                                    <!-- end: calcul fmarcana --> 
+                                                    </td>
+
+                                                    
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_bonus }}</td>
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_percentage_bonus }}</td>
                                             </tr>
 
                                             <tr>
                                                 <th scope="row" style="width: 20%" height="35px">Sacrée</th>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_max }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_game }}</td>
+                                                    <td style="width: 20%" height="35px">
+                                                    <!-- calcul fmholy -->
+                                                    @include('calculations.fmholy') 
+                                                    <!-- end: calcul fmholy --> 
+                                                    </td>
+                                                    
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_bonu }}</td>
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_percentage_bonus }}</td>
                                             </tr>
 
                                             <tr>
                                                 <th scope="row" style="width: 20%" height="35px">Maudite</th>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_max }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_game }}</td>
+                                                    <td style="width: 20%" height="35px">
+                                                    <!-- calcul fmcursed -->
+                                                    @include('calculations.fmcursed') 
+                                                    <!-- end: calcul fmcursed --> 
+                                                    </td>
+                                                    
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_bonus }}</td>
                                                     <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_percentage_bonus }}</td>
                                             </tr>

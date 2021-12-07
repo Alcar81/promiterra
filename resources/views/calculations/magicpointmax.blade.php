@@ -1,0 +1,1 @@
+{{ ( ( (($character->career_Ment_T * $character->character_armor1_magic) + $character->character_magic_point_bonus ) * ($character->character_magic_point_percentage_bonus / 100)) + (($character->career_Ment_T * $character->character_armor1_magic) + $character->character_magic_point_bonus ) ) }}

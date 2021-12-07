@@ -472,6 +472,46 @@ class Character extends Model
 
     ];
 
+    public function getcareerPhyTAttribute()
+    {
+        return $this->character_career_physic +$this->character_career_physic_bonus - $this->character_career_physic_penalty ;
+    }
 
+    public function getcareerMentTAttribute()
+    {
+        return $this->character_career_mental +$this->character_career_mental_bonus - $this->character_career_mental_penalty ;
+    }
+
+    public function getcareerReactTAttribute()
+    {
+        return $this->character_career_reaction +$this->character_career_reaction_bonus - $this->character_career_reaction_penalty ;
+        
+    }
+
+    public function getxPAttribute() {
+        return $this->character_experience;       
+       
+    }
+
+    public function getlifeGAttribute() {
+        return $this->character_life_point_game ;       
+       
+    }
+    
+    public function getlifeBonusAttribute() {
+        return $this->character_life_point_bonus;       
+       
+    }
+
+    public function getlPPAttribute() {
+        return $this->character_life_point_percentage_bonus;       
+       
+    }
+
+    
+    
+
+    
+    
 
 }

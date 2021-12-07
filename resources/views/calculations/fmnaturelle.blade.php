@@ -1,0 +1,1 @@
+{{ ((($character->career_Ment_T * $character->x_P) / 40) + 1) }}

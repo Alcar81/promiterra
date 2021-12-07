@@ -1,0 +1,1 @@
+{{ ( ( (((($character->career_Ment_T * $character->x_P) / 40) + 1) + $character->character_magic_force_holy_bonus) * ($character->character_magic_force_holy_percentage_bonus / 100)) + (((($character->career_Ment_T * $character->x_P) / 40) + 1) + $character->character_magic_force_holy_bonus)) }}
