@@ -146,8 +146,7 @@ Show personnage
                                         <thead class="thead-light">
                                             <tr>
                                                 <th scope="col" style="width: 20%">Points de magie</th>  
-                                                <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
+                                                
                                             </tr>
                                         </thead>
                                             <tbody>
@@ -161,8 +160,7 @@ Show personnage
                                                     <!-- end: calcul lifemax -->                                                  
                                                                                                    
                                                     </td>                                                                                                     
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_point_bonus }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_point_percentage_bonus }}</td>
+                                                    
                                             </tr>
 
                                         </tbody>
@@ -181,8 +179,7 @@ Show personnage
                                                     <!-- end: calcul fmarcana -->
                                                 </th>
                                                 <th scope="col" style="width: 20%; text-align: center;">Force magique</th>                                                
-                                                <th scope="col" style="width: 20%; text-align: center;">Bonus</th>
-                                                <th scope="col" style="width: 20%; text-align: center;">% bonus</th>
+                                                
                                             </tr>
                                         </thead>
                                             <tbody>
@@ -192,11 +189,8 @@ Show personnage
                                                     <!-- calcul fmarcana -->
                                                     @include('calculations.fmarcana') 
                                                     <!-- end: calcul fmarcana --> 
-                                                    </td>
-
+                                                    </td>                                                   
                                                     
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_bonus }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_arcana_percentage_bonus }}</td>
                                             </tr>
 
                                             <tr>
@@ -206,9 +200,7 @@ Show personnage
                                                     @include('calculations.fmholy') 
                                                     <!-- end: calcul fmholy --> 
                                                     </td>
-                                                    
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_bonu }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_holy_percentage_bonus }}</td>
+                                                   
                                             </tr>
 
                                             <tr>
@@ -218,9 +210,7 @@ Show personnage
                                                     @include('calculations.fmcursed') 
                                                     <!-- end: calcul fmcursed --> 
                                                     </td>
-                                                    
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_bonus }}</td>
-                                                    <td style="width: 20%" height="35px">{{ $character->character_magic_force_cursed_percentage_bonus }}</td>
+                                                                                                   
                                             </tr>
 
                                         </tbody>
