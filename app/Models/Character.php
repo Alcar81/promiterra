@@ -509,9 +509,407 @@ class Character extends Model
     }
 
     
-    
+    public function getalcoolAttribute() {
+        return $this->character_tma_alcool + $this->character_tma_alcool_b ;       
+       
+    }
 
+    public function getartsNcraftsAttribute() {
+        return $this->character_tma_artsNcrafts + $this->character_tma_artsNcrafts_b ;       
+       
+    }
     
-    
+    public function getcarpentryAttribute() {
+        return $this->character_tma_carpentry + $this->character_tma_carpentry_b ;       
+       
+    }
+
+    public function gethuntingNfishingAttribute() {
+        return $this->character_tma_huntingNfishing + $this->character_tma_huntingNfishing_b ;       
+       
+    }
+
+    public function getdriveAttribute() {
+        return $this->character_tma_drive + $this->character_tma_drive_b ;       
+       
+    }
+
+    public function getstringsAttribute() {
+        return $this->character_tma_strings + $this->character_tma_strings_b ;       
+       
+    }
+
+    public function getrunAttribute() {
+        return $this->character_tma_run + $this->character_tma_run_b ;       
+       
+    }
+
+    public function getbalancedAttribute() {
+        return $this->character_tma_balanced + $this->character_tma_balanced_b ;       
+       
+    }
+
+    public function gethorseridingAttribute() {
+        return $this->character_tma_horseriding + $this->character_tma_horseriding_b ;       
+       
+    }
+
+    public function getclimbingAttribute() {
+        return $this->character_tma_climbing + $this->character_tma_climbing_b ;       
+       
+    }
+
+    public function getfightAttribute() {
+        return $this->character_tma_fight + $this->character_tma_fight_b ;       
+       
+    }
+
+    public function getmetallurgyAttribute() {
+        return $this->character_tma_metallurgy + $this->character_tma_metallurgy_b ;       
+       
+    }
+
+    public function getswimmingAttribute() {
+        return $this->character_tma_swimming + $this->character_tma_swimming_b ;       
+       
+    }
+
+    public function getnavigationAttribute() {
+        return $this->character_tma_navigation + $this->character_tma_navigation_b ;       
+       
+    }
+
+    public function gettortureAttribute() {
+        return $this->character_tma_torture + $this->character_tma_torture_b ;       
+       
+    }
+
+    public function getdragonryAttribute() {
+        return $this->character_tma_dragonry + $this->character_tma_dragonry_b ;       
+       
+    }
+
+    public function getacrobaticsAttribute() {
+        return $this->character_tha_acrobatics + $this->character_tha_acrobatics_b ;       
+       
+    }
+
+    public function getnaturecamoAttribute() {
+        return $this->character_tha_naturecamo + $this->character_tha_naturecamo_b ;       
+       
+    }
+
+    public function geturbancamoAttribute() {
+        return $this->character_tha_urbancamo + $this->character_tha_urbancamo_b ;       
+       
+    }
+
+    public function getlockpickingAttribute() {
+        return $this->character_tha_lockpicking + $this->character_tha_lockpicking_b ;       
+       
+    }
+
+    public function getdisguiseAttribute() {
+        return $this->character_tha_disguise + $this->character_tha_disguise_b ;       
+       
+    }
+
+    public function getdemolitionAttribute() {
+        return $this->character_tha_demolition + $this->character_tha_demolition_b ;       
+       
+    }
+
+    public function getdiscretnatureAttribute() {
+        return $this->character_tha_discretnature + $this->character_tha_discretnature_b ;       
+       
+    }
+
+    public function getdiscreturbanAttribute() {
+        return $this->character_tha_discreturban + $this->character_tha_discreturban_b ;       
+       
+    }
+
+    public function getconcealmentAttribute() {
+        return $this->character_tha_concealment + $this->character_tha_concealment_b ;       
+       
+    }
+
+    public function getmedecineAttribute() {
+        return $this->character_tha_medecine + $this->character_tha_medecine_b ;       
+       
+    }
+
+    public function gettrapAttribute() {
+        return $this->character_tha_trap + $this->character_tha_trap_b ;       
+       
+    }
+
+    public function getprecisionAttribute() {
+        return $this->character_tha_precision + $this->character_tha_precision_b ;       
+       
+    }
+
+    public function gettechnologyAttribute() {
+        return $this->character_tha_technology + $this->character_tha_technology_b ;       
+       
+    }
+
+    public function getthanatologyAttribute() {
+        return $this->character_tha_thanatology + $this->character_tha_thanatology_b ;       
+       
+    }
+
+    public function getpickpocketingAttribute() {
+        return $this->character_tha_pickpocketing + $this->character_tha_pickpocketing_b ;       
+       
+    }
+
+    public function gettribaltattooAttribute() {
+        return $this->character_tha_tribaltattoo + $this->character_tha_tribaltattoo_b ;       
+       
+    }
+
+    public function getanalysisAttribute() {
+        return $this->character_tse_analysis + $this->character_tse_analysis_b ;       
+       
+    }
+
+    public function getconcentrationAttribute() {
+        return $this->character_tse_concentration + $this->character_tse_concentration_b ;       
+       
+    }
+
+    public function getcookAttribute() {
+        return $this->character_tse_cook + $this->character_tse_cook_b ;       
+       
+    }
+
+    public function getdetectionAttribute() {
+        return $this->character_tse_detection + $this->character_tse_detection_b ;       
+       
+    }
+
+    public function getdressageAttribute() {
+        return $this->character_tse_dressage + $this->character_tse_dressage_b ;       
+       
+    }
+
+    public function getlistenAttribute() {
+        return $this->character_tse_listen + $this->character_tse_listen_b ;       
+       
+    }
+
+    public function getevaluationAttribute() {
+        return $this->character_tse_evaluation + $this->character_tse_evaluation_b ;       
+       
+    }
+
+
+    public function getlipreadingAttribute() {
+        return $this->character_tse_lipreading + $this->character_tse_lipreading_b ;       
+       
+    }
+
+
+    public function getmeteorologyAttribute() {
+        return $this->character_tse_meteorology + $this->character_tse_meteorology_b ;       
+       
+    }
+
+    public function getobservationAttribute() {
+        return $this->character_tse_observation + $this->character_tse_observation_b ;       
+       
+    }
+
+    public function getsmellAttribute() {
+        return $this->character_tse_smell + $this->character_tse_smell_b ;       
+       
+    }
+
+    public function getorientationAttribute() {
+        return $this->character_tse_orientation + $this->character_tse_orientation_b ;       
+       
+    }
+
+    public function getperceptionAttribute() {
+        return $this->character_tse_perception + $this->character_tse_perception_b ;       
+       
+    }
+
+    public function gettrackingAttribute() {
+        return $this->character_tse_tracking + $this->character_tse_tracking_b ;       
+       
+    }
+
+    public function getresearchAttribute() {
+        return $this->character_tse_research + $this->character_tse_research_b ;       
+       
+    }
+
+    public function getpesAttribute() {
+        return $this->character_tse_pes + $this->character_tse_pes_b ;       
+       
+    }
+
+    public function getspielAttribute() {
+        return $this->character_tso_spiel + $this->character_tso_spiel_b ;       
+       
+    }
+
+    public function getcorruptionAttribute() {
+        return $this->character_tso_corruption + $this->character_tso_corruption_b ;       
+       
+    }
+
+    public function geteloquenceAttribute() {
+        return $this->character_tso_eloquence + $this->character_tso_eloquence_b ;       
+       
+    }
+
+    public function getempathyAttribute() {
+        return $this->character_tso_empathy + $this->character_tso_empathy_b ;       
+       
+    }
+
+    public function getcounterfeitingAttribute() {
+        return $this->character_tso_counterfeiting + $this->character_tso_counterfeiting_b ;       
+       
+    }
+
+    public function gethypnotismAttribute() {
+        return $this->character_tso_hypnotism + $this->character_tso_hypnotism_b ;       
+       
+    }
+
+    public function getintimidationAttribute() {
+        return $this->character_tso_intimidation + $this->character_tso_intimidation_b ;       
+       
+    }
+
+    public function getsecretjargonAttribute() {
+        return $this->character_tso_secretjargon + $this->character_tso_secretjargon_b ;       
+       
+    }
+
+    public function getgameAttribute() {
+        return $this->character_tso_game + $this->character_tso_game_b ;       
+       
+    }
+
+    public function getleadershipAttribute() {
+        return $this->character_tso_leadership + $this->character_tso_leadership_b ;       
+       
+    }
+
+    public function getbargainingAttribute() {
+        return $this->character_tso_bargaining + $this->character_tso_bargaining_b ;       
+       
+    }
+
+    public function getperformanceAttribute() {
+        return $this->character_tso_performance + $this->character_tso_performance_b ;       
+       
+    }
+
+    public function getrumorsAttribute() {
+        return $this->character_tso_rumors + $this->character_tso_rumors_b ;       
+       
+    }
+
+    public function getseductionAttribute() {
+        return $this->character_tso_seduction + $this->character_tso_seduction_b ;       
+       
+    }
+
+    public function getventriloquismAttribute() {
+        return $this->character_tso_ventriloquism + $this->character_tso_ventriloquism_b ;       
+       
+    }
+
+    public function getignisaltaAttribute() {
+        return $this->character_tso_ignisalta + $this->character_tso_ignisalta_b ;       
+       
+    }
+
+    public function getancientcultAttribute() {
+        return $this->character_tco_ancientcult + $this->character_tco_ancientcult_b ;       
+       
+    }
+
+    public function getastronomyAttribute() {
+        return $this->character_tco_astronomy + $this->character_tco_astronomy_b ;       
+       
+    }
+
+    public function getlibraryAttribute() {
+        return $this->character_tco_library + $this->character_tco_library_b ;       
+       
+    }
+
+    public function getcreatureAttribute() {
+        return $this->character_tco_creature + $this->character_tco_creature_b ;       
+       
+    }
+
+    public function getgeographyAttribute() {
+        return $this->character_tco_geography + $this->character_tco_geography_b ;       
+       
+    }
+
+    public function gethistoryAttribute() {
+        return $this->character_tco_history + $this->character_tco_history_b ;       
+       
+    }
+
+    public function getidentificationAttribute() {
+        return $this->character_tco_identification + $this->character_tco_identification_b ;       
+       
+    }
+
+    public function gethousesAttribute() {
+        return $this->character_tco_houses + $this->character_tco_houses_b ;       
+       
+    }
+
+    public function getnatureAttribute() {
+        return $this->character_tco_nature + $this->character_tco_nature_b ;       
+       
+    }
+
+    public function getoccultismAttribute() {
+        return $this->character_tco_occultism + $this->character_tco_occultism_b ;       
+       
+    }
+
+    public function getpoliticsAttribute() {
+        return $this->character_tco_politics + $this->character_tco_politics_b ;       
+       
+    }
+
+    public function getritualofdeathAttribute() {
+        return $this->character_tco_ritualofdeath + $this->character_tco_ritualofdeath_b ;       
+       
+    }
+
+    public function getspellAttribute() {
+        return $this->character_tco_spell + $this->character_tco_spell_b ;       
+       
+    }
+
+    public function gettacticalAttribute() {
+        return $this->character_tco_tactical + $this->character_tco_tactical_b ;       
+       
+    }
+
+    public function gettheologyAttribute() {
+        return $this->character_tco_theology + $this->character_tco_theology_b ;       
+       
+    }
+
+    public function getritualofstarsAttribute() {
+        return $this->character_tco_ritualofstars + $this->character_tco_ritualofstars_b ;       
+       
+    }
+
 
 }

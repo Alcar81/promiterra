@@ -56,10 +56,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="m-b-40">
-
-
-                            <span class="lead">Promiterra est un jeu de rôle de table qui mélange les grandes aventures de la renaissance avec l’univers fantastique et combattif des jeux de rôle traditionnels. Les parties sont dirigées par un maître de jeu qui prépare et décrit un monde vaste aux joueurs afin qu’ils décident et vivent leurs propres destinés. Le jeu est limité seulement par l’imagination des participants et les buts à accomplir peuvent être très variés. Les joueurs peuvent décider de tenter de sauver le monde ou de le détruire, ou simplement raconter la meilleure blague dans une taverne.
-				</span>
+                            <span class="lead">Promiterra est un jeu de rôle de table qui mélange les grandes aventures de la renaissance avec l’univers fantastique et combattif des jeux de rôle traditionnels. Les parties sont dirigées par un maître de jeu qui prépare et décrit un monde vaste aux joueurs afin qu’ils décident et vivent leurs propres destinés. Le jeu est limité seulement par l’imagination des participants et les buts à accomplir peuvent être très variés. Les joueurs peuvent décider de tenter de sauver le monde ou de le détruire, ou simplement raconter la meilleure blague dans une taverne.</span>
                         </div>
                     </div>
                     <div class="col-md-6">

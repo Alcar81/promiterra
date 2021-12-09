@@ -16,7 +16,7 @@ Show personnage
 
                 <div class="card-body">
 
-                    <div class="row p-4">
+                    <div class="row">
                         <div class="col-md-12">
                             <div class="m-b-40">
 
@@ -111,19 +111,19 @@ Show personnage
                                 </div>
                             </div>
 
-                            <div class="container border rounded pt-4">
-                                <div class="table-responsive" style="overflow-x:auto;">
+                            <div class="container border rounded pt-3">
+                                <div class="col-md-3">
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Points de vie</th>                                                                                     
+                                                <th scope="col">Points de vie</th>                                                                                     
                                                 
                                                 
                                             </tr>
                                         </thead>
                                             <tbody>
                                             <tr>                                                
-                                                    <td style="width: 20%" height="35px">
+                                                    <td height="35px">
                                                                                     
                                                         {{ $character->life_G }} /                                                        
                                                         
@@ -138,21 +138,21 @@ Show personnage
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            
 
-                            <div class="container border rounded pt-4">
-                                <div class="table-responsive" style="overflow-x:auto;">
+                            
+                                <div class="col-md-3">
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Points de magie</th>  
+                                                <th scope="col">Points de magie</th>  
                                                 
                                             </tr>
                                         </thead>
                                             <tbody>
                                             <tr>                                              
 
-                                                    <td style="width: 20%" height="35px">
+                                                    <td  height="35px">
                                                     {{ $character->character_magic_point_game }}/                                                     
                                                     
                                                     <!-- calcul lifemax -->
@@ -165,27 +165,23 @@ Show personnage
 
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
+                                </div>                          
 
-                            <div class="container border rounded pt-4">
-                                <div class="table-responsive" style="overflow-x:auto;">
+                            
+                                <div class="col-md-3">
                                     <table class="table table-bordered">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col" style="width: 20%">Naturelle
-                                                <!-- calcul fmarcana -->
-                                                (@include('calculations.fmnaturelle')) 
-                                                    <!-- end: calcul fmarcana -->
-                                                </th>
-                                                <th scope="col" style="width: 20%; text-align: center;">Force magique</th>                                                
-                                                
+                                                <th scope="col"> Force magique</th>
+                                                                                                        <!-- calcul fmarcana -->
+                                                <th scope="col" style=" text-align: center;">@include('calculations.fmnaturelle')</th>                                                
+                                                                                                        <!-- end: calcul fmarcana -->
                                             </tr>
                                         </thead>
                                             <tbody>
                                             <tr>
-                                                <th scope="row" style="width: 20%" height="35px">Sortilège</th>
-                                                    <td style="width: 20%" height="35px">
+                                                <th scope="row"  height="35px">Sortilège</th>
+                                                    <td style="text-align: center;" height="35px">
                                                     <!-- calcul fmarcana -->
                                                     @include('calculations.fmarcana') 
                                                     <!-- end: calcul fmarcana --> 
@@ -194,8 +190,8 @@ Show personnage
                                             </tr>
 
                                             <tr>
-                                                <th scope="row" style="width: 20%" height="35px">Sacrée</th>
-                                                    <td style="width: 20%" height="35px">
+                                                <th scope="row" height="35px">Sacrée</th>
+                                                    <td style="text-align: center;" height="35px">
                                                     <!-- calcul fmholy -->
                                                     @include('calculations.fmholy') 
                                                     <!-- end: calcul fmholy --> 
@@ -204,8 +200,8 @@ Show personnage
                                             </tr>
 
                                             <tr>
-                                                <th scope="row" style="width: 20%" height="35px">Maudite</th>
-                                                    <td style="width: 20%" height="35px">
+                                                <th scope="row"  height="35px">Maudite</th>
+                                                    <td style="text-align: center;" height="35px">
                                                     <!-- calcul fmcursed -->
                                                     @include('calculations.fmcursed') 
                                                     <!-- end: calcul fmcursed --> 
@@ -549,487 +545,412 @@ Show personnage
 
                             </div>
 
-                            <div class="container border rounded pt-4">
-                                <p>Compétences</p>
-                                <div class="table-responsive" style="overflow-x:auto;">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-light">
-                                            <tr>
+                            <div class="container border rounded pt-4 ">
+                                <div> 
+                                    <p>Compétences</p>
+                                    <div class="row g-0">
+                                        <div class="col-md-3 m-0">
+                                            <table class="table table-bordered " >
+                                                <thead class="thead-light">
+                                                    <tr>
 
-                                                <th scope="col"  style="width: 20%; text-align: center;">Manuelle</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Pts</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Bonus</th>
+                                                        <th scope="col"  style="text-align: center;">Manuelle</th>
+                                                        <th scope="col"  style="text-align: center;">P</th>                                               
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Alcool</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_alcool }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_alcool_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Artisanat</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_artsNcrafts }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_artsNcrafts_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Charpenterie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_carpentry }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_carpentry_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Chasse et pêche *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_huntingNfishing }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_huntingNfishing_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Conduite</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_drive }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_drive_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Corde</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_strings }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_strings_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Course *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_run }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_run_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Équilibre *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_balanced }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_balanced_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Équitation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_horseriding }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_horseriding_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Escalade *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_climbing }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_climbing_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Lutte *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_fight }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_fight_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Métallurgie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_metallurgy }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_metallurgy_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Natation *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_swimming }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_swimming_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Navigation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_navigation }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_navigation_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Torture</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_torture }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_torture_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Dragonnerie **</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_dragonry }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tma_dragonry_b }}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="table-responsive" style="overflow-x:auto;">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-light">
-                                            <tr>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" height="35px">Alcool</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->alcool }}</td>
+                                                            
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Artisanat</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->artsNcrafts }}</td>                                                
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" height="35px">Charpenterie</th>
+                                                            <td  style="text-align: center;" height="35px">{{ $character->carpentry }}</td>                                                
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Chasse et pêche *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->huntingNfishing }}</td>                                                
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" height="35px">Conduite</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->drive }}</td>                                                
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" height="35px">Corde</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->strings }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Course *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->run }}</td>
+                                                            
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" height="35px">Équilibre *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->balanced }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Équitation</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->horseriding }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Escalade *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->climbing }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Lutte *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->fight }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Métallurgie</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->metallurgy }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Natation *</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->swimming }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Navigation</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->navigation }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Torture</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->torture }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"  height="35px">Dragonnerie **</th>
+                                                            <td style="text-align: center;" height="35px">{{ $character->dragonry }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    
+                                    
+                                    
+                                        <div class="col-md-3 m-0">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
 
-                                                <th scope="col"  style="width: 20%; text-align: center;">Habileté</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Pts</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Bonus</th>
+                                                        <th scope="col"  style="width: 8%; text-align: center;">Habileté</th>
+                                                        <th scope="col"  style="width: 2%; text-align: center;">P</th>                                               
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Acrobatie *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_acrobatics }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_acrobatics_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Camouflage nature *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_naturecamo }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_naturecamo_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Camouflage urbain *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_urbancamo }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_urbancamo_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Crochetage</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_lockpicking }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_lockpicking_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Déguisement</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_disguise }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_disguise_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Démolition</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_demolition }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_demolition_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Discrétion nature *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_discretnature }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_discretnature_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Discrétion urbaine *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_discreturban }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_discreturban_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Dissimulation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_concealment }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_concealment_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Médecine</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_medecine }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_medecine_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Piège</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_trap }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_trap_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Précision</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_precision }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_precision_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Technologie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_technology }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_technology_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Thanatologie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_thanatology }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_thanatology_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Vol à la tire *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_pickpocketing }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_pickpocketing_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Tatouage tribal **</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_tribaltattoo }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tha_tribaltattoo_b }}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row" height="35px">Acrobatie *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->acrobatics }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Camouflage nature *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->naturecamo }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Camouflage urbain *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->urbancamo }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Crochetage</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->lockpicking }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Déguisement</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->disguise }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Démolition</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->demolition }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Discrétion nature *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->discretnature }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Discrétion urbaine *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->discreturban }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Dissimulation</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->concealment }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Médecine</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->medecine }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Piège</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->trap }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Précision</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->precision }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Technologie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->technology }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Thanatologie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->thanatology }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Vol à la tire *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->pickpocketing }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Tatouage tribal **</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->tribaltattoo }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>                                    
+                                        </div>
+                                        
+                                        <div class="col-md-3 m-0">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
 
-                                <div class="table-responsive" style="overflow-x:auto;">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-light">
-                                            <tr>
+                                                        <th scope="col"  style="width: 8%; text-align: center;">Sens</th>
+                                                        <th scope="col"  style="width: 2%; text-align: center;">P</th>
 
-                                                <th scope="col"  style="width: 20%; text-align: center;">Sens</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Pts</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Bonus</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Analyse</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->analysis }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Concentration *</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->concentration }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Cuisine</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->cook }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Détection</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->detection }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Dressage</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->dressage }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Écoute</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->listen }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Évaluation</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->evaluation }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Lecture labiale</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->lipreading }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Météorologie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->meteorology }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Observation</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->observation }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Odorat</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->smell }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Orientation</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->orientation }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Perception</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->perception }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Pistage</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->tracking }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Recherche</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->research }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">P.E.S **</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->pes }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>                                    
+                                        </div>
+                                        
+                                        <div class="col-md-3 m-0">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Analyse</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_analysis }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_analysis_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Concentration *</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_concentration }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_concentration_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Cuisine</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_cook }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_cook_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Détection</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_detection }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_detection_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Dressage</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_dressage }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_dressage_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Écoute</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_listen }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_listen_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Évaluation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_evaluation }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_evaluation_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Lecture labiale</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_lipreading }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_lipreading_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Météorologie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_meteorology }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_meteorology_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Observation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_observation }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_observation_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Odorat</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_smell }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_smell_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Orientation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_orientation }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_orientation_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Perception</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_perception }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_perception_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Pistage</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_tracking }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_tracking_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Recherche</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_research }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_research_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">P.E.S **</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_pes }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tse_pes_b }}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                        <th scope="col"  style="width: 8%; text-align: center;">Sociale</th>
+                                                        <th scope="col"  style="width: 2%; text-align: center;">P</th>
 
-                                <div class="table-responsive" style="overflow-x:auto;">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-light">
-                                            <tr>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row" height="35px">Baratin</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->spiel }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Corruption</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->corruption }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Éloquence</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->eloquence }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Empathie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->empathy }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Faux papiers</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->counterfeiting }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Hypnotisme</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->hypnotism }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"  height="35px">Intimidation</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->intimidation }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Jargon secret</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->secretjargon }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Jeu</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->game }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Leadership</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->leadership }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Marchandage</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->bargaining }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Performance</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->performance }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Rumeur</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->rumors }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Séduction</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->seduction }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Ventriloquie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->ventriloquism }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" sheight="35px">Ignisalta **</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->ignisalta }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
 
-                                                <th scope="col"  style="width: 20%; text-align: center;">Sociale</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Pts</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Bonus</th>
+                                        <div class="col-md-3 m-0">
+                                            <table class="table table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Baratin</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_spiel }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_spiel_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Corruption</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_corruption }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_corruption_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Éloquence</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_eloquence }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_eloquence_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Empathie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_empathy }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_empathy_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Faux papiers</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_counterfeiting }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_counterfeiting_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Hypnotisme</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_hypnotism }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_hypnotism_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Intimidation</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_intimidation }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_intimidation_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Jargon secret</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_secretjargon }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_secretjargon_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Jeu</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_game }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_game_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Leadership</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_leadership }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_leadership_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Marchandage</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_bargaining }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_bargaining_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Performance</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_performance }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_performance_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Rumeur</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_rumors }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_rumors_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Séduction</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_seduction }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_seduction_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Ventriloquie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_ventriloquism }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_ventriloquism_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Ignisalta **</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_ignisalta }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tso_ignisalta_b }}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                                        <th scope="col"  style="width: 8%; text-align: center;">Connaissance</th>
+                                                        <th scope="col"  style="width: 2%; text-align: center;">P</th>
 
-                                <div class="table-responsive" style="overflow-x:auto;">
-                                    <table class="table table-bordered">
-                                        <thead class="thead-light">
-                                            <tr>
-
-                                                <th scope="col"  style="width: 20%; text-align: center;">Connaissance</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Pts</th>
-                                                <th scope="col"  style="width: 20%; text-align: center;">Bonus</th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Ancien culte</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ancientcult }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ancientcult_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Astronomie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_astronomy }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_astronomy_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Bibliothèques</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_library }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_library_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Créatures</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_creature }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_creature_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Géographie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_geography }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_geography_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Histoire</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_history }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_history_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Identification</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_identification }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_identification_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Maison</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_houses }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_houses_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Nature</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_nature }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_nature_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Occultisme</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_occultism }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_occultism_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Politique</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_politics }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_politics_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Rituel du trépas</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ritualofdeath }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ritualofdeath_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Sortilèges</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_spell }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_spell_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Tactiques</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_tactical }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_tactical_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Théologie</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_theology }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_theology_b }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" style="width: 20%" height="35px">Rituel des étoiles **</th>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ritualofstars }}</td>
-                                                <td style="width: 20%" height="35px">{{ $character->character_tco_ritualofstars_b }}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row" height="35px">Ancien culte</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->ancientcult }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Astronomie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->astronomy }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Bibliothèques</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->library }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Créatures</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->creature }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Géographie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->geography }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Histoire</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->history }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Identification</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->identification }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Maison</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->houses }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Nature</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->nature }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Occultisme</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->occultism }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Politique</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->politics }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Rituel du trépas</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->ritualofdeath }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Sortilèges</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->spell }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Tactiques</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->tactical }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Théologie</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->theology }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" height="35px">Rituel des étoiles **</th>
+                                                        <td style="text-align: center;" height="35px">{{ $character->ritualofstars }}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
 
                             <div class="container border rounded pt-4">
                                 <div class="table-responsive" style="overflow-x:auto;">
