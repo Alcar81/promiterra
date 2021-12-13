@@ -6,7 +6,7 @@ Show personnage
 @section('content')
 
     <div class="row justify-content-center p-4">
-        <div class="col-md-8">
+        <div class="col-md-11">
             <div class="card">
                 <div class="card-header"><p><strong>{{ $character->character_name }}</strong>
                     (<a href="{{ route('character.user.edit', $character->id) }}">
@@ -17,8 +17,8 @@ Show personnage
                 <div class="card-body">
 
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="m-b-40">
+                        <div class="col-md-11">
+                            
 
 
                             <div class="row p-4">
@@ -39,7 +39,11 @@ Show personnage
                             </div>
 
 
-
+                            <style>
+                                            .table td, .table th {
+                                            font-size: 12px;
+                                                            }
+                            </style>
                             <div class="container border rounded pt-4">
                                 <div class="table-responsive" style="overflow-x:auto;">
                                     <table class="table table-bordered">
@@ -545,12 +549,12 @@ Show personnage
 
                             </div>
 
-                            <div class="container border rounded pt-4 ">
-                                <div> 
+                            <div class="container border rounded pt-4">
+                                
                                     <p>Compétences</p>
-                                    <div class="row g-0">
-                                        <div class="col-md-3 m-0">
-                                            <table class="table table-bordered " >
+                                    <div class="row">
+                                        <div class="col-md-2 p-0">
+                                            <table class="table table-bordered" >
                                                 <thead class="thead-light">
                                                     <tr>
 
@@ -632,7 +636,8 @@ Show personnage
                                     
                                     
                                     
-                                        <div class="col-md-3 m-0">
+                                        <div class="col-md-2 p-0">
+                                        
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
@@ -643,12 +648,13 @@ Show personnage
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                
                                                 <tr>
                                                     <th scope="row" height="35px">Acrobatie *</th>
                                                         <td style="text-align: center;" height="35px">{{ $character->acrobatics }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row"  height="35px">Camouflage nature *</th>
+                                                    <th scope="row" height="35px">Camouflage nature *</th>
                                                         <td style="text-align: center;" height="35px">{{ $character->naturecamo }}</td>
                                                 </tr>
                                                 <tr>
@@ -706,12 +712,13 @@ Show personnage
                                                 <tr>
                                                     <th scope="row"  height="35px">Tatouage tribal **</th>
                                                         <td style="text-align: center;" height="35px">{{ $character->tribaltattoo }}</td>
+                                                        
                                                 </tr>
                                                 </tbody>
                                             </table>                                    
                                         </div>
                                         
-                                        <div class="col-md-3 m-0">
+                                        <div class="col-md-2 p-0">
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
@@ -790,12 +797,12 @@ Show personnage
                                             </table>                                    
                                         </div>
                                         
-                                        <div class="col-md-3 m-0">
+                                        <div class="col-md-2 p-0">
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
 
-                                                        <th scope="col"  style="width: 8%; text-align: center;">Sociale</th>
+                                                        <th scope="col-6"  style="width: 8%; text-align: center;">Sociale</th>
                                                         <th scope="col"  style="width: 2%; text-align: center;">P</th>
 
                                                     </tr>
@@ -869,12 +876,12 @@ Show personnage
                                             </table>
                                         </div>
 
-                                        <div class="col-md-3 m-0">
+                                        <div class="col-md-2 p-0">
                                             <table class="table table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
 
-                                                        <th scope="col"  style="width: 8%; text-align: center;">Connaissance</th>
+                                                        <th scope="col"  style="width: 12%; text-align: center;">Connaissance</th>
                                                         <th scope="col"  style="width: 2%; text-align: center;">P</th>
 
                                                     </tr>
@@ -948,7 +955,7 @@ Show personnage
                                             </table>
                                         </div>
                                     </div>
-                                </div>
+                                
                             </div>
 
 
