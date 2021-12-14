@@ -18,15 +18,15 @@ class CreateCharacterTable extends Migration
 
         Schema::create('characters', function (Blueprint $table) {
 
-            Schema::disableForeignKeyConstraints();
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')
-            ->references('id');
-            //->on('user')
-            //->onDelete('restrict')
-            //->onUpdate('restrict');
-
             $table->bigIncrements('id');
+            Schema::disableForeignKeyConstraints();
+            
+            $table->unsignedBigInteger('user_id')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('user')
+            ->onDelete('restrict')->onUpdate('restrict');
+
+            
 
             $table->string('character_name')->unique();
             $table->Integer('character_age')->nullable();

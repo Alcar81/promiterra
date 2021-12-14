@@ -108,7 +108,13 @@ Route::namespace('Character')->prefix('character')->name('character.')->group(fu
 */
 // <!-- >End: Les Chapitres -->
 
+// <!-- Chapitre 5 Les Carrières -->
 
+    Route::namespace('Editable\Chapitre\Cinq')->prefix('chapitre/cinq')->name('cinq.')->group(function() {
+        Route::resource('careers', 'EditableCareersController');
+    });
+
+// <!-- end: Chapitre 5 Les Carrières -->
 
 // <!-- Chapitre 7 Les Cités -->
 

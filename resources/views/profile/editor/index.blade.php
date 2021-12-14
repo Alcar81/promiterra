@@ -124,7 +124,7 @@
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div>
-
+                            <button class="btn btn-primary"><a href="{{ route('cinq.careers.index') }}">5. Carrières</a></button>
 
 
                         </div>
