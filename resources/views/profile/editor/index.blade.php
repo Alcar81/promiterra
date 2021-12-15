@@ -120,7 +120,7 @@
 
                 </div>
 
-                <div class="card-header"><strong>Carrières     <a href="">( ajouter / modifier )</a></strong></div>
+                <div class="card-header"><strong>Carrières     <a href="{{ route('cinq.careers.create') }}">( ajouter / modifier )</a></strong></div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Editable\Chapitre\Cinq;
 use App\Http\Controllers\Controller;
 use App\Models\Chapitre\Cinq\Careers;
 //use Illuminate\Http\Request;
-use Illuminate\Http\Request\Chapitre\Cinq;
+use Illuminate\Http\Request;
 use Illuminate\support\Facades\Gate;
 
 
@@ -33,7 +33,10 @@ class EditableCareersController extends Controller
      */
     public function create()
     {
-        //
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
+        return view('editable.chapitre.cinq.careers.create');
     }
 
     /**
@@ -44,7 +47,13 @@ class EditableCareersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Gate::denies('edit-users')) {
+            return redirect()->route('login');
+        }
+
+            Careers::create($request->all());
+
+            return redirect()->route('cinq.careers.index');
     }
 
     /**

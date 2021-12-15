@@ -9,6 +9,7 @@ class Careers extends Model
 {
     protected $fillable = [      
         
+        'CareerVersion',
         'CareerIDClass',
         'CareerIDParent1',
         'CareerIDParent2',
@@ -24,6 +25,7 @@ class Careers extends Model
         'CareerSenses',
         'CareerSocial',
         'CareerKnowledge',
+        'CareerAuchoix',
         'CareerWeapons1',
         'CareerWeapons2',
         'CareerWeapons3',

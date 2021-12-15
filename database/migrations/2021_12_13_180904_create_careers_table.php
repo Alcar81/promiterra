@@ -17,7 +17,7 @@ class  CreateCareersTable extends Migration
 
            
             $table->bigIncrements('careerId')->unique();
-            $table->integer('CareerVersion')->unique();
+            $table->string('CareerVersion')->unique();
 
             $table->Integer('CareerIDClass')->unique();
             $table->Integer('CareerIDParent1')->nullable();
@@ -25,7 +25,7 @@ class  CreateCareersTable extends Migration
             $table->string('CareerClassName')->nullable();
             $table->string('CareerImage')->nullable();
             $table->string('CareerImageArtist')->nullable();
-            $table->string('CareerDescription')->nullable();
+            $table->text('CareerDescription')->nullable();
             $table->Integer('CareerPhysical')->nullable();
             $table->Integer('CareerMental')->nullable();
             $table->Integer('CareerReaction')->nullable();
@@ -33,7 +33,8 @@ class  CreateCareersTable extends Migration
             $table->string('CareerAbility')->nullable();
             $table->string('CareerSenses')->nullable();
             $table->string('CareerSocial')->nullable();
-            $table->string('CareerKnowledge')->nullable();
+            $table->string('CareerKnowledge')->nullable();            
+            $table->string('CareerAuchoix')->nullable();
             $table->string('CareerWeapons1')->nullable();
             $table->string('CareerWeapons2')->nullable();
             $table->string('CareerWeapons3')->nullable();
@@ -50,29 +51,29 @@ class  CreateCareersTable extends Migration
             $table->string('CareerSpecials2')->nullable();
             $table->string('CareerSpecials3')->nullable();
             $table->string('CareerAction1Name')->nullable();
-            $table->string('CareerAction1Desc')->nullable();
+            $table->text('CareerAction1Desc')->nullable();
             $table->string('CareerAction2Name')->nullable();
-            $table->string('CareerAction2Desc')->nullable();
+            $table->text('CareerAction2Desc')->nullable();
             $table->string('CareerAction3Name')->nullable();
-            $table->string('CareerAction3Desc')->nullable();
+            $table->text('CareerAction3Desc')->nullable();
             $table->string('CareerAction4Name')->nullable();
-            $table->string('CareerAction4Desc')->nullable();
+            $table->text('CareerAction4Desc')->nullable();
             $table->string('CareerAction5Name')->nullable();
-            $table->string('CareerAction5Desc')->nullable();
+            $table->text('CareerAction5Desc')->nullable();
             $table->string('CareerAction6Name')->nullable();
-            $table->string('CareerAction6Desc')->nullable();
+            $table->text('CareerAction6Desc')->nullable();
             $table->string('CareerAction7Name')->nullable();
-            $table->string('CareerAction7Desc')->nullable();
+            $table->text('CareerAction7Desc')->nullable();
             $table->string('CareerAction8Name')->nullable();
-            $table->string('CareerAction8Desc')->nullable();
+            $table->text('CareerAction8Desc')->nullable();
             $table->string('CareerTalent1Name')->nullable();
-            $table->string('CareerTalent1Desc')->nullable();
+            $table->text('CareerTalent1Desc')->nullable();
             $table->string('CareerTalent2Name')->nullable();
-            $table->string('CareerTalent2Desc')->nullable();
+            $table->text('CareerTalent2Desc')->nullable();
             $table->string('CareerTalent3Name')->nullable();
-            $table->string('CareerTalent3Desc')->nullable();
+            $table->text('CareerTalent3Desc')->nullable();
             $table->string('CareerTalent4Name')->nullable();
-            $table->string('CareerTalent4Desc')->nullable();
+            $table->text('CareerTalent4Desc')->nullable();
             
             $table->timestamps();
 
