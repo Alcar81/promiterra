@@ -23,7 +23,7 @@ class CreateCharacterTable extends Migration
             
             $table->unsignedBigInteger('user_id')->nullable();
 
-            $table->foreign('user_id')->references('id')->on('user')
+            $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('restrict')->onUpdate('restrict');
 
             
