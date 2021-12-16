@@ -23,9 +23,10 @@
 <!-- Chapitre 5 Les Carrières -->
     <section>  
         <div class="container justify-content-center">
-            <div class="border col-md-11">               
+            <div class="col-md-11">               
 
                 <div class="row">
+
                     <div class="border" style="width: 25%" height="500px">
                         <span>Place pour futur image de la carrière</span>
                     </div>
@@ -73,7 +74,9 @@
                 </div>
 
                 <div class="row">
+
                     <div class="container border">
+
                         <div class="p-2"><strong>{{ $careers->CareerAction1Name }}:</strong> {!! $careers->CareerAction1Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerAction2Name }}:</strong> {!! $careers->CareerAction2Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerAction3Name }}:</strong> {!! $careers->CareerAction3Desc !!}</div>
@@ -82,26 +85,32 @@
                         <div class="p-2"><strong>{{ $careers->CareerAction6Name }}:</strong> {!! $careers->CareerAction6Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerAction7Name }}:</strong> {!! $careers->CareerAction7Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerAction8Name }}:</strong> {!! $careers->CareerAction8Desc !!}</div>
+
                     </div>
+
                     <div class="container border">
+
                         <div class="p-2"><strong>{{ $careers->CareerTalent1Name }}:</strong> {!! $careers->CareerTalent1Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerTalent2Name }}:</strong> {!! $careers->CareerTalent2Desc !!}</div>
                         <div class="p-2"><strong>{{ $careers->CareerTalent3Name }}:</strong> {!! $careers->CareerTalent3Desc !!}</div>
-                        <div class="p-2"><strong>{{ $careers->CareerTalent4Name }}:</strong> {!! $careers->CareerTalent4Desc !!}</div>                                
+                        <div class="p-2"><strong>{{ $careers->CareerTalent4Name }}:</strong> {!! $careers->CareerTalent4Desc !!}</div>
+                        
                     </div>
+                    
                 </div>
 
-                <div class="row p-2">
-                    <div class="justify-content-left">Promiterra, version {{ $careers->CareerVersion }}</div>
-                    <div class="justify-content-center">Dessinateur: {{ $careers->CareerImageArtist }}</div>
-                    <div class="justify-content-right">
-                        <div>Chapire 5 | Les carrières - </div>
-                        <div> {{ $careers->CareerIDClass }}</div>
-                    </div>
-                <div>
+                <div class="row p-2" style="height: 40px;">
+
+                    <div class="" style="width: 25%"><p>Promiterra, version {{ $careers->CareerVersion }}</p></div>
+                    <div class="" style="width: 50%; text-align: center;"><p>Dessinateur: {{ $careers->CareerImageArtist }}</p></div>
+                    <div class="" style="width: 25%; text-align: right;"><p>Chapire 5 | Les carrières - {{ $careers->CareerIDClass }}</p></div>
+                    
+                </div>
 
             </div>
-        </div>           
+
+        </div>
+
     </section>
 
     <!-- summernote css/js -->
@@ -112,5 +121,5 @@
             height: 400
         });
     </script>
-<!-- end: Chapitre 7 Les Cités -->
+<!-- end: Chapitre 5 Les Carrières -->
 @endsection

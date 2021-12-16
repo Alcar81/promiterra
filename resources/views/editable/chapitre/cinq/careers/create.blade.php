@@ -269,7 +269,7 @@ Création | Chapire 5 | Les carrières
                                 <div>    
                                 <p>Armes autorisées pour la carrière</p>
                                 </div>
-                                <table class="table table-bordered" >
+                                <table class="table table-bordered">
                                     <thead class="thead-light">
                                         <tr>
 
