@@ -675,25 +675,25 @@
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent1Name">{{ __('Talent 1') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent1Name" placeholder="" value="{{ old('year') ?? $careers->CareerTalent1Name }}" name="CareerTalent1Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent1Name">{{ old('year') ?? $careers->CareerTalent1Name }}</textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent1Desc">{{ old('year') ?? $careers->CareerTalent1Desc }}</textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent2Name">{{ __('Talent 2') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent2Name" placeholder="" value="{{ old('year') ?? $careers->CareerTalent2Name }}" name="CareerTalent2Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent2Name">{{ old('year') ?? $careers->CareerTalent2Name }}</textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent2Desc">{{ old('year') ?? $careers->CareerTalent2Desc }}</textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent3Name">{{ __('Talent 3') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent3Name" placeholder="" value="{{ old('year') ?? $careers->CareerTalent3Name }}" name="CareerTalent3Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent3Name">{{ old('year') ?? $careers->CareerTalent3Name }}</textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent3Desc">{{ old('year') ?? $careers->CareerTalent3Desc }}</textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent4Name">{{ __('Talent 4') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent4Name" placeholder="" value="{{ old('year') ?? $careers->CareerTalent4Name }}" name="CareerTalent4Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent4Name">{{ old('year') ?? $careers->CareerTalent4Name }}</textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent4Desc">{{ old('year') ?? $careers->CareerTalent4Desc }}</textarea>
                                 </div>
                             </div>
 

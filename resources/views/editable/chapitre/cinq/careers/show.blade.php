@@ -56,11 +56,11 @@
 
                     <div class="border" style="width: 10%" height="500px">                                    
                         <div style="text-align: center;" height="20px">{{ __('Physique') }}</div>
-                        <div style="text-align: center;" height="20px">5{{ $careers->CareerPhysical }}</div>
+                        <div style="text-align: center;" height="20px">{{ $careers->CareerPhysical }}</div>
                         <div style="text-align: center;" height="20px">{{ __('Mental') }}</div>
-                        <div style="text-align: center;" height="20px">5{{ $careers->CareerMental }}</div>
+                        <div style="text-align: center;" height="20px">{{ $careers->CareerMental }}</div>
                         <div style="text-align: center;" height="20px">{{ __('Réaction') }}</div>
-                        <div style="text-align: center;" height="20px">8{{ $careers->CareerReaction }}</div>
+                        <div style="text-align: center;" height="20px">{{ $careers->CareerReaction }}</div>
                     </div>
 
                     <div class="border" style="width: 90%" display="inline-block" p-4>
@@ -74,20 +74,20 @@
 
                 <div class="row">
                     <div class="container border">
-                        <div><strong>{{ $careers->CareerAction1Name }}:</strong> {!! $careers->CareerAction1Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction2Name }}:</strong> {!! $careers->CareerAction2Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction3Name }}:</strong> {!! $careers->CareerAction3Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction4Name }}:</strong> {!! $careers->CareerAction4Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction5Name }}:</strong> {!! $careers->CareerAction5Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction6Name }}:</strong> {!! $careers->CareerAction6Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction7Name }}:</strong> {!! $careers->CareerAction7Desc !!}</div>
-                        <div><strong>{{ $careers->CareerAction8Name }}:</strong> {!! $careers->CareerAction8Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction1Name }}:</strong> {!! $careers->CareerAction1Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction2Name }}:</strong> {!! $careers->CareerAction2Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction3Name }}:</strong> {!! $careers->CareerAction3Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction4Name }}:</strong> {!! $careers->CareerAction4Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction5Name }}:</strong> {!! $careers->CareerAction5Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction6Name }}:</strong> {!! $careers->CareerAction6Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction7Name }}:</strong> {!! $careers->CareerAction7Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerAction8Name }}:</strong> {!! $careers->CareerAction8Desc !!}</div>
                     </div>
                     <div class="container border">
-                        <div><strong>{{ $careers->CareerTalent1Name }}:</strong> {!! $careers->CareerTalent1Desc !!}</div>
-                        <div><strong>{{ $careers->CareerTalent2Name }}:</strong> {!! $careers->CareerTalent2Desc !!}</div>
-                        <div><strong>{{ $careers->CareerTalent3Name }}:</strong> {!! $careers->CareerTalent3Desc !!}</div>
-                        <div><strong>{{ $careers->CareerTalent4Name }}:</strong> {!! $careers->CareerTalent4Desc !!}</div>                                
+                        <div class="p-2"><strong>{{ $careers->CareerTalent1Name }}:</strong> {!! $careers->CareerTalent1Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerTalent2Name }}:</strong> {!! $careers->CareerTalent2Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerTalent3Name }}:</strong> {!! $careers->CareerTalent3Desc !!}</div>
+                        <div class="p-2"><strong>{{ $careers->CareerTalent4Name }}:</strong> {!! $careers->CareerTalent4Desc !!}</div>                                
                     </div>
                 </div>
 

@@ -675,25 +675,25 @@ Création | Chapire 5 | Les carrières
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent1Name">{{ __('Talent 1') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent1Name" placeholder="" value="" name="CareerTalent1Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent1Name"></textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent1Desc"></textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent2Name">{{ __('Talent 2') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent2Name" placeholder="" value="" name="CareerTalent2Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent2Name"></textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent2Desc"></textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent3Name">{{ __('Talent 3') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent3Name" placeholder="" value="" name="CareerTalent3Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent3Name"></textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent3Desc"></textarea>
                                 </div>
 
                                 <div class="form-floating pt-4">
                                     <label for="CareerTalent4Name">{{ __('Talent 4') }}</label>
                                     <input type="text" class="form-control" id="CareerTalent4Name" placeholder="" value="" name="CareerTalent4Name">
-                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent4Name"></textarea>
+                                    <textarea class="form-control" placeholder="Écrivez la description ici" id="summernote" style="height: 100px" name="CareerTalent4Desc"></textarea>
                                 </div>
                             </div>
 
