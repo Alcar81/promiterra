@@ -16,7 +16,7 @@ class  CreateCareersTable extends Migration
         Schema::create('careers', function (Blueprint $table) {
 
            
-            $table->bigIncrements('careerId')->unique();
+            $table->Increments('id')->unique();
             $table->string('CareerVersion')->unique();
 
             $table->Integer('CareerIDClass')->unique();

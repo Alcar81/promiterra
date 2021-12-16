@@ -1,6 +1,6 @@
-@extends('template')
+@extends('layouts.app')
 @section('title')
-Chapire 5 | Les carrières
+{{ $careers->CareerClassName }} | Chapire 5 | Les carrières
 @endsection
 
 @if(session()->has('info'))
@@ -18,190 +18,90 @@ Chapire 5 | Les carrières
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head2>
 
-@section('contenu')
+@section('content')
 
 <!-- Chapitre 5 Les Carrières -->
-    <section class="background-black p-b-60">
-        <div class="container">
-            <div class="row" display="inline-block">
+    <section>  
+        <div class="container justify-content-center">
+            <div class="border col-md-11">               
 
-                <!-- Menu villes -->
-                @include('partials.menus.menuVilles')
-                <!-- end: Menu villes -->
+                <div class="row">
+                    <div class="border" style="width: 25%" height="500px">
+                        <span>Place pour futur image de la carrière</span>
+                    </div>
 
-
-
-                <div class="card" display="flex">
-
-                        <div class="card">
-                                <div class="card-body pt-4">
-                                    <div class="card-header">
-                                        <div class="heading heading-center m-b-40 pt-4">
-                                            <h2>Les Carrières</h2>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <p>
-                                                <a href="">
-                                                @can ('edit-users')
-                                                    ( modifier / supprimer )
-                                                @endcan
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Menu Chapitre 7 -->
-                                    @include('editable.chapitre.sept.partials.menuChapitreSept.menu')
-                                    <!-- end: Menu Chapitre 7 -->
-
-                                    <div class="row p-4">
-                                        <div class="col-md-12">
-                                            <div class="m-b-40">
-
-                                                <span class="lead">
-                                                    <p>Promiterra est composée de milliers de cités, villages et hameaux. Afin de simplifier les voyages, seules les villes les plus importantes de chaque région sont répertoriées. Les autres villages existent un peu partout mais sont laissés à la discrétion du maître de jeu.
-                                                    </p>
-                                                </span>
-                                                </br>
-
-                                                <span class="lead">
-                                                    <p>Chaque cité a son caractère unique et ses mœurs. Afin de bien découvrir et comprendre une ville, vous devez avoir habité dans celle-ci pendant au moins 30 jours, consécutifs ou non. Si vous avez séjourné pendant cette période dans une cité précise, demandez au maître de jeu qu’il vous remette la fiche détaillée de celle-ci.
-                                                    </p>
-                                                </span>
-                                                </br>
-
-                                                <span class="lead">
-                                                    <p>Afin de rendre intéressante la visite de chaque cité, le maître de jeu vous remettra la fiche de la ville seulement si l’avez visitée pendant le jeu et non dans votre historique. Ceci afin de garder la surprise et la magie de chaque cité intactes. Le maître pourra quand même vous donner certains détails si votre personnage connaît déjà la ville.
-                                                    </p>
-                                                </span>
-
-                                                <span class="lead"><p>La fiche de la cité se décompose comme suit.</p></span>
-
-                                                <table class="table table-bordered">
-                                                    <thead class="thead-light">
-                                                    <tr>
-                                                        <th scope="col">Donnée</th>
-                                                        <th scope="col">Description</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">Nom</th>
-                                                                <td>Le nom français de la cité, le nom d’origine peut être différent</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Maison</th>
-                                                                <td>La Maison qui possède la cité (en l’an 831)</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Fondation</th>
-                                                                <td>L’année de fondation de la cité (si connue)</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Taille</th>
-                                                                <td>Dans l’ordre : Capitale, Métropole, Cité, Ville, Village ou Hameau</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Climat</th>
-                                                                <td>La température typique locale</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Accent régional</th>
-                                                                <td>L’accent typique de la population locale</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Population urbaine</th>
-                                                                <td>Le nombre d’habitants de la cité elle-même</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Population régionale</th>
-                                                                <td>Le nombre d’habitants de la région, hors de la cité</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Commerce maximal</th>
-                                                                <td>Le maximum de pièces d’or transigé en marchandise commerciale</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Spécialité locale</th>
-                                                                <td>La nourriture locale la plus répandue ou la plus réputée</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Boisson locale</th>
-                                                                <td>L’alcool ou le breuvage le plus populaire</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Maire ou mairesse</th>
-                                                                <td>Le nom du régent de la cité (en l’an 831)</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Économie</th>
-                                                                <td>Les meilleures sources d’économies de la cité</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Offres</th>
-                                                                <td>Les marchandises commerciales offertes par la ville</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Demandes</th>
-                                                                <td>Les marchandises commerciales demandées par la ville</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Offres voisines</th>
-                                                                <td>Les marchandises commerciales offertes par les villes voisines</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Demandes voisines</th>
-                                                                <td>Les marchandises commerciales demandées par les villes voisines</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-
-                                                <span class="lead"><p>De plus, cinq notes de 1 à 10 sont attribuées à la cité sur divers points.</p></span>
-
-                                                <table class="table table-bordered">
-                                                    <thead class="thead-light">
-                                                    <tr>
-                                                        <th scope="col">Note</th>
-                                                        <th scope="col">Description</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">Éducation</th>
-                                                                <td>Le niveau de scolarité moyen et la qualité de l’enseignement</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Fortification</th>
-                                                                <td>La solidité des murailles et la difficulté tactique à prendre la cité</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Loi et ordre</th>
-                                                                <td>Le respect de l’autorité en place et le contrôle sur le crime</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Technologie</th>
-                                                                <td>Mesure le modernisme et la disponibilité d’objets et services</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">Richesse </th>
-                                                                <td>Représente le revenu moyen et la capacité de prospérer</td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-
-                                            <div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="border" style="width: 75%" display="inline-block">                                       
+                        <div class="row justify-content-center pt-4">
+                            <h2>{{ $careers->CareerClassName }}</h2>                                        
                         </div>
+                        <div class="row justify-content-center">
+                            <p>Prérequis : Druide ({{ $careers->CareerIDParent1 }}) + Traqueur ({{ $careers->CareerIDParent2 }}) </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <p><strong></strong>
+                                (<a href="{{ route('cinq.careers.edit', $careers->id) }}">
+                                    @can ('edit-users')
+                                        modifier / supprimer
+                                    @endcan
+                                </a>)
+                            </p>
+                        </div>
+                        <div class="container justify-content-center p-4">
+                            <span>{!! $careers->CareerDescription !!}</span>
+                        </div>                                   
+                    </div>                                
+                </div>
 
+                <div class="row">
 
+                    <div class="border" style="width: 10%" height="500px">                                    
+                        <div style="text-align: center;" height="20px">{{ __('Physique') }}</div>
+                        <div style="text-align: center;" height="20px">5{{ $careers->CareerPhysical }}</div>
+                        <div style="text-align: center;" height="20px">{{ __('Mental') }}</div>
+                        <div style="text-align: center;" height="20px">5{{ $careers->CareerMental }}</div>
+                        <div style="text-align: center;" height="20px">{{ __('Réaction') }}</div>
+                        <div style="text-align: center;" height="20px">8{{ $careers->CareerReaction }}</div>
+                    </div>
+
+                    <div class="border" style="width: 90%" display="inline-block" p-4>
+                        <div class="p-1">Compétences: {{ $careers->CareerManual }} {{ $careers->Ability }} {{ $careers->CareerSenses }} {{ $careers->CareerSocial }} {{ $careers->CareerKnowledge }} {{ $careers->CareerAuchoix }}</div>                                                                                                                                                  
+                        <div class="p-1">Armes: {{ $careers->CareerWeapons1 }} {{ $careers->CareerWeapons2 }} {{ $careers->CareerWeapons3 }} {{ $careers->CareerWeapons4 }} {{ $careers->CareerWeapons5 }} {{ $careers->CareerWeapons6 }} {{ $careers->CareerWeapons7 }} {{ $careers->CareerWeapons8 }} {{ $careers->CareerWeapons9 }}</div>                                                 
+                        <div class="p-1">Armures: {{ $careers->CareerArmors1 }} {{ $careers->CareerArmors2 }} {{ $careers->CareerArmors3 }}</div>                                              
+                        <div class="p-1">Spécial: {{ $careers->CareerSpecials1 }} {{ $careers->CareerSpecials2 }} {{ $careers->CareerSpecials3 }}</div>
+                    </div>
 
                 </div>
+
+                <div class="row">
+                    <div class="container border">
+                        <div><strong>{{ $careers->CareerAction1Name }}:</strong> {!! $careers->CareerAction1Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction2Name }}:</strong> {!! $careers->CareerAction2Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction3Name }}:</strong> {!! $careers->CareerAction3Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction4Name }}:</strong> {!! $careers->CareerAction4Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction5Name }}:</strong> {!! $careers->CareerAction5Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction6Name }}:</strong> {!! $careers->CareerAction6Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction7Name }}:</strong> {!! $careers->CareerAction7Desc !!}</div>
+                        <div><strong>{{ $careers->CareerAction8Name }}:</strong> {!! $careers->CareerAction8Desc !!}</div>
+                    </div>
+                    <div class="container border">
+                        <div><strong>{{ $careers->CareerTalent1Name }}:</strong> {!! $careers->CareerTalent1Desc !!}</div>
+                        <div><strong>{{ $careers->CareerTalent2Name }}:</strong> {!! $careers->CareerTalent2Desc !!}</div>
+                        <div><strong>{{ $careers->CareerTalent3Name }}:</strong> {!! $careers->CareerTalent3Desc !!}</div>
+                        <div><strong>{{ $careers->CareerTalent4Name }}:</strong> {!! $careers->CareerTalent4Desc !!}</div>                                
+                    </div>
+                </div>
+
+                <div class="row p-2">
+                    <div class="justify-content-left">Promiterra, version {{ $careers->CareerVersion }}</div>
+                    <div class="justify-content-center">Dessinateur: {{ $careers->CareerImageArtist }}</div>
+                    <div class="justify-content-right">
+                        <div>Chapire 5 | Les carrières - </div>
+                        <div> {{ $careers->CareerIDClass }}</div>
+                    </div>
+                <div>
+
             </div>
-        </div>
+        </div>           
     </section>
 
     <!-- summernote css/js -->

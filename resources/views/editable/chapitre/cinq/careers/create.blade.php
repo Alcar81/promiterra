@@ -1,6 +1,6 @@
 @extends('template')
 @section('title')
-Édition | Chapire 5 | Les carrières
+Création | Chapire 5 | Les carrières
 @endsection
 
 @if(session()->has('info'))
@@ -180,12 +180,12 @@
                                     <thead class="thead-light">
                                         <tr>
 
-                                            <th scope="col"  style="text-align: center;">{{ __('Manuel') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Habilité') }}</th> 
-                                            <th scope="col"  style="text-align: center;">{{ __('Sens') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Sociale') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Connaissance') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Au choix') }}</th>                                                   
+                                            <th scope="col"  style="text-align: center;">{{ __('1') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{ __('2') }}</th> 
+                                            <th scope="col"  style="text-align: center;">{{ __('3') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{ __('4') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{ __('5') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{ __('6') }}</th>                                                   
 
                                         </tr>
                                     </thead>
@@ -195,36 +195,66 @@
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerManual" aria-label="Floating label select example" name="CareerManual">
                                                     <option selected></option>                                                    
-                                                    <option value="Manuel">Manuel</option> 
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
+                                                    <option value="Auchoix">Au choix</option>
                                                 </select>
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerAbility" aria-label="Floating label select example" name="CareerAbility">
                                                     <option selected></option>                                                    
-                                                    <option value="Habilité">Habilité</option> 
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
+                                                    <option value="Auchoix">Au choix</option>
                                                 </select>                                                        
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerSenses" aria-label="Floating label select example" name="CareerSenses">
                                                     <option selected></option>
-                                                    <option value="Sens">Sens</option> 
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
+                                                    <option value="Auchoix">Au choix</option> 
                                                 </select>
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerSocial" aria-label="Floating label select example" name="CareerSocial">
                                                     <option selected></option>
-                                                    <option value="Sociale">Sociale</option> 
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
+                                                    <option value="Auchoix">Au choix</option> 
                                                 </select>
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerKnowledge" aria-label="Floating label select example" name="CareerKnowledge">
                                                     <option selected></option>
-                                                    <option value="Connaissance">Connaissance</option> 
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
+                                                    <option value="Auchoix">Au choix</option> 
                                                 </select>
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <select class="form-select" id="CareerAuchoix" aria-label="Floating label select example" name="CareerAuchoix">
                                                     <option selected></option>
+                                                    <option value="Connaissance">Connaissance</option>
+                                                    <option value="Habilité">Habilité</option>                                                    
+                                                    <option value="Manuel">Manuel</option>
+                                                    <option value="Sens">Sens</option>
+                                                    <option value="Sociale">Sociale</option>
                                                     <option value="Auchoix">Au choix</option> 
                                                 </select>
                                             </td>                                                            
