@@ -20,7 +20,6 @@ Chapire 5 | Les carrières
 
 @section('contenu')
 
-
 <!-- Chapitre 5 Les Carrières -->
 <section class="background-black p-b-60">
         <div class="container">
@@ -33,8 +32,8 @@ Chapire 5 | Les carrières
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Carrière') }}</th>
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Version') }}</th> 
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Page') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Parent 1') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Parent 2') }}</th>
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('P1') }}</th>                                            
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('P2') }}</th>                                            
                                         </tr>                                        
                                     </thead>
                             @foreach($careers->chunk(8) as $carrieres)
@@ -52,11 +51,11 @@ Chapire 5 | Les carrières
                                                     <p>{{ $carriere->CareerIDClass }}</p>
                                                 </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerIDParent1 }}</p>
-                                                </td>
+                                                    <p>{{ $carriere->CareerParent1Name }} ({{ $carriere->CareerIDParent1 }})</p>
+                                                </td>                                                
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerIDParent2 }}</p>
-                                                </td>
+                                                    <p>{{ $carriere->CareerParent2Name }} ({{ $carriere->CareerIDParent2 }})</p>
+                                                </td>                                                
                                             @endforeach                                            
                                         </tr>
                                     </tbody>

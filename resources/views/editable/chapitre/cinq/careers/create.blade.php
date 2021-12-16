@@ -21,7 +21,7 @@ Création | Chapire 5 | Les carrières
 @section('contenu')
 
 <div class="row justify-content-center pt-4">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="card">
 
 
@@ -46,6 +46,7 @@ Création | Chapire 5 | Les carrières
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col"  style="text-align: center;">{{ __('Nom') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{__('Page') }}</th>
                                             <th scope="col"  style="text-align: center;">{{ __('Version') }}</th> 
                                             <th scope="col"  style="text-align: center;">{{ __('Chapitre') }}</th> 
                                         </tr>                                        
@@ -55,6 +56,9 @@ Création | Chapire 5 | Les carrières
                                             
                                             <td scope="row" style="text-align: center;" height="35px">
                                             <input type="text" class="form-control" id="CareerClassName" placeholder="" value="" name="CareerClassName" autofocus>
+                                            </td>
+                                            <td scope="row" style="text-align: center;" height="35px">
+                                                <input type="text" class="form-control" id="CareerIDClass" placeholder="" value="" name="CareerIDClass">
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <input type="text" class="form-control" id="CareerVersion" placeholder="" value="" name="CareerVersion">                                                     
@@ -71,25 +75,33 @@ Création | Chapire 5 | Les carrières
                                     <thead class="thead-light">
                                         <tr>
 
-                                            <th scope="col"  style="text-align: center;">{{__('Page :') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Parent 1') }}</th> 
-                                            <th scope="col"  style="text-align: center;">{{ __('Parent 2') }}</th>                                                                                           
+                                            <th scope="col"  style="text-align: center;"></th>
+                                            <th scope="col"  style="text-align: center;">{{__('Nom') }}</th> 
+                                            <th scope="col"  style="text-align: center;">{{__('Page') }}</th>                                                                                           
 
                                         </tr>
                                     </thead>
                                     <tbody>
+
                                         <tr>
-                                            
+                                            <th scope="row"><p>{{ __('Parent 1') }}</p></th>                                            
                                             <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDClass" placeholder="" value="" name="CareerIDClass" autofocus>
+                                                <input type="text" class="form-control" id="CareerParent1Name" placeholder="" value="" name="CareerParent1Name">                                                
                                             </td>
-                                            <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDParent1" placeholder="" value="" name="CareerIDParent1">                                                      
+                                            <td>
+                                                <input type="text" class="form-control" id="CareerIDParent1" placeholder="" value="" name="CareerIDParent1">
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><p>{{ __('Parent 2') }}</p></th>  
                                             <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDParent2" placeholder="" value="" name="CareerIDParent2">
-                                            </td>                                                                                                       
-                                        </tr>                                                   
+                                                <input type="text" class="form-control" id="CareerParent2Name" placeholder="" value="" name="CareerParent2Name">   
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" id="CareerIDParent2" placeholder="" value="" name="CareerIDParent2">                                                      
+                                            </td>
+                                        </tr>
+                                                                                           
                                         
                                     </tbody>
                                 </table>                            

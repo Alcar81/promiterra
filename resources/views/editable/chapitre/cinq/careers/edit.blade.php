@@ -21,7 +21,7 @@
 @section('contenu')
 
 <div class="row justify-content-center pt-4">
-        <div class="col-md-11">
+        <div class="col-md-7">
             <div class="card">
 
 
@@ -42,10 +42,11 @@
 
                             <div class="container border rounded p-4">
                                 
-                                <table class="table table-bordered" >
+                            <table class="table table-bordered" >
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col"  style="text-align: center;">{{ __('Nom') }}</th>
+                                            <th scope="col"  style="text-align: center;">{{__('Page') }}</th>
                                             <th scope="col"  style="text-align: center;">{{ __('Version') }}</th> 
                                             <th scope="col"  style="text-align: center;">{{ __('Chapitre') }}</th> 
                                         </tr>                                        
@@ -55,6 +56,9 @@
                                             
                                             <td scope="row" style="text-align: center;" height="35px">
                                             <input type="text" class="form-control" id="CareerClassName" placeholder="" value="{{ old('year') ?? $careers->CareerClassName }}" name="CareerClassName" autofocus>
+                                            </td>
+                                            <td scope="row" style="text-align: center;" height="35px">
+                                                <input type="text" class="form-control" id="CareerIDClass" placeholder="" value="{{ old('year') ?? $careers->CareerIDClass }}" name="CareerIDClass">
                                             </td>
                                             <td scope="row" style="text-align: center;" height="35px">
                                                 <input type="text" class="form-control" id="CareerVersion" placeholder="" value="{{ old('year') ?? $careers->CareerVersion }}" name="CareerVersion">                                                     
@@ -71,28 +75,36 @@
                                     <thead class="thead-light">
                                         <tr>
 
-                                            <th scope="col"  style="text-align: center;">{{__('Page :') }}</th>
-                                            <th scope="col"  style="text-align: center;">{{ __('Parent 1') }}</th> 
-                                            <th scope="col"  style="text-align: center;">{{ __('Parent 2') }}</th>                                                                                           
+                                            <th scope="col"  style="text-align: center;"></th>
+                                            <th scope="col"  style="text-align: center;">{{__('Nom :') }}</th> 
+                                            <th scope="col"  style="text-align: center;">{{__('Page :') }}</th>                                                                                           
 
                                         </tr>
                                     </thead>
                                     <tbody>
+
                                         <tr>
-                                            
-                                            <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDClass" placeholder="" value="{{ old('year') ?? $careers->CareerIDClass }}" name="CareerIDClass" autofocus>
-                                            </td>
-                                            <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDParent1" placeholder="" value="{{ old('year') ?? $careers->CareerIDParent1 }}" name="CareerIDParent1">                                                      
-                                            </td>
-                                            <td scope="row" style="text-align: center;" height="35px">
-                                                <input type="text" class="form-control" id="CareerIDParent2" placeholder="" value="{{ old('year') ?? $careers->CareerIDParent2 }}" name="CareerIDParent2">
-                                            </td>                                                                                                       
-                                        </tr>                                                   
+                                            <th scope="row"><p>{{ __('Parent 1') }}</p></th>                                            
+                                                <td scope="row" style="text-align: center;" height="35px">
+                                                    <input type="text" class="form-control" id="CareerParent1Name" placeholder="" value="{{ old('year') ?? $careers->CareerParent1Name }}" name="CareerParent1Name">                                                
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" id="CareerIDParent1" placeholder="" value="{{ old('year') ?? $careers->CareerIDParent1 }}" name="CareerIDParent1">
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><p>{{ __('Parent 2') }}</p></th>  
+                                                <td scope="row" style="text-align: center;" height="35px">
+                                                    <input type="text" class="form-control" id="CareerParent2Name" placeholder="" value="{{ old('year') ?? $careers->CareerParent2Name }}" name="CareerParent2Name">                                                
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control" id="CareerIDParent2" placeholder="" value="{{ old('year') ?? $careers->CareerIDParent2 }}" name="CareerIDParent2">                                                      
+                                                </td>
+                                        </tr>
+                                                                                           
                                         
                                     </tbody>
-                                </table>                            
+                                </table>                             
                             </div>
 
                             <div class="container border rounded p-4">

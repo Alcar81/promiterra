@@ -9,6 +9,7 @@ class City extends Model
     protected $fillable = [
         'name',
         'year',
+        'page',
         'house',
         'yearfoundation',
         'size',

@@ -20,7 +20,9 @@ class  CreateCareersTable extends Migration
             $table->string('CareerVersion')->unique();
 
             $table->Integer('CareerIDClass')->unique();
+            $table->string('CareerParent1Name')->nullable();
             $table->Integer('CareerIDParent1')->nullable();
+            $table->string('CareerParent2Name')->nullable();
             $table->Integer('CareerIDParent2')->nullable();
             $table->string('CareerClassName')->nullable();
             $table->string('CareerImage')->nullable();

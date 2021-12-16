@@ -25,12 +25,6 @@ Chapire 7 | Les cités
         <div class="container">
             <div class="row" display="inline-block">
 
-                <!-- Menu villes -->
-                @include('partials.menus.menuVilles')
-                <!-- end: Menu villes -->
-
-
-
                 <div class="card" display="flex">
 
                         <div class="card">
@@ -38,16 +32,7 @@ Chapire 7 | Les cités
                                     <div class="card-header">
                                         <div class="heading heading-center m-b-40 pt-4">
                                             <h2>Les Cités</h2>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <p>
-                                                <a href="">
-                                                @can ('edit-users')
-                                                    ( modifier / supprimer )
-                                                @endcan
-                                                </a>
-                                            </p>
-                                        </div>
+                                        </div>                                        
                                     </div>
 
                                     <!-- Menu Chapitre 7 -->

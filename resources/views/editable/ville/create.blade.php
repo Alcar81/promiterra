@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Édition Villes
+Création Ville
 @endsection
 
 @if(session()->has('info'))
@@ -86,9 +86,15 @@
                                 </div>
 
                                 <div class="form-floating">
+                                    <label for="page">{{ __('Page') }}</label>
+                                    <input type="text" class="form-control" id="page" placeholder="" value="" name="page">
+                                </div>
+
+                                <div class="form-floating">
                                     <label for="house">{{ __('Maison') }}</label>
                                     <input type="text" class="form-control" id="house" placeholder="" value="" name="house">
                                 </div>
+                                
 
                             </div>
 
@@ -176,13 +182,13 @@
                                 </div>
 
                                 <div class="form-floating">
-                                    <label for="urbanPopulaiton">{{ __('Population urbaine') }}</label>
-                                        <input type="text" class="form-control" id="urbanPopulaiton" placeholder="" value="" name="urbanPopulaiton">
+                                    <label for="urbanPopulation">{{ __('Population urbaine') }}</label>
+                                        <input type="text" class="form-control" id="urbanPopulation" placeholder="" value="" name="urbanPopulation">
                                 </div>
 
                                 <div class="form-floating">
                                     <label for="ruralPopulaiton">{{ __('Population régionale') }}</label>
-                                        <input type="text" class="form-control" id="ruralPopulaiton" placeholder="" value="" name="ruralPopulaiton">
+                                        <input type="text" class="form-control" id="ruralPopulation" placeholder="" value="" name="ruralPopulation">
                                 </div>
 
                                 <div class="form-floating">
@@ -501,9 +507,9 @@
 
 
                             <div class="container border rounded p-4">
-                                <div class="form-floating">
+                                <div>
                                     <label for="story">{{ __('Histoire') }}</label>
-                                            <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="summernote" style="height: 100px" name="story"></textarea>
+                                    <textarea class="form-control" placeholder="Écrivez l'histoire ici" id="summernote" style="height: 100px" name="story"></textarea>                                     
                                 </div>
 
                                 <div class="form-floating pt-4">

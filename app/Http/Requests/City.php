@@ -27,6 +27,7 @@ class City extends FormRequest
         return [
             'name' => ['required', 'string', 'max:30'],
             'year' => ['required', 'string', 'max:100'],
+            'page' => ['required', 'numeric'],
             'house'=> ['required', 'string', 'max:100'],
             'yearfoundation' => ['required', 'numeric'],
             'size' => ['required', 'string', 'max:30'],

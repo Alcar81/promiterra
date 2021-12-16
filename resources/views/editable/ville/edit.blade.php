@@ -46,6 +46,10 @@ Mise à jour | {{ $ville->name }}
                                     <label for="name">{{ __('Nom') }}</label>
                                     <input type="text" class="form-control" id="name" placeholder="" value="{{ old('name') ?? $ville->name }}" name="name">
                                 </div>
+                                <div class="form-floating">
+                                    <label for="page">{{ __('Page') }}</label>
+                                    <input type="text" class="form-control" id="page" placeholder="{{ old('house') ?? $ville->page }}" value="" name="page">
+                                </div>
 
                                 <div class="form-floating">
                                     <label for="house">{{ __('Maison') }}</label>
@@ -84,18 +88,18 @@ Mise à jour | {{ $ville->name }}
                                     <label for="accent1">{{ __('Accents régionales') }}</label>
                                     <div>
                                             <div class="pt-2">
-                                                <input type="text" class="form-control pt-2" id="accent1" placeholder="" value="{{ old('Accent 1') ?? $ville->Accent1 }}" name="accent1">
+                                                <input type="text" class="form-control pt-2" id="accent1" placeholder="" value="{{ old('accent1') ?? $ville->accent1 }}" name="accent1">
                                             </div>
                                     </div>
                                     <div class="pt-2">
                                             <div class="pt-2">
-                                                <input type="text" class="form-control pt-2" id="accent2" placeholder="" value="{{ old('Accent 2') ?? $ville->Accent2 }}" name="accent2">
+                                                <input type="text" class="form-control pt-2" id="accent2" placeholder="" value="{{ old('accent2') ?? $ville->accent2 }}" name="accent2">
                                             </div>
                                     </div>
 
                                     <div class="pt-2">
                                         <div class="pt-2">
-                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="" value="{{ old('Accent 3') ?? $ville->Accent3 }}" name="accent3">
+                                            <input type="text" class="form-control pt-2" id="accent3" placeholder="" value="{{ old('accent3') ?? $ville->accent3 }}" name="accent3">
                                         </div>
                                     </div>
                                 </div>

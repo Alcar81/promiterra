@@ -26,7 +26,9 @@ class Careers extends FormRequest
         return [
             'CareerVersion' => ['required', 'numeric'],
             'CareerIDClass'=> ['required', 'numeric', 'max:3'],
+            'CareerParent1Name'=> ['required', 'string', 'max:20'],
             'CareerIDParent1'=> ['required', 'numeric', 'max:3'],
+            'CareerParent2Name'=> ['required', 'string', 'max:20'],
             'CareerIDParent2'=> ['required', 'numeric', 'max:3'],
             'CareerClassName' => ['required', 'string', 'max:20'],
             'CareerImage'  => ['required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'],

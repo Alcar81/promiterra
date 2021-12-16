@@ -58,13 +58,7 @@
 
                 </div>
 
-                <div class="card-header"><strong>Villes       <a href="{{ route('ville.city.create') }}">( ajouter )</a></strong></div>
-
-
-                <!-- Menu villes -->
-                @include('partials.menus.menuVilles')
-                <!-- end: Menu villes -->
-
+                <div class="card-header"><strong><a href="{{ route('ville.city.index') }}">Villes</a>       <a href="{{ route('ville.city.create') }}">( ajouter )</a></strong></div>
 
 
                 <div class="card-header"><strong>Lieux mytiques     <a href="">( ajouter / modifier )</a></strong></div>
@@ -120,16 +114,8 @@
 
                 </div>
 
-                <div class="card-header"><strong>Carrières     <a href="{{ route('cinq.careers.create') }}">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-                            <button class="btn btn-primary"><a href="{{ route('cinq.careers.index') }}">5. Carrières</a></button>
-
-
-                        </div>
-
-                    </div>
+                <div class="card-header"><strong><a href="{{ route('cinq.careers.index') }}">Carrières</a>     <a href="{{ route('cinq.careers.create') }}">( ajouter )</a></strong></div>
+                <div class="card-body">                    
 
                 </div>
 

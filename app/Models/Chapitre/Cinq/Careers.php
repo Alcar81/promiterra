@@ -11,7 +11,9 @@ class Careers extends Model
         
         'CareerVersion',
         'CareerIDClass',
+        'CareerParent1Name',
         'CareerIDParent1',
+        'CareerParent2Name',
         'CareerIDParent2',
         'CareerClassName',
         'CareerImage', //The path you uploader the image
