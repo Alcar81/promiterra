@@ -24,7 +24,9 @@ Chapire 7 | Les Citées
 <section class="background-black p-b-60">
         <div class="container">
             <div class="row" display="inline-block">
+
                 <div class="card-body">
+                <a href="{{ route('ville.city.create') }}"><h3>Ajouter</h3></a>
                     <div class="row justify-content-center">
                         <table class="table table-bordered" >
                                     <thead class="thead-light">

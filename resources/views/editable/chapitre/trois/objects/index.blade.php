@@ -1,6 +1,6 @@
 @extends('template')
 @section('title')
-Chapire 5 | Les carrières
+Objets | Chapire 3 | L'économie
 @endsection
 
 @if(session()->has('info'))
@@ -26,40 +26,43 @@ Chapire 5 | Les carrières
             <div class="row" display="inline-block">
             
                 <div class="card-body">
-                <a href="{{ route('cinq.careers.create') }}"><h3>Ajouter</h3></a>
+                <a href="{{ route('trois.objects.create') }}"><h3>Ajouter</h3></a>
                     <div class="row justify-content-center">
                         <table class="table table-bordered" >
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Carrière') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Version') }}</th> 
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Page') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('P1') }}</th>                                            
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('P2') }}</th>                                            
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Id') }}</th>
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Objet') }}</th>
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Version') }}</th>
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Effet') }}</th>
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Coût') }}</th> 
+                                                                                         
                                         </tr>                                        
                                     </thead>
-                            @foreach($careers->chunk(8) as $carrieres)
+                            @foreach($objects->chunk(8) as $objets)
                                 <div class="row justify-content-center">
                                     <tbody>
-                                        <tr>                                           
-                                            @foreach($carrieres as $carriere)
+                                                                                   
+                                        @foreach($objets as $objet)
+                                            <tr>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <a href="{{ route('cinq.careers.show', $carriere->id) }}">{{ $carriere->CareerClassName }}</a>
+                                                    <p>{{ $objet->id }}</p>
                                                 </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerVersion }}</p>
+                                                    <a href="{{ route('trois.objects.edit', $objet->id) }}">{{ $objet->ObjectName }}</a>
                                                 </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerIDClass }}</p>
+                                                    <p>{{ $objet->ObjectVersion }}</p>
                                                 </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerParent1Name }} ({{ $carriere->CareerIDParent1 }})</p>
-                                                </td>                                                
+                                                    <p>{{ $objet->ObjectEffect }}</p>
+                                                </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
-                                                    <p>{{ $carriere->CareerParent2Name }} ({{ $carriere->CareerIDParent2 }})</p>
-                                                </td>                                                
-                                            @endforeach                                            
-                                        </tr>
+                                                    <p>{{ $objet->ObjectCost }}</p>
+                                                </td> 
+                                            </tr>                                                 
+                                        @endforeach                                            
+                                        
                                     </tbody>
                                 </div>
                             @endforeach

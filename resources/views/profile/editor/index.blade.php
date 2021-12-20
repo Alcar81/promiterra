@@ -12,139 +12,80 @@
 
     <div class="row justify-content-center pt-4">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header"><strong>Équipements</strong></div>
-                <div class="card-body">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">                       
 
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('cinq.careers.index') }}">Carrières <span class="sr-only">(current)</span></a>
+                        </li>
 
-                    <div class="">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chapitres</a> 
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Introduction</a>
+                                    <a class="dropdown-item" href="#">1. Monde</a>
+                                    <a class="dropdown-item" href="#">2. Personnage</a>
+                                    <a class="dropdown-item" href="#">3. Économie</a>
+                                    <a class="dropdown-item" href="#">4. Combats</a>
+                                    <a class="dropdown-item" href="#">5. Carrières</a>
+                                    <a class="dropdown-item" href="#">6. Guerres</a>
+                                    <a class="dropdown-item" href="{{ route('sept.cites.index') }}">7. Cités</a>
+                                    <a class="dropdown-item" href="#">8. Bestiaire</a>
+                                    <a class="dropdown-item" href="#">Règles avancées</a>
+                                    <a class="dropdown-item" href="#">Objets divers</a>
+                                    <a class="dropdown-item" href="#">Version 3.0</a>
+                                </div>
+                        </li>
 
-                            <div class="row justify-content-center">
-                                <button class="btn btn-primary" href="">Armes</button>
-                                <button class="btn btn-primary" href="">Armures</button>
-                                <button class="btn btn-primary" href="">Boucliers</button>
-                                <button class="btn btn-primary" href="">Montures</button>
-                                <button class="btn btn-primary" href="">Navires</button>
-                                <button class="btn btn-primary" href="">Canons</button>
-                                <button class="btn btn-primary" href="">Bombes</button>
-                                <button class="btn btn-primary" href="">Grimoires</button>
-                                <button class="btn btn-primary" href="">Bibles</button>
-                                <button class="btn btn-primary" href="">Herbes</button>
-                                <button class="btn btn-primary" href="">Objets divers</button>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Créatures</a>
+                        </li>
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Équipements</a> 
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('trois.weapons.index') }}">Armes</a>
+                                    <a class="dropdown-item" href="{{ route('trois.armors.index') }}">Armures</a>
+                                    <a class="dropdown-item" href="{{ route('trois.shields.index') }}">Boucliers</a>
+                                    <a class="dropdown-item" href="#">Montures</a>
+                                    <a class="dropdown-item" href="#">Navires</a>
+                                    <a class="dropdown-item" href="#">Canons</a>
+                                    <a class="dropdown-item" href="#">Bombes</a>
+                                    <a class="dropdown-item" href="#">Grimoires</a>
+                                    <a class="dropdown-item" href="#">Bibles</a>
+                                    <a class="dropdown-item" href="#">Herbes</a>
+                                    <a class="dropdown-item" href="{{ route('trois.objects.index') }}">Objets divers</a>
+                                </div>
+                        </li>
 
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lieux mytiques</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Maisons</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Personnages</a>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('ville.city.index') }}">Villes</a>
+                        </li>
+                        
+
+                        
+                    </ul>
                 </div>
-
-                <div class="card-header"><strong>Les chapitres     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div>
-                        <div class="row justify-content-center">
-                            <button class="btn btn-primary" href="">Introduction</button>
-                            <button class="btn btn-primary" href="">1. Monde</button>
-                            <button class="btn btn-primary" href="">2. Personnage</button>
-                            <button class="btn btn-primary" href="">3. Économie</button>
-                            <button class="btn btn-primary" href="">4. Combats</button>
-                            <button class="btn btn-primary" href="">5. Carrières</button>
-                            <button class="btn btn-primary" href="">6. Guerres</button>
-                            <button class="btn btn-primary"><a href="{{ route('sept.cites.index') }}">7. Cités</a></button>
-                            <button class="btn btn-primary" href="">8. Bestaire</button>
-                            <button class="btn btn-primary" href="">Règles avancées</button>
-                            <button class="btn btn-primary" href="">Version 3.0</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="card-header"><strong><a href="{{ route('ville.city.index') }}">Villes</a>       <a href="{{ route('ville.city.create') }}">( ajouter )</a></strong></div>
-
-
-                <div class="card-header"><strong>Lieux mytiques     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="card-header"><strong>Maisons     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="card-header"><strong>Personnages     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="card-header"><strong>Créatures     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="card-header"><strong><a href="{{ route('cinq.careers.index') }}">Carrières</a>     <a href="{{ route('cinq.careers.create') }}">( ajouter )</a></strong></div>
-                <div class="card-body">                    
-
-                </div>
-
-                <div class="card-header"><strong>Services     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="card-header"><strong>Métiers     <a href="">( ajouter / modifier )</a></strong></div>
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+            </nav>        
+            
         </div>
 
     </div>

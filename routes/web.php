@@ -108,6 +108,23 @@ Route::namespace('Character')->prefix('character')->name('character.')->group(fu
 */
 // <!-- >End: Les Chapitres -->
 
+// <!-- Chapitre 3 L'économie -->
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('weapons', 'EditableWeaponsController');
+    });
+
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('armors', 'EditableArmorsController');
+    });
+
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('objects', 'EditableObjectsController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('shields', 'EditableShieldsController');
+    });
+// <!-- end: Chapitre 3 L'économie -->
+
 // <!-- Chapitre 5 Les Carrières -->
 
     Route::namespace('Editable\Chapitre\Cinq')->prefix('chapitre/cinq')->name('cinq.')->group(function() {
