@@ -34,7 +34,7 @@ class Shields extends FormRequest
             'ShieldBack' => ['required', 'string', 'max:2'],
             'ShieldProperty1' => ['required', 'string', 'max:20'], 
             'ShieldProperty2' => ['required', 'string', 'max:20'], 
-            'ShieldCost' => ['required', 'numeric', 'max:6'], 
+            'ShieldCost' => ['required', 'numeric', 'max:6'],
         ];
     }
 }

@@ -146,7 +146,7 @@ Création Armure | Chapire 3 | L'économie
                                                 <th class="text-center" scope="col">{{ __('Encombrement') }}</th>
                                                 <th class="text-center" scope="col">{{ __('P1') }}</th>
                                                 <th class="text-center" scope="col">{{ __('P2') }}</th>
-                                                <th class="text-center" scope="col">{{ __('Coût') }}</th>                                                                                        
+                                                <th class="text-center" scope="col">{{ __('Valeur') }}</th>                                                                                        
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -269,7 +269,7 @@ Création Arme | Chapire 3 | L'économie
                                                 </td>                                            
                                             </tr>
                                             <tr>
-                                                <th scope="row"><p>{{ __('Coût') }}</th>
+                                                <th scope="row"><p>{{ __('Valeur') }}</th>
                                                 <td><input type="text" class="form-control" id="WeaponCost" placeholder="" value="" name="WeaponCost"></td>                                            
                                             </tr>
                                             

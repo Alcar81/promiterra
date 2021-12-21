@@ -43,7 +43,7 @@ Armures | Chapire 3 | L'économie
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Encombrement') }}</th>                                              
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('P1') }}</th> 
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('P2') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Coût') }}</th>                                             
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Valeur') }}</th>                                             
                                         </tr>                                        
                                     </thead>
                             @foreach($armors->chunk(8) as $armures)

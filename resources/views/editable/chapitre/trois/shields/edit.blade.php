@@ -85,7 +85,7 @@
                                         
                                     <th scope="col">{{ __('Propriété 1') }}</th>
                                     <th scope="col">{{ __('Propriété 2') }}</th>
-                                    <th scope="col">{{ __('Coût') }}</th>                                                                                        
+                                    <th scope="col">{{ __('Valeur') }}</th>                                                                                        
                                 </tr>
                             </thead>
                             <tbody>

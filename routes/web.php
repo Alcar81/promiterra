@@ -123,6 +123,27 @@ Route::namespace('Character')->prefix('character')->name('character.')->group(fu
     Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
         Route::resource('shields', 'EditableShieldsController');
     });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('grimoires', 'EditableGrimoiresController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('herbales', 'EditableHerbalesController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('mounts', 'EditableMountsController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('mountshields', 'EditableMountshieldsController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('ships', 'EditableShipsController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('cannons', 'EditableCannonsController');
+    });
+    Route::namespace('Editable\Chapitre\Trois')->prefix('chapitre/trois')->name('trois.')->group(function() {
+        Route::resource('bombs', 'EditableBombsController');
+    });
 // <!-- end: Chapitre 3 L'économie -->
 
 // <!-- Chapitre 5 Les Carrières -->

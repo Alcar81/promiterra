@@ -47,14 +47,14 @@ Armes | Chapire 3 | L'économie
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Maladresse') }}</th>  
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('P1') }}</th> 
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('P2') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Coût') }}</th>                                             
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Valeur') }}</th>                                             
                                         </tr>                                        
                                     </thead>
                             @foreach($weapons->chunk(8) as $armes)
                                 <div class="row justify-content-center">
                                     <tbody>
-                                        <tr>                                           
-                                            @foreach($armes as $arme)
+                                        @foreach($armes as $arme)
+                                            <tr>
                                                 <td scope="row" style="text-align: center;" height="10px">
                                                     <p>{{ $arme->id }}</p>
                                                 </td>
@@ -105,9 +105,9 @@ Armes | Chapire 3 | L'économie
                                                 </td>
                                                 <td scope="row" style="text-align: center;" height="10px">
                                                     <p>{{ $arme->WeaponCost }}</p>
-                                                </td>                                                 
-                                            @endforeach                                            
-                                        </tr>
+                                                </td>                                   
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </div>
                             @endforeach

@@ -43,7 +43,7 @@ Création Objet | Chapire 3 | L'économie
                                                 <th class="text-center" scope="col">{{ __('Objet') }}</th>
                                                 <th class="text-center" scope="col">{{ __('Version') }}</th>
                                                 <th class="text-center" scope="col">{{ __('Effet') }}</th>
-                                                <th class="text-center" scope="col">{{ __('Coût') }}</th>                                                                                                                                      
+                                                <th class="text-center" scope="col">{{ __('Valeur') }}</th>                                                                                                                                      
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -42,7 +42,7 @@
                                                 <th class="text-center" scope="col">{{ __('Objet') }}</th>
                                                 <th class="text-center" scope="col">{{ __('Version') }}</th>
                                                 <th class="text-center" scope="col">{{ __('Effect') }}</th>
-                                                <th class="text-center" scope="col">{{ __('Coût') }}</th>                                                                                                                                       
+                                                <th class="text-center" scope="col">{{ __('Valeur') }}</th>                                                                                                                                       
                                             </tr>
                                         </thead>
                                         <tbody>

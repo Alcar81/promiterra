@@ -52,13 +52,13 @@
                                     <a class="dropdown-item" href="{{ route('trois.weapons.index') }}">Armes</a>
                                     <a class="dropdown-item" href="{{ route('trois.armors.index') }}">Armures</a>
                                     <a class="dropdown-item" href="{{ route('trois.shields.index') }}">Boucliers</a>
-                                    <a class="dropdown-item" href="#">Montures</a>
-                                    <a class="dropdown-item" href="#">Navires</a>
-                                    <a class="dropdown-item" href="#">Canons</a>
-                                    <a class="dropdown-item" href="#">Bombes</a>
-                                    <a class="dropdown-item" href="#">Grimoires</a>
-                                    <a class="dropdown-item" href="#">Bibles</a>
-                                    <a class="dropdown-item" href="#">Herbes</a>
+                                    <a class="dropdown-item" href="{{ route('trois.mounts.index') }}">Montures</a>
+                                    <a class="dropdown-item" href="{{ route('trois.mountshields.index') }}">Armures Monture</a>
+                                    <a class="dropdown-item" href="{{ route('trois.ships.index') }}">Navires</a>
+                                    <a class="dropdown-item" href="{{ route('trois.cannons.index') }}">Canons</a>
+                                    <a class="dropdown-item" href="{{ route('trois.bombs.index') }}">Bombes</a>
+                                    <a class="dropdown-item" href="{{ route('trois.grimoires.index') }}">Grimoires</a>                                    
+                                    <a class="dropdown-item" href="{{ route('trois.herbales.index') }}">Herbes</a>
                                     <a class="dropdown-item" href="{{ route('trois.objects.index') }}">Objets divers</a>
                                 </div>
                         </li>

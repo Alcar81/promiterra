@@ -35,7 +35,7 @@ Objets | Chapire 3 | L'économie
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Objet') }}</th>
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Version') }}</th>
                                             <th scope="col"  style="text-align: center;" height="20px">{{ __('Effet') }}</th>
-                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Coût') }}</th> 
+                                            <th scope="col"  style="text-align: center;" height="20px">{{ __('Valeur') }}</th> 
                                                                                          
                                         </tr>                                        
                                     </thead>

@@ -19,7 +19,7 @@ class Shields extends Model
         'ShieldProperty1',
         'ShieldProperty2',
         'ShieldCost',
-
+    
     ];
     
 }
